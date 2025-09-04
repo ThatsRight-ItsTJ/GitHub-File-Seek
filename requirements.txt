@@ -1,0 +1,10 @@
+aiohttp>=3.8.0
+aiofiles>=23.0.0
+asyncio
+argparse
+pathlib
+fnmatch
+dataclasses
+typing
+urllib3
+requests
