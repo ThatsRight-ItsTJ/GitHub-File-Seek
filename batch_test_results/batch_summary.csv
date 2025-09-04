@@ -1,0 +1,5 @@
+repo_url,status,files_found,files_downloaded,files_failed,output_dir
+microsoft/vscode,success,1009,1009,0,./batch_test_results/vscode_configs
+facebook/react,success,0,0,0,./batch_test_results/react_frontend
+docker/compose,success,245,245,0,./batch_test_results/docker_files
+kubernetes/kubernetes,error,0,0,0,

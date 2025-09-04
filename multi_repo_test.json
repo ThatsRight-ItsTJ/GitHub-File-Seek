@@ -1,0 +1,36 @@
+[
+  {
+    "repo_url": "microsoft/vscode",
+    "search_criteria": {
+      "extensions": [".json", ".yml", ".yaml"],
+      "exclude_patterns": ["node_modules/*", "test*"]
+    },
+    "branch": "main",
+    "output_subdir": "vscode_configs"
+  },
+  {
+    "repo_url": "facebook/react",
+    "search_criteria": {
+      "extensions": [".js", ".jsx"],
+      "path_patterns": ["src/*"],
+      "exclude_patterns": ["*.test.*", "*.spec.*"]
+    },
+    "output_subdir": "react_frontend"
+  },
+  {
+    "repo_url": "docker/compose",
+    "search_criteria": {
+      "name_patterns": ["docker*", "*.dockerfile", "*compose*"],
+      "exclude_patterns": ["test*"]
+    },
+    "output_subdir": "docker_files"
+  },
+  {
+    "repo_url": "kubernetes/kubernetes",
+    "search_criteria": {
+      "extensions": [".md"],
+      "name_patterns": ["README*", "CHANGELOG*"]
+    },
+    "output_subdir": "k8s_docs"
+  }
+]

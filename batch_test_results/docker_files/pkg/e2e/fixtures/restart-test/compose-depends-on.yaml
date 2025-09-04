@@ -1,0 +1,24 @@
+services:
+  with-restart:
+    image: nginx:alpine
+    init: true
+    command: tail -f /dev/null
+    depends_on:
+      nginx: {condition: service_healthy, restart: true}
+
+  no-restart:
+    image: nginx:alpine
+    init: true
+    command: tail -f /dev/null
+    depends_on:
+      nginx: { condition: service_healthy }
+
+  nginx:
+    image: nginx:alpine
+    labels:
+      TEST: ${LABEL:-test}
+    healthcheck:
+      test:     "echo | nc -w 5 localhost:80"
+      interval: 2s
+      timeout:  1s
+      retries:  10
