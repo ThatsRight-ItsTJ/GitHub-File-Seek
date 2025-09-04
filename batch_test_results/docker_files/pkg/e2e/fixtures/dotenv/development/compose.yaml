@@ -1,7 +1,0 @@
-services:
-  backend:
-    image: $IMAGE_NAME:$IMAGE_TAG
-  test:
-    profiles:
-      - test
-    image: enabled:profile
