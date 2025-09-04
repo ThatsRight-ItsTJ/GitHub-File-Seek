@@ -1,337 +1,400 @@
-# GitHub File Hunter - Complete Usage Guide
+# GitHub File Hunter 🔍
 
-A powerful tool for finding and downloading specific files from GitHub repositories without cloning the entire repo.
+An enhanced version of DownGit that intelligently finds and downloads specific files from GitHub repositories without cloning the entire repository.
 
-## 🚀 Quick Start
+## Features
 
-### Installation
+- **Smart File Discovery**: Use GitHub API to traverse repository trees and find files matching your criteria
+- **Pattern-Based Searching**: Support for wildcards, regex patterns, file extensions, and custom filters
+- **Pre-built Profiles**: 14 ready-to-use search profiles for common development scenarios
+- **Batch Processing**: Process multiple repositories from configuration files
+- **Concurrent Downloads**: Fast, rate-limited downloads with progress tracking
+- **Multiple Export Formats**: Save results as JSON, CSV, or TXT
+- **Web Interface**: User-friendly Flask dashboard for non-technical users
+- **Flexible Output**: Preview-only mode or direct downloads to organized folders
+
+## Installation
+
 ```bash
-# Install dependencies
-pip install aiohttp aiofiles
+# Clone the repository
+git clone https://github.com/ThatsRight-ItsTJ/GitHub-File-Seek.git
+cd GitHub-File-Seek
 
-# Make scripts executable
-chmod +x github_file_hunter.py
-chmod +x github_hunter_profiles.py
+# Install dependencies
+pip install -r requirements.txt
 ```
+
+## Quick Start
 
 ### Basic Usage
+
 ```bash
-# Find all Python files
-python github_file_hunter.py microsoft/vscode --ext py
+# Find all Python files in a repository
+python github_file_hunter.py microsoft/vscode --ext py --preview-only
 
-# Use pre-built profile for config files
-python github_hunter_profiles.py microsoft/vscode --profile config
+# Download configuration files using a pre-built profile
+python github_file_hunter.py facebook/react --profile config --download
 
-# Download all API-related files
-python github_hunter_profiles.py fastapi/fastapi --profile api --download
+# Search for files matching a pattern
+python github_file_hunter.py google/tensorflow --pattern "*.dockerfile" --download
 ```
 
-## 🎯 Search Profiles (Easy Mode)
+### Using Pre-built Profiles
 
-### Available Profiles
 ```bash
-# List all available profiles
-python github_hunter_profiles.py --list
+# Available profiles: config, api, auth, database, docker, ci, docs, tests, frontend, backend, scripts, ml, security, large
+
+# Find all configuration files
+python github_file_hunter.py owner/repo --profile config --preview-only
+
+# Download API-related files
+python github_file_hunter.py owner/repo --profile api --download
+
+# Find documentation files
+python github_file_hunter.py owner/repo --profile docs --preview-only
 ```
 
-**Built-in Profiles:**
-- `config` - Configuration files (yml, json, toml, etc.)
-- `api` - API-related files (routes, endpoints, clients)
-- `auth` - Authentication and security files
-- `database` - Database models, schemas, migrations
-- `docker` - Docker and containerization files
-- `ci` - CI/CD pipeline files
-- `docs` - Documentation files
-- `tests` - Test files and specs
-- `frontend` - Frontend/UI files (js, css, html)
-- `backend` - Backend/server files
-- `scripts` - Scripts and automation
-- `ml` - Machine Learning files
-- `security` - Security-related files
-- `large` - Large files (>1MB)
+## Batch Processing 📦
 
-### Profile Examples
-```bash
-# Find config files and preview
-python github_hunter_profiles.py kubernetes/kubernetes --profile config --preview-only
+The batch processing feature allows you to process multiple repositories at once using configuration files. This is perfect for:
+- Analyzing multiple projects simultaneously
+- Collecting files from related repositories
+- Automated file gathering workflows
+- Research and comparison tasks
 
-# Download Docker files
-python github_hunter_profiles.py docker/compose --profile docker --download --output-dir ./docker_files
+### Creating Batch Configuration Files
 
-# Combine multiple profiles
-python github_hunter_profiles.py fastapi/fastapi --profile "api,auth,docs" --download
+#### CSV Format
 
-# Show profile details
-python github_hunter_profiles.py --show api
+Create a CSV file with repository information:
+
+```csv
+repository,profile,extensions,patterns,max_files,output_folder
+microsoft/vscode,config,,*.json;*.yml,50,vscode_configs
+facebook/react,frontend,js;jsx;ts;tsx,,100,react_frontend
+google/tensorflow,ml,py,,200,tensorflow_ml
+docker/compose,docker,,docker*;*.dockerfile,30,docker_files
 ```
 
-## 🔍 Advanced Search (Custom Mode)
+**CSV Columns:**
+- `repository`: GitHub repository in format `owner/repo`
+- `profile`: Pre-built profile name (optional)
+- `extensions`: Comma-separated file extensions (optional)
+- `patterns`: Semicolon-separated file patterns (optional)
+- `max_files`: Maximum files to download per repository (optional)
+- `output_folder`: Custom output folder name (optional)
 
-### Search by File Extensions
-```bash
-# Find specific file types
-python github_file_hunter.py owner/repo --ext py js ts
+#### JSON Format
 
-# Multiple extensions with size limit
-python github_file_hunter.py owner/repo --ext py --min-size 1000 --max-size 100000
+Create a JSON file with detailed configuration:
+
+```json
+{
+  "repositories": [
+    {
+      "repository": "microsoft/vscode",
+      "profile": "config",
+      "patterns": ["*.json", "*.yml", "*.yaml"],
+      "max_files": 50,
+      "output_folder": "vscode_configs"
+    },
+    {
+      "repository": "facebook/react",
+      "extensions": ["js", "jsx", "ts", "tsx"],
+      "exclude_patterns": ["*.test.*", "*.spec.*"],
+      "max_files": 100,
+      "output_folder": "react_source"
+    },
+    {
+      "repository": "google/tensorflow",
+      "profile": "ml",
+      "custom_filters": {
+        "min_size": 1024,
+        "max_size": 1048576
+      },
+      "output_folder": "tensorflow_ml"
+    }
+  ],
+  "global_settings": {
+    "download": true,
+    "export_format": "json",
+    "concurrent_limit": 5,
+    "rate_limit_delay": 0.1
+  }
+}
 ```
 
-### Search by Name Patterns
-```bash
-# Find files with specific names (supports wildcards)
-python github_file_hunter.py owner/repo --name "config.*" "*settings*" "*.yml"
+### Running Batch Processing
 
-# Case-sensitive search
-python github_file_hunter.py owner/repo --name "README*" --case-sensitive
+```bash
+# Process repositories from CSV file
+python batch_hunter.py --config repositories.csv
+
+# Process repositories from JSON file
+python batch_hunter.py --config batch_config.json
+
+# Preview mode (don't download, just show what would be found)
+python batch_hunter.py --config repositories.csv --preview-only
+
+# Custom output directory
+python batch_hunter.py --config batch_config.json --output-dir /path/to/output
+
+# Export results to specific format
+python batch_hunter.py --config repositories.csv --export-format csv
 ```
 
-### Search by Path Patterns
-```bash
-# Find files in specific directories
-python github_file_hunter.py owner/repo --path "src/*" "api/*" --ext py
+### Batch Processing Options
 
-# Exclude certain patterns
-python github_file_hunter.py owner/repo --ext js --exclude "node_modules/*" "dist/*" "*.min.*"
+```bash
+python batch_hunter.py [OPTIONS]
+
+Options:
+  --config PATH              Configuration file (CSV or JSON) [required]
+  --output-dir PATH          Base output directory [default: ./batch_downloads]
+  --preview-only            Show what would be downloaded without downloading
+  --export-format FORMAT    Export format: json, csv, txt [default: json]
+  --concurrent-limit INT     Max concurrent downloads [default: 5]
+  --rate-limit FLOAT        Delay between requests in seconds [default: 0.1]
+  --verbose                 Enable verbose logging
+  --help                    Show help message
 ```
 
-### Search with Regex
-```bash
-# Use regex for complex patterns
-python github_file_hunter.py owner/repo --regex ".*test.*\.py$"
+### Example Batch Workflows
 
-# Find API endpoints
-python github_file_hunter.py owner/repo --regex ".*(api|route|endpoint).*\.(py|js|ts)$"
+#### 1. Configuration Analysis Across Projects
+
+```csv
+repository,profile,max_files,output_folder
+kubernetes/kubernetes,config,100,k8s_configs
+docker/docker,config,50,docker_configs
+hashicorp/terraform,config,75,terraform_configs
+ansible/ansible,config,60,ansible_configs
 ```
 
-### Size-based Search
 ```bash
-# Find large files
-python github_file_hunter.py owner/repo --min-size 1048576  # Files > 1MB
-
-# Find small config files
-python github_file_hunter.py owner/repo --ext yml json --max-size 10240  # Files < 10KB
+python batch_hunter.py --config config_analysis.csv --export-format json
 ```
 
-## 📁 Output and Export Options
+#### 2. Frontend Framework Comparison
 
-### Download Options
-```bash
-# Download to specific directory
-python github_file_hunter.py owner/repo --ext py --download --output-dir ./python_files
-
-# Preview before downloading
-python github_file_hunter.py owner/repo --ext py --preview-only
-
-# Control download concurrency
-python github_file_hunter.py owner/repo --ext py --download --concurrent 10
+```json
+{
+  "repositories": [
+    {
+      "repository": "facebook/react",
+      "extensions": ["js", "jsx", "ts", "tsx"],
+      "max_files": 200,
+      "output_folder": "react_source"
+    },
+    {
+      "repository": "vuejs/vue",
+      "extensions": ["js", "ts", "vue"],
+      "max_files": 200,
+      "output_folder": "vue_source"
+    },
+    {
+      "repository": "angular/angular",
+      "extensions": ["ts", "js"],
+      "max_files": 200,
+      "output_folder": "angular_source"
+    }
+  ],
+  "global_settings": {
+    "download": true,
+    "export_format": "csv"
+  }
+}
 ```
 
-### Export Results
-```bash
-# Export to JSON
-python github_file_hunter.py owner/repo --ext py --export results.json
+#### 3. Security Analysis
 
-# Export to CSV
-python github_file_hunter.py owner/repo --ext py --export results.csv --export-format csv
-
-# Export to simple text list
-python github_file_hunter.py owner/repo --ext py --export files.txt --export-format txt
+```csv
+repository,profile,patterns,max_files,output_folder
+owasp/owasp-top-ten,security,*.md;*.yml;*.json,50,owasp_security
+securecodewarrior/secure-code-review,security,,100,secure_review
+microsoft/security-devops-action,security,*.yml;*.yaml;*.json,75,ms_security
 ```
 
-### Display Options
-```bash
-# Show detailed information
-python github_file_hunter.py owner/repo --ext py --details
+### Batch Processing Output
 
-# Quiet mode (minimal output)
-python github_file_hunter.py owner/repo --ext py --quiet
+The batch processor creates:
+- **Individual repository folders**: Each repository gets its own subfolder
+- **Consolidated reports**: Summary files with all findings
+- **Export files**: Results in your chosen format (JSON/CSV/TXT)
+- **Progress logs**: Detailed processing information
+
+Example output structure:
+```
+batch_downloads/
+├── microsoft_vscode/          # Repository-specific downloads
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── ...
+├── facebook_react/
+│   ├── package.json
+│   ├── babel.config.js
+│   └── ...
+├── batch_results.json         # Consolidated results
+├── batch_summary.csv          # Processing summary
+└── batch_log.txt             # Detailed processing log
 ```
 
-## 🔑 Authentication
+## Command Line Options
 
-### GitHub Token Setup
+### github_file_hunter.py
+
 ```bash
-# Set environment variable (recommended)
-export GITHUB_TOKEN="ghp_your_token_here"
+python github_file_hunter.py REPOSITORY [OPTIONS]
 
-# Or pass directly
-python github_file_hunter.py owner/repo --token ghp_your_token_here --ext py
+Arguments:
+  REPOSITORY                GitHub repository (owner/repo format)
+
+Options:
+  --profile PROFILE         Use pre-built search profile
+  --ext EXTENSIONS          File extensions (comma-separated)
+  --pattern PATTERNS        File patterns (supports wildcards)
+  --regex PATTERN           Regular expression pattern
+  --exclude PATTERNS        Exclude patterns
+  --max-files INT           Maximum files to process [default: 100]
+  --download                Download files (default: preview only)
+  --output-dir PATH         Output directory [default: ./downloads]
+  --export-format FORMAT    Export format: json, csv, txt [default: json]
+  --concurrent-limit INT    Max concurrent downloads [default: 10]
+  --rate-limit FLOAT        Delay between requests [default: 0.1]
+  --github-token TOKEN      GitHub API token
+  --verbose                 Enable verbose logging
+  --help                    Show help message
 ```
 
-**Why use a token?**
-- Increased rate limits (5,000 vs 60 requests/hour)
-- Access to private repositories
-- Better reliability for large repositories
+## Pre-built Profiles
 
-## 🎯 Real-World Examples
+| Profile | Description | File Types |
+|---------|-------------|------------|
+| `config` | Configuration files | .json, .yml, .yaml, .toml, .ini, .cfg, .conf |
+| `api` | API-related files | OpenAPI specs, API docs, endpoint definitions |
+| `auth` | Authentication files | Auth configs, JWT, OAuth, security policies |
+| `database` | Database files | SQL, migrations, database configs |
+| `docker` | Docker files | Dockerfiles, docker-compose, container configs |
+| `ci` | CI/CD files | GitHub Actions, Jenkins, Travis, CircleCI |
+| `docs` | Documentation | README, docs, guides, wikis |
+| `tests` | Test files | Unit tests, integration tests, test configs |
+| `frontend` | Frontend files | HTML, CSS, JS, React, Vue, Angular |
+| `backend` | Backend files | Server code, APIs, microservices |
+| `scripts` | Scripts | Shell, Python, automation scripts |
+| `ml` | Machine Learning | Models, datasets, ML configs, notebooks |
+| `security` | Security files | Security configs, policies, certificates |
+| `large` | Large files | Files over 1MB, binaries, assets |
 
-### 1. Audit Configuration Files
+## Web Interface
+
+Launch the web dashboard for a user-friendly experience:
+
 ```bash
-# Find all config files in a project
-python github_hunter_profiles.py kubernetes/kubernetes --profile config --export k8s_configs.json
-
-# Look for sensitive config patterns
-python github_file_hunter.py owner/repo --name "*secret*" "*key*" "*password*" --ext yml json
+python web_interface.py
 ```
 
-### 2. Extract API Documentation
-```bash
-# Get API-related files and docs
-python github_hunter_profiles.py fastapi/fastapi --profile "api,docs" --download --output-dir ./fastapi_study
+Then open http://localhost:5000 in your browser.
 
-# Find OpenAPI/Swagger specs
-python github_file_hunter.py owner/repo --name "*swagger*" "*openapi*" "*.api" --ext yml json
+Features:
+- Repository browsing with real-time file tree
+- Interactive file filtering and selection
+- Drag-and-drop batch configuration upload
+- Progress tracking for downloads
+- Export results in multiple formats
+
+## Advanced Usage
+
+### Custom Filters
+
+```bash
+# Find Python files larger than 10KB
+python github_file_hunter.py owner/repo --ext py --min-size 10240
+
+# Find recently modified files (last 30 days)
+python github_file_hunter.py owner/repo --modified-since 30
+
+# Exclude test files
+python github_file_hunter.py owner/repo --ext js --exclude "*.test.*,*.spec.*"
 ```
 
-### 3. Security Analysis
-```bash
-# Find security-related files
-python github_hunter_profiles.py owner/repo --profile security --preview-only
+### Using GitHub Token
 
-# Look for potential secrets
-python github_file_hunter.py owner/repo --name "*.pem" "*.key" "*secret*" "*token*"
+For better rate limits and private repository access:
+
+```bash
+export GITHUB_TOKEN="your_token_here"
+python github_file_hunter.py owner/private-repo --download
 ```
 
-### 4. Code Architecture Study
-```bash
-# Get backend structure
-python github_hunter_profiles.py django/django --profile backend --path "django/*" --download
+### Export Formats
 
-# Extract test patterns
-python github_hunter_profiles.py pytest-dev/pytest --profile tests --download --output-dir ./test_patterns
+```bash
+# Export as CSV
+python github_file_hunter.py owner/repo --export-format csv
+
+# Export as plain text
+python github_file_hunter.py owner/repo --export-format txt
+
+# Export as JSON (default)
+python github_file_hunter.py owner/repo --export-format json
 ```
 
-### 5. DevOps Automation
-```bash
-# Collect CI/CD configurations
-python github_hunter_profiles.py kubernetes/kubernetes --profile ci --download --output-dir ./k8s_ci
+## Examples
 
-# Find deployment scripts
-python github_file_hunter.py owner/repo --name "*deploy*" "*build*" --ext sh yml
+### Find Configuration Files
+```bash
+python github_file_hunter.py kubernetes/kubernetes --profile config --max-files 50 --download
 ```
 
-### 6. Machine Learning Projects
+### Download Frontend Assets
 ```bash
-# Extract ML models and notebooks
-python github_hunter_profiles.py tensorflow/tensorflow --profile ml --download
-
-# Find training scripts
-python github_file_hunter.py owner/repo --name "*train*" "*model*" --ext py ipynb
+python github_file_hunter.py facebook/react --profile frontend --exclude "*.test.*" --download
 ```
 
-## 🛠️ Custom Profiles
-
-### Create Custom Profile
+### Security Audit
 ```bash
-# Create a profile for React components
-python github_hunter_profiles.py --create-profile react-components \
-  --profile-description "React component files" \
-  --profile-extensions jsx tsx \
-  --profile-paths "src/components/*" "components/*" \
-  --profile-names "*Component*" "*component*"
+python github_file_hunter.py owner/repo --profile security --export-format csv --preview-only
 ```
 
-### Save and Reuse
+### Custom Pattern Search
 ```bash
-# The custom profile is now available
-python github_hunter_profiles.py facebook/react --profile react-components --download
+python github_file_hunter.py owner/repo --pattern "*.dockerfile,docker-compose*" --download
 ```
 
-## 📊 Performance Tips
-
-### For Large Repositories
-```bash
-# Use specific paths to limit scope
-python github_file_hunter.py kubernetes/kubernetes --path "cmd/*" "pkg/*" --ext go
-
-# Limit file size to avoid huge downloads
-python github_file_hunter.py owner/repo --ext py --max-size 1048576  # Max 1MB files
-
-# Reduce concurrency for stability
-python github_file_hunter.py owner/repo --ext py --download --concurrent 3
-```
+## Troubleshooting
 
 ### Rate Limiting
-```bash
-# Use GitHub token to avoid rate limits
-export GITHUB_TOKEN="your_token"
+If you encounter rate limiting:
+- Use a GitHub token: `export GITHUB_TOKEN="your_token"`
+- Increase rate limit delay: `--rate-limit 0.5`
+- Reduce concurrent downloads: `--concurrent-limit 3`
 
-# For very large repos, consider using specific branches
-python github_file_hunter.py owner/repo --branch main --ext py
-```
+### Large Repositories
+For large repositories:
+- Use `--max-files` to limit results
+- Use specific patterns to narrow search
+- Use `--preview-only` first to estimate size
 
-## 🚨 Common Use Cases
+### Memory Issues
+If processing very large files:
+- Reduce `--concurrent-limit`
+- Use smaller `--max-files` values
+- Process in smaller batches
 
-### 1. Learning from Open Source
-```bash
-# Study FastAPI's architecture
-python github_hunter_profiles.py tiangolo/fastapi --profile "api,auth" --download --output-dir ./fastapi_study
+## Contributing
 
-# Examine Django's models
-python github_file_hunter.py django/django --name "*model*" --path "django/*" --ext py --download
-```
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
-### 2. Security Auditing
-```bash
-# Find configuration files that might contain secrets
-python github_hunter_profiles.py owner/repo --profile config --name "*prod*" "*secret*"
+## License
 
-# Look for hardcoded keys
-python github_file_hunter.py owner/repo --regex ".*[kK]ey.*=.*" --ext py js
-```
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-### 3. Documentation Gathering
-```bash
-# Collect all docs for offline reading
-python github_hunter_profiles.py microsoft/vscode --profile docs --download --output-dir ./vscode_docs
+## Acknowledgments
 
-# Find README files in subdirectories
-python github_file_hunter.py owner/repo --name "README*" --path "*/*"
-```
-
-### 4. Code Migration Assistance
-```bash
-# Extract specific technology stack files
-python github_file_hunter.py owner/repo --ext py --path "src/*" --exclude "*test*" --download
-
-# Find database migrations
-python github_file_hunter.py owner/repo --name "*migration*" "*migrate*" --ext py sql
-```
-
-## 🔧 Troubleshooting
-
-### Common Issues
-```bash
-# Rate limited? Use a token
-export GITHUB_TOKEN="your_token"
-
-# Repository not found? Check URL format
-python github_file_hunter.py owner/repo  # ✅ Good
-python github_file_hunter.py https://github.com/owner/repo  # ✅ Also good
-
-# No files found? Check your patterns
-python github_file_hunter.py owner/repo --ext py --preview-only  # Test first
-
-# Download failed? Check permissions and disk space
-python github_file_hunter.py owner/repo --ext py --download --output-dir ./downloads
-```
-
-### Debug Mode
-```bash
-# Enable verbose output
-python github_file_hunter.py owner/repo --ext py --details --preview-only
-```
-
-## 🎉 Pro Tips
-
-1. **Start with `--preview-only`** to see what you'll get before downloading
-2. **Use profiles** for common searches - they're faster and more reliable
-3. **Set GitHub token** as environment variable for seamless authentication
-4. **Combine multiple profiles** for comprehensive searches
-5. **Export results** to analyze patterns before downloading
-6. **Use size limits** to avoid downloading huge files accidentally
-7. **Exclude common directories** like `node_modules`, `.git`, `dist` to focus on source code
-
----
-
-Happy hunting! 🎯
+- Built upon the DownGit concept
+- Uses GitHub API for repository traversal
+- Inspired by the need for selective file downloading from repositories
