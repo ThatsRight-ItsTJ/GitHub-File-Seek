@@ -21,6 +21,7 @@ class BatchGitHubHunter:
     def __init__(self, token: Optional[str] = None):
         self.token = token
         self.temp_structure_dir = None
+        self.pulled_structures_dir = None
         self.structure_cache = {}
         
     async def analyze_repositories_first(self, repositories: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
@@ -64,7 +65,16 @@ class BatchGitHubHunter:
                 
                 if structure_data:
                     structure_results[repo_key] = structure_data
+                    
+                    # Save structure JSON to PULLED_FILE_STRUCTURES folder
+                    structure_filename = f"{owner}_{repo}_structure.json"
+                    structure_file_path = os.path.join(self.pulled_structures_dir, structure_filename)
+                    
+                    with open(structure_file_path, 'w') as f:
+                        json.dump(structure_data, f, indent=2)
+                    
                     print(f"    ✅ {structure_data.get('summary', {}).get('total_files', 0)} files found")
+                    print(f"    📄 Structure saved to: {structure_file_path}")
                 else:
                     print(f"    ❌ Failed to analyze structure")
                     
@@ -162,6 +172,11 @@ class BatchGitHubHunter:
         self.temp_structure_dir = tempfile.mkdtemp(prefix="github_structures_")
         print(f"📁 Created temporary structure directory: {self.temp_structure_dir}")
         
+        # Create PULLED_FILE_STRUCTURES directory
+        self.pulled_structures_dir = os.path.join(os.getcwd(), "PULLED_FILE_STRUCTURES")
+        os.makedirs(self.pulled_structures_dir, exist_ok=True)
+        print(f"📁 Created PULLED_FILE_STRUCTURES directory: {self.pulled_structures_dir}")
+        
         # Phase 1: Analyze all repositories first
         structure_results = await self.analyze_repositories_first(repositories)
         
@@ -171,6 +186,7 @@ class BatchGitHubHunter:
             "failed": 0,
             "repositories": {},
             "structure_dir": self.temp_structure_dir if structure_only else None,
+            "pulled_structures_dir": self.pulled_structures_dir,
             "structure_analysis": structure_results
         }
         
@@ -279,13 +295,26 @@ class BatchGitHubHunter:
                 }
                 results["failed"] += 1
         
-        # Clean up temporary structure directory if downloads were successful
-        if results["failed"] == 0 and self.temp_structure_dir:
-            try:
-                shutil.rmtree(self.temp_structure_dir)
-                print(f"🧹 Cleaned up temporary structure directory")
-            except Exception as e:
-                print(f"⚠️ Warning: Could not clean up temporary directory: {e}")
+        # Clean up temporary structure directory and PULLED_FILE_STRUCTURES if downloads were successful
+        if results["failed"] == 0:
+            # Clean up temporary structure directory
+            if self.temp_structure_dir:
+                try:
+                    shutil.rmtree(self.temp_structure_dir)
+                    print(f"🧹 Cleaned up temporary structure directory")
+                except Exception as e:
+                    print(f"⚠️ Warning: Could not clean up temporary directory: {e}")
+            
+            # Clean up PULLED_FILE_STRUCTURES directory
+            if self.pulled_structures_dir and os.path.exists(self.pulled_structures_dir):
+                try:
+                    shutil.rmtree(self.pulled_structures_dir)
+                    print(f"🧹 Cleaned up PULLED_FILE_STRUCTURES directory")
+                except Exception as e:
+                    print(f"⚠️ Warning: Could not clean up PULLED_FILE_STRUCTURES directory: {e}")
+        else:
+            print(f"⚠️ Keeping structure files due to {results['failed']} failed downloads")
+            print(f"📁 Structure files available in: {self.pulled_structures_dir}")
         
         return results
 
@@ -316,6 +345,9 @@ async def main():
     
     if args.structure_only and results.get("structure_dir"):
         print(f"📁 Structure files saved to: {results['structure_dir']}")
+    
+    if results.get("pulled_structures_dir"):
+        print(f"📁 PULLED_FILE_STRUCTURES directory: {results['pulled_structures_dir']}")
     
     # Print summary
     for repo, result in results.get("repositories", {}).items():
