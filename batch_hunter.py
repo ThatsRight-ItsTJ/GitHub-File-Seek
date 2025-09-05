@@ -181,8 +181,24 @@ class BatchHunter:
             print(f"    ❌ Error getting tree: {e}")
             return []
 
+    def is_glob_pattern(self, pattern: str) -> bool:
+        """Check if a pattern is a glob pattern (contains *, ?, [, ]) or a regex pattern"""
+        # Simple heuristic: if it contains glob characters without regex-specific chars, treat as glob
+        glob_chars = set('*?[]')
+        regex_chars = set('^$+{}()\\|.')
+        
+        has_glob = any(c in pattern for c in glob_chars)
+        has_regex_only = any(c in pattern for c in regex_chars - glob_chars)
+        
+        # If it has glob chars and no regex-only chars, treat as glob
+        # If it starts with common regex anchors, treat as regex
+        if pattern.startswith(('^', '.*')) or pattern.endswith('$'):
+            return False
+        
+        return has_glob and not has_regex_only
+
     def matches_criteria(self, file_path: str, criteria: SearchCriteria) -> bool:
-        """Check if file matches search criteria"""
+        """Check if file matches search criteria with improved pattern matching"""
         if not criteria:
             return True
         
@@ -191,17 +207,52 @@ class BatchHunter:
             if not any(file_path.lower().endswith(ext.lower()) for ext in criteria.extensions):
                 return False
         
-        # Check patterns
+        # Check patterns with improved glob/regex handling
         if criteria.patterns:
-            if not any(fnmatch.fnmatch(file_path, pattern) or re.search(pattern, file_path) 
-                      for pattern in criteria.patterns):
+            pattern_match = False
+            for pattern in criteria.patterns:
+                try:
+                    if self.is_glob_pattern(pattern):
+                        # Use fnmatch for glob patterns
+                        if fnmatch.fnmatch(file_path, pattern):
+                            pattern_match = True
+                            break
+                    else:
+                        # Use regex for regex patterns, with proper escaping
+                        if re.search(pattern, file_path):
+                            pattern_match = True
+                            break
+                except re.error as e:
+                    # If regex fails, try as glob pattern
+                    print(f"    ⚠️ Regex error for pattern '{pattern}': {e}, trying as glob")
+                    try:
+                        if fnmatch.fnmatch(file_path, pattern):
+                            pattern_match = True
+                            break
+                    except:
+                        print(f"    ⚠️ Pattern '{pattern}' failed both regex and glob matching")
+                        continue
+            
+            if not pattern_match:
                 return False
         
-        # Check exclude patterns
+        # Check exclude patterns with improved handling
         if criteria.exclude_patterns:
-            if any(fnmatch.fnmatch(file_path, pattern) or re.search(pattern, file_path) 
-                  for pattern in criteria.exclude_patterns):
-                return False
+            for pattern in criteria.exclude_patterns:
+                try:
+                    if self.is_glob_pattern(pattern):
+                        if fnmatch.fnmatch(file_path, pattern):
+                            return False
+                    else:
+                        if re.search(pattern, file_path):
+                            return False
+                except re.error as e:
+                    # If regex fails, try as glob pattern
+                    try:
+                        if fnmatch.fnmatch(file_path, pattern):
+                            return False
+                    except:
+                        continue
         
         return True
 
