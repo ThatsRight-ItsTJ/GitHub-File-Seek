@@ -1,0 +1,264 @@
+{
+  "summary": {
+    "total_files": 20,
+    "total_directories": 8,
+    "total_size_bytes": 65692,
+    "total_size_mb": 0.06,
+    "average_file_size": 3284.6
+  },
+  "file_types": {
+    ".xml": 5,
+    "[no extension]": 4,
+    ".py": 4,
+    ".pyc": 2,
+    ".yml": 1,
+    ".iml": 1,
+    ".md": 1,
+    ".ipynb": 1,
+    ".png": 1
+  },
+  "largest_files": [
+    {
+      "path": "examples/example_notebook.ipynb",
+      "size": 29494,
+      "sha": "a01d9f35ae8207fca5e39a7bd89e59d9ed0032ce",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/examples/example_notebook.ipynb"
+    },
+    {
+      "path": "images/screenshot.png",
+      "size": 14488,
+      "sha": "21d79bee5a77c7010d2dfed3920fea29905105f8",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/images/screenshot.png"
+    },
+    {
+      "path": "gpt_cost_estimator/estimator.py",
+      "size": 4775,
+      "sha": "6893ec0428b7c189dae832add7a710afe90b5105",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/gpt_cost_estimator/estimator.py"
+    },
+    {
+      "path": "README.md",
+      "size": 4318,
+      "sha": "fe41c667788be6ee4b238a3c05b1b486652c40d9",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/README.md"
+    },
+    {
+      "path": ".gitignore",
+      "size": 3206,
+      "sha": "12cc8681e3ca6c8e0b6b0bc22500a745c76cd80e",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/.gitignore"
+    },
+    {
+      "path": "gpt_cost_estimator/utils.py",
+      "size": 2302,
+      "sha": "9ca9128879b9c060b248ed6ab63657aa1e3efc6d",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/gpt_cost_estimator/utils.py"
+    },
+    {
+      "path": "gpt_cost_estimator/__pycache__/estimator.cpython-38.pyc",
+      "size": 2186,
+      "sha": "c4090651ca47e59cc7c82a539bddd9bf6443d5cd",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/gpt_cost_estimator/__pycache__/estimator.cpython-38.pyc"
+    },
+    {
+      "path": "LICENSE",
+      "size": 1072,
+      "sha": "baee5fe28796299410b06e6aa5c44e009bc824a2",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/LICENSE"
+    },
+    {
+      "path": ".github/workflows/python-publish.yml",
+      "size": 1033,
+      "sha": "f138f481f32dd90df3050cb3bb4830e44aae205c",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/.github/workflows/python-publish.yml"
+    },
+    {
+      "path": "setup.py",
+      "size": 569,
+      "sha": "91e0ac4364c0c76aec37e78d77dc8ccfb0d1f1f4",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/setup.py"
+    }
+  ],
+  "top_directories": [
+    {
+      "path": ".idea",
+      "file_count": 6,
+      "total_size": 1291,
+      "avg_size": 215.16666666666666
+    },
+    {
+      "path": "gpt_cost_estimator",
+      "file_count": 3,
+      "total_size": 7157,
+      "avg_size": 2385.6666666666665
+    },
+    {
+      "path": ".idea/inspectionProfiles",
+      "file_count": 2,
+      "total_size": 618,
+      "avg_size": 309.0
+    },
+    {
+      "path": "gpt_cost_estimator/__pycache__",
+      "file_count": 2,
+      "total_size": 2446,
+      "avg_size": 1223.0
+    },
+    {
+      "path": ".github/workflows",
+      "file_count": 1,
+      "total_size": 1033,
+      "avg_size": 1033.0
+    },
+    {
+      "path": "examples",
+      "file_count": 1,
+      "total_size": 29494,
+      "avg_size": 29494.0
+    },
+    {
+      "path": "images",
+      "file_count": 1,
+      "total_size": 14488,
+      "avg_size": 14488.0
+    }
+  ],
+  "all_files": [
+    {
+      "path": ".github/workflows/python-publish.yml",
+      "size": 1033,
+      "sha": "f138f481f32dd90df3050cb3bb4830e44aae205c",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/.github/workflows/python-publish.yml"
+    },
+    {
+      "path": ".gitignore",
+      "size": 3206,
+      "sha": "12cc8681e3ca6c8e0b6b0bc22500a745c76cd80e",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/.gitignore"
+    },
+    {
+      "path": ".idea/.gitignore",
+      "size": 176,
+      "sha": "73f69e0958611ac6e00bde95641f6699030ad235",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/.idea/.gitignore"
+    },
+    {
+      "path": ".idea/.name",
+      "size": 18,
+      "sha": "f05bc778d52c4c4e499f4ea36305343cec5d53a4",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/.idea/.name"
+    },
+    {
+      "path": ".idea/gpt_cost_estimator.iml",
+      "size": 436,
+      "sha": "916f5050721289fc1b5f1695dd0fb43d51f1d3f6",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/.idea/gpt_cost_estimator.iml"
+    },
+    {
+      "path": ".idea/inspectionProfiles/Project_Default.xml",
+      "size": 444,
+      "sha": "2aa90efdb4ceee2d9761e71cda14884459ece84e",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/.idea/inspectionProfiles/Project_Default.xml"
+    },
+    {
+      "path": ".idea/inspectionProfiles/profiles_settings.xml",
+      "size": 174,
+      "sha": "105ce2da2d6447d11dfe32bfb846c3d5b199fc99",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/.idea/inspectionProfiles/profiles_settings.xml"
+    },
+    {
+      "path": ".idea/misc.xml",
+      "size": 206,
+      "sha": "5d4e9638b47978e786af8b5a5df45276918f951f",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/.idea/misc.xml"
+    },
+    {
+      "path": ".idea/modules.xml",
+      "size": 288,
+      "sha": "c9fe038cce92875a2b04f89869316524ae742eda",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/.idea/modules.xml"
+    },
+    {
+      "path": ".idea/vcs.xml",
+      "size": 167,
+      "sha": "35eb1ddfbbc029bcab630581847471d7f238ec53",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/.idea/vcs.xml"
+    },
+    {
+      "path": "LICENSE",
+      "size": 1072,
+      "sha": "baee5fe28796299410b06e6aa5c44e009bc824a2",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "size": 4318,
+      "sha": "fe41c667788be6ee4b238a3c05b1b486652c40d9",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/README.md"
+    },
+    {
+      "path": "examples/example_notebook.ipynb",
+      "size": 29494,
+      "sha": "a01d9f35ae8207fca5e39a7bd89e59d9ed0032ce",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/examples/example_notebook.ipynb"
+    },
+    {
+      "path": "gpt_cost_estimator/__init__.py",
+      "size": 80,
+      "sha": "0be33669b290f611710c61be4afd31716bfb95ce",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/gpt_cost_estimator/__init__.py"
+    },
+    {
+      "path": "gpt_cost_estimator/__pycache__/__init__.cpython-38.pyc",
+      "size": 260,
+      "sha": "7092e41fe97fe0365d89ff822d0f3a8f7eb069f1",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/gpt_cost_estimator/__pycache__/__init__.cpython-38.pyc"
+    },
+    {
+      "path": "gpt_cost_estimator/__pycache__/estimator.cpython-38.pyc",
+      "size": 2186,
+      "sha": "c4090651ca47e59cc7c82a539bddd9bf6443d5cd",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/gpt_cost_estimator/__pycache__/estimator.cpython-38.pyc"
+    },
+    {
+      "path": "gpt_cost_estimator/estimator.py",
+      "size": 4775,
+      "sha": "6893ec0428b7c189dae832add7a710afe90b5105",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/gpt_cost_estimator/estimator.py"
+    },
+    {
+      "path": "gpt_cost_estimator/utils.py",
+      "size": 2302,
+      "sha": "9ca9128879b9c060b248ed6ab63657aa1e3efc6d",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/gpt_cost_estimator/utils.py"
+    },
+    {
+      "path": "images/screenshot.png",
+      "size": 14488,
+      "sha": "21d79bee5a77c7010d2dfed3920fea29905105f8",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/images/screenshot.png"
+    },
+    {
+      "path": "setup.py",
+      "size": 569,
+      "sha": "91e0ac4364c0c76aec37e78d77dc8ccfb0d1f1f4",
+      "download_url": "https://raw.githubusercontent.com/michaelachmann/gpt-cost-estimator/None/setup.py"
+    }
+  ],
+  "all_directories": [
+    ".github",
+    ".github/workflows",
+    ".idea",
+    ".idea/inspectionProfiles",
+    "examples",
+    "gpt_cost_estimator",
+    "gpt_cost_estimator/__pycache__",
+    "images"
+  ],
+  "repository_info": {
+    "owner": "michaelachmann",
+    "repo": "gpt-cost-estimator",
+    "branch": null,
+    "repo_url": "https://github.com/michaelachmann/gpt-cost-estimator"
+  }
+}
