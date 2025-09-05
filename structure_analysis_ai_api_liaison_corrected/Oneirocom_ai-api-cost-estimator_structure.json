@@ -1,0 +1,296 @@
+{
+  "summary": {
+    "total_files": 28,
+    "total_directories": 6,
+    "total_size_bytes": 178375,
+    "total_size_mb": 0.17,
+    "average_file_size": 6370.54
+  },
+  "file_types": {
+    ".ts": 16,
+    ".json": 3,
+    ".txt": 3,
+    "[no extension]": 2,
+    ".md": 2,
+    ".js": 1,
+    ".lock": 1
+  },
+  "largest_files": [
+    {
+      "path": "yarn.lock",
+      "size": 99645,
+      "sha": "652744ed132a4bd0f3d993d0c45b3c5a621714f4",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/yarn.lock"
+    },
+    {
+      "path": "src/test/fixtures/8116-tokens.txt",
+      "size": 38488,
+      "sha": "74fc4b11ea7030220518d23577cc17e2bd03caca",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/test/fixtures/8116-tokens.txt"
+    },
+    {
+      "path": "src/test/fixtures/3113-tokens.txt",
+      "size": 12381,
+      "sha": "c675e9de2a40050525940864f1a308fea2cdabe3",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/test/fixtures/3113-tokens.txt"
+    },
+    {
+      "path": "tsconfig.json",
+      "size": 11091,
+      "sha": "3103be53d89f7c9b0b5c36121b50fd0cd97229e7",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/tsconfig.json"
+    },
+    {
+      "path": "src/estimateCompletion.test.ts",
+      "size": 4094,
+      "sha": "ea6fc2b1c67a06b35b21dbcf9e537e10683cab40",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/estimateCompletion.test.ts"
+    },
+    {
+      "path": "src/test/fixtures/482-tokens.txt",
+      "size": 2126,
+      "sha": "5aad9c8ebec4668a6cb467d4fe95b5af17e91081",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/test/fixtures/482-tokens.txt"
+    },
+    {
+      "path": "README.md",
+      "size": 1470,
+      "sha": "890cdae4be69033de8b0f3101e1ff78dd9393504",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/README.md"
+    },
+    {
+      "path": "src/estimateCompletion.ts",
+      "size": 1130,
+      "sha": "740ef69dbf3b806fbb6e6d3be14b004d3edbfc3e",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/estimateCompletion.ts"
+    },
+    {
+      "path": "LICENSE.md",
+      "size": 1068,
+      "sha": "81ade69eb667260cd51d1122493d7919d2fc77e7",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/LICENSE.md"
+    },
+    {
+      "path": "package.json",
+      "size": 955,
+      "sha": "0182d2949d55080956fcce0fa6caa0615a8c4850",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/package.json"
+    }
+  ],
+  "top_directories": [
+    {
+      "path": "src",
+      "file_count": 7,
+      "total_size": 8480,
+      "avg_size": 1211.4285714285713
+    },
+    {
+      "path": "src/types",
+      "file_count": 6,
+      "total_size": 1461,
+      "avg_size": 243.5
+    },
+    {
+      "path": "src/test/fixtures",
+      "file_count": 3,
+      "total_size": 52995,
+      "avg_size": 17665.0
+    },
+    {
+      "path": "src/utils",
+      "file_count": 2,
+      "total_size": 899,
+      "avg_size": 449.5
+    },
+    {
+      "path": "src/declarations",
+      "file_count": 1,
+      "total_size": 98,
+      "avg_size": 98.0
+    }
+  ],
+  "all_files": [
+    {
+      "path": ".gitignore",
+      "size": 17,
+      "sha": "db4c6d9b6797601f6677263cb201a46743f9d545",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/.gitignore"
+    },
+    {
+      "path": ".npmignore",
+      "size": 3,
+      "sha": "e8310385c56dc4bbe379f43400f3181f6a59f260",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/.npmignore"
+    },
+    {
+      "path": "LICENSE.md",
+      "size": 1068,
+      "sha": "81ade69eb667260cd51d1122493d7919d2fc77e7",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/LICENSE.md"
+    },
+    {
+      "path": "README.md",
+      "size": 1470,
+      "sha": "890cdae4be69033de8b0f3101e1ff78dd9393504",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/README.md"
+    },
+    {
+      "path": "jest.config.js",
+      "size": 123,
+      "sha": "b413e106db66e6c7150b76da0fc542e797db4034",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/jest.config.js"
+    },
+    {
+      "path": "package.json",
+      "size": 955,
+      "sha": "0182d2949d55080956fcce0fa6caa0615a8c4850",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/package.json"
+    },
+    {
+      "path": "src/costPerToken.ts",
+      "size": 481,
+      "sha": "b0652ee73e0e79bf2418c078246cabfc85ddf366",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/costPerToken.ts"
+    },
+    {
+      "path": "src/declarations/gpt-3-encoder.ts",
+      "size": 98,
+      "sha": "c628501bea3fcab09477d582ab9329a244e2f5a0",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/declarations/gpt-3-encoder.ts"
+    },
+    {
+      "path": "src/estimateCompletion.test.ts",
+      "size": 4094,
+      "sha": "ea6fc2b1c67a06b35b21dbcf9e537e10683cab40",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/estimateCompletion.test.ts"
+    },
+    {
+      "path": "src/estimateCompletion.ts",
+      "size": 1130,
+      "sha": "740ef69dbf3b806fbb6e6d3be14b004d3edbfc3e",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/estimateCompletion.ts"
+    },
+    {
+      "path": "src/estimateEmbedding.test.ts",
+      "size": 834,
+      "sha": "239ba93c6c70bc2f742b4ce007e1acb3a514167d",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/estimateEmbedding.test.ts"
+    },
+    {
+      "path": "src/estimateEmbedding.ts",
+      "size": 868,
+      "sha": "d56dfbe44ab06eda59c067a0d2ceebc3de5d7deb",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/estimateEmbedding.ts"
+    },
+    {
+      "path": "src/index.test.ts",
+      "size": 346,
+      "sha": "a90855b8b0ca07282992d2568bf38e43a2055bbe",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/index.test.ts"
+    },
+    {
+      "path": "src/index.ts",
+      "size": 727,
+      "sha": "ad6315a3a3983e17ca1f66a100d47ec00755b706",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/index.ts"
+    },
+    {
+      "path": "src/test/fixtures/3113-tokens.txt",
+      "size": 12381,
+      "sha": "c675e9de2a40050525940864f1a308fea2cdabe3",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/test/fixtures/3113-tokens.txt"
+    },
+    {
+      "path": "src/test/fixtures/482-tokens.txt",
+      "size": 2126,
+      "sha": "5aad9c8ebec4668a6cb467d4fe95b5af17e91081",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/test/fixtures/482-tokens.txt"
+    },
+    {
+      "path": "src/test/fixtures/8116-tokens.txt",
+      "size": 38488,
+      "sha": "74fc4b11ea7030220518d23577cc17e2bd03caca",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/test/fixtures/8116-tokens.txt"
+    },
+    {
+      "path": "src/types/CostEstimatorConfig.ts",
+      "size": 549,
+      "sha": "fd384b1aff7c55ab86acbeb747dff725fd4abf9b",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/types/CostEstimatorConfig.ts"
+    },
+    {
+      "path": "src/types/CostEstimatorResult.ts",
+      "size": 438,
+      "sha": "1de09c0a1314f0df11a1cad81b6043279ba6f93b",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/types/CostEstimatorResult.ts"
+    },
+    {
+      "path": "src/types/CostPerToken.ts",
+      "size": 158,
+      "sha": "02fc3608cc2af16c5ed6b69fb1a1a1ac3d0e8a93",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/types/CostPerToken.ts"
+    },
+    {
+      "path": "src/types/Model.ts",
+      "size": 181,
+      "sha": "f07a5be0d98356f019f3ddd170200baff13f4566",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/types/Model.ts"
+    },
+    {
+      "path": "src/types/Operation.ts",
+      "size": 82,
+      "sha": "31074cf88d71f3bc838a4a0377eff1240635be49",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/types/Operation.ts"
+    },
+    {
+      "path": "src/types/index.ts",
+      "size": 53,
+      "sha": "73f3f969f9bfd910389630dca7a54ee345f5bdb0",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/types/index.ts"
+    },
+    {
+      "path": "src/utils/calculateCompletionTokens.test.ts",
+      "size": 645,
+      "sha": "d55941d362b23461100f8ce262d795b1ea5e5e97",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/utils/calculateCompletionTokens.test.ts"
+    },
+    {
+      "path": "src/utils/calculateCompletionTokens.ts",
+      "size": 254,
+      "sha": "98f6b6dcd4bb59e741a5bda185bd0ec3b226e736",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/src/utils/calculateCompletionTokens.ts"
+    },
+    {
+      "path": "tsconfig.build.json",
+      "size": 70,
+      "sha": "0a11719fef16fc028c563caa2587165d34a7291e",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/tsconfig.build.json"
+    },
+    {
+      "path": "tsconfig.json",
+      "size": 11091,
+      "sha": "3103be53d89f7c9b0b5c36121b50fd0cd97229e7",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/tsconfig.json"
+    },
+    {
+      "path": "yarn.lock",
+      "size": 99645,
+      "sha": "652744ed132a4bd0f3d993d0c45b3c5a621714f4",
+      "download_url": "https://raw.githubusercontent.com/Oneirocom/ai-api-cost-estimator/None/yarn.lock"
+    }
+  ],
+  "all_directories": [
+    "src",
+    "src/declarations",
+    "src/test",
+    "src/test/fixtures",
+    "src/types",
+    "src/utils"
+  ],
+  "repository_info": {
+    "owner": "Oneirocom",
+    "repo": "ai-api-cost-estimator",
+    "branch": null,
+    "repo_url": "https://github.com/Oneirocom/ai-api-cost-estimator"
+  }
+}

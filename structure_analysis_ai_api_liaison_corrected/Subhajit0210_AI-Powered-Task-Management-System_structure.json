@@ -1,0 +1,199 @@
+{
+  "summary": {
+    "total_files": 18,
+    "total_directories": 0,
+    "total_size_bytes": 2365072,
+    "total_size_mb": 2.26,
+    "average_file_size": 131392.89
+  },
+  "file_types": {
+    ".py": 5,
+    ".pkl": 4,
+    ".csv": 3,
+    ".md": 2,
+    "[no extension]": 1,
+    ".pptx": 1,
+    ".txt": 1,
+    ".ipynb": 1
+  },
+  "largest_files": [
+    {
+      "path": "priority_predictor.pkl",
+      "size": 676046,
+      "sha": "e196bc31c86caf999d3931723d258ed7ce05088e",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/priority_predictor.pkl"
+    },
+    {
+      "path": "task_classifier.pkl",
+      "size": 572446,
+      "sha": "9aa8e297ef6d4b2f604c12267d267e76a103cedd",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/task_classifier.pkl"
+    },
+    {
+      "path": "AI-Powered Task management system (1).pptx",
+      "size": 534681,
+      "sha": "9101864db36744e1c116021565042b7b8523aaa1",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/AI-Powered Task management system (1).pptx"
+    },
+    {
+      "path": "cleaned_jira_dataset.csv",
+      "size": 168314,
+      "sha": "1c7963ecc18f88e541c0844314d8d12875ef9c02",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/cleaned_jira_dataset.csv"
+    },
+    {
+      "path": "jira_dataset.csv",
+      "size": 166172,
+      "sha": "cedc53225ab1599dc67e9057656208c26ef239fc",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/jira_dataset.csv"
+    },
+    {
+      "path": "streamlit_app.py",
+      "size": 83520,
+      "sha": "d200a9def666404632b2c1fab5f31a24c689eb41",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/streamlit_app.py"
+    },
+    {
+      "path": "priority_tfidf_vectorizer.pkl",
+      "size": 60164,
+      "sha": "354836a34e51a93d537836e285629024e3a69301",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/priority_tfidf_vectorizer.pkl"
+    },
+    {
+      "path": "tfidf_vectorizer.pkl",
+      "size": 60164,
+      "sha": "354836a34e51a93d537836e285629024e3a69301",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/tfidf_vectorizer.pkl"
+    },
+    {
+      "path": "task_managment_project.ipynb",
+      "size": 20078,
+      "sha": "b74a9b40ba6770276bc171a770445d4ebf6c15ba",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/task_managment_project.ipynb"
+    },
+    {
+      "path": "README.md",
+      "size": 8996,
+      "sha": "9384927f7aabe2bffc6efc7d2ee7d240d34fb183",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/README.md"
+    }
+  ],
+  "top_directories": [],
+  "all_files": [
+    {
+      "path": ".gitignore",
+      "size": 841,
+      "sha": "9501d2afc39933e74c3f54bceb85701bbd8203f5",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/.gitignore"
+    },
+    {
+      "path": "AI-Powered Task management system (1).pptx",
+      "size": 534681,
+      "sha": "9101864db36744e1c116021565042b7b8523aaa1",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/AI-Powered Task management system (1).pptx"
+    },
+    {
+      "path": "README.md",
+      "size": 8996,
+      "sha": "9384927f7aabe2bffc6efc7d2ee7d240d34fb183",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/README.md"
+    },
+    {
+      "path": "SETUP.md",
+      "size": 5061,
+      "sha": "7a924c58a1d917bfb8650adab124f4d7f8ff2844",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/SETUP.md"
+    },
+    {
+      "path": "cleaned_jira_dataset.csv",
+      "size": 168314,
+      "sha": "1c7963ecc18f88e541c0844314d8d12875ef9c02",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/cleaned_jira_dataset.csv"
+    },
+    {
+      "path": "jira_dataset.csv",
+      "size": 166172,
+      "sha": "cedc53225ab1599dc67e9057656208c26ef239fc",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/jira_dataset.csv"
+    },
+    {
+      "path": "new_tasks.csv",
+      "size": 436,
+      "sha": "21e023c674fe5d67f8899f58ec07d78d03e0559d",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/new_tasks.csv"
+    },
+    {
+      "path": "priority_predictor.pkl",
+      "size": 676046,
+      "sha": "e196bc31c86caf999d3931723d258ed7ce05088e",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/priority_predictor.pkl"
+    },
+    {
+      "path": "priority_tfidf_vectorizer.pkl",
+      "size": 60164,
+      "sha": "354836a34e51a93d537836e285629024e3a69301",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/priority_tfidf_vectorizer.pkl"
+    },
+    {
+      "path": "requirements.txt",
+      "size": 428,
+      "sha": "d5a5a4bb6aab9764e7a00721ad6ae56eb092e101",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/requirements.txt"
+    },
+    {
+      "path": "streamlit_app.py",
+      "size": 83520,
+      "sha": "d200a9def666404632b2c1fab5f31a24c689eb41",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/streamlit_app.py"
+    },
+    {
+      "path": "task_classifier.pkl",
+      "size": 572446,
+      "sha": "9aa8e297ef6d4b2f604c12267d267e76a103cedd",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/task_classifier.pkl"
+    },
+    {
+      "path": "task_managment_project.ipynb",
+      "size": 20078,
+      "sha": "b74a9b40ba6770276bc171a770445d4ebf6c15ba",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/task_managment_project.ipynb"
+    },
+    {
+      "path": "tfidf_vectorizer.pkl",
+      "size": 60164,
+      "sha": "354836a34e51a93d537836e285629024e3a69301",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/tfidf_vectorizer.pkl"
+    },
+    {
+      "path": "train_model.py",
+      "size": 3572,
+      "sha": "5fbcc9e7517ee853d0bf54dd052b012d22bf43c9",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/train_model.py"
+    },
+    {
+      "path": "train_priority_model.py",
+      "size": 2974,
+      "sha": "10246683204e9114542086561f2854a47f62ea53",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/train_priority_model.py"
+    },
+    {
+      "path": "train_priority_tfidf_vectorizer.py",
+      "size": 603,
+      "sha": "c05932d1ce90717a7663df9d368f9e65fa049513",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/train_priority_tfidf_vectorizer.py"
+    },
+    {
+      "path": "train_tfidf_vectorizer.py",
+      "size": 576,
+      "sha": "3ab851d20f2c61b13b50e5e26c5c549cf88015f2",
+      "download_url": "https://raw.githubusercontent.com/Subhajit0210/AI-Powered-Task-Management-System/None/train_tfidf_vectorizer.py"
+    }
+  ],
+  "all_directories": [],
+  "repository_info": {
+    "owner": "Subhajit0210",
+    "repo": "AI-Powered-Task-Management-System",
+    "branch": null,
+    "repo_url": "https://github.com/Subhajit0210/AI-Powered-Task-Management-System"
+  }
+}
