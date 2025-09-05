@@ -1,0 +1,32 @@
+[
+  {
+    "repo_url": "microsoft/vscode",
+    "profile": "config",
+    "output_dir": "./ai-api-liaison-auto/vscode",
+    "branch": null
+  },
+  {
+    "repo_url": "fastapi/fastapi",
+    "profile": "api",
+    "output_dir": "./ai-api-liaison-auto/fastapi",
+    "branch": null
+  },
+  {
+    "repo_url": "openai/openai-python",
+    "profile": "api",
+    "output_dir": "./ai-api-liaison-auto/openai-python",
+    "branch": null
+  },
+  {
+    "repo_url": "anthropic/anthropic-sdk-python",
+    "profile": "api",
+    "output_dir": "./ai-api-liaison-auto/anthropic",
+    "branch": null
+  },
+  {
+    "repo_url": "langchain-ai/langchain",
+    "profile": "api",
+    "output_dir": "./ai-api-liaison-auto/langchain",
+    "branch": null
+  }
+]
