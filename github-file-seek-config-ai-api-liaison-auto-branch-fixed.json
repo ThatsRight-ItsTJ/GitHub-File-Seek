@@ -1,0 +1,89 @@
+[
+  {
+    "repo_url": "zukijourney/api-oss",
+    "output_dir": "./ai-api-liaison-auto/core",
+    "branch": null,
+    "search_criteria": {
+      "patterns": ["api/app/core/db/managers/provider_manager.py"]
+    }
+  },
+  {
+    "repo_url": "zukijourney/api-oss", 
+    "output_dir": "./ai-api-liaison-auto/core",
+    "branch": null,
+    "search_criteria": {
+      "patterns": ["api/app/api/dependencies.py", "api/app/api/routes/route.py"]
+    }
+  },
+  {
+    "repo_url": "austind/retryhttp",
+    "output_dir": "./ai-api-liaison-auto/resilience", 
+    "branch": null,
+    "search_criteria": {
+      "patterns": ["retryhttp/_retry.py", "retryhttp/_wait.py", "retryhttp/_utils.py", "retryhttp/_constants.py", "retryhttp/_types.py"]
+    }
+  },
+  {
+    "repo_url": "guilatrova/gracy",
+    "output_dir": "./ai-api-liaison-auto/resilience",
+    "branch": null, 
+    "search_criteria": {
+      "patterns": ["src/gracy/_core.py", "src/gracy/common_hooks.py", "src/gracy/replays/_wrappers.py", "src/gracy/_loggers.py", "src/gracy/_reports/_builders.py", "src/gracy/_reports/_models.py", "src/gracy/_reports/_printers.py", "src/gracy/_configs.py", "src/gracy/_validators.py", "src/gracy/_general.py", "src/gracy/_types.py"]
+    }
+  },
+  {
+    "repo_url": "scikit-learn-contrib/DESlib",
+    "output_dir": "./ai-api-liaison-auto/selection",
+    "branch": null,
+    "search_criteria": {
+      "patterns": ["deslib/des/*.py", "deslib/dcs/*.py", "deslib/util/*.py", "deslib/static/*.py", "deslib/base*.py"],
+      "exclude_patterns": ["test_*", "*_test.py", "deslib/tests/*", "__pycache__/*"]
+    }
+  },
+  {
+    "repo_url": "michaelachmann/gpt-cost-estimator",
+    "output_dir": "./ai-api-liaison-auto/cost",
+    "branch": null,
+    "search_criteria": {
+      "extensions": [".py"],
+      "exclude_patterns": ["test_*", "*_test.py", "tests/*", "__pycache__/*"]
+    }
+  },
+  {
+    "repo_url": "Oneirocom/ai-api-cost-estimator", 
+    "output_dir": "./ai-api-liaison-auto/cost",
+    "branch": null,
+    "search_criteria": {
+      "patterns": ["src/*.py", "*.py"],
+      "exclude_patterns": ["test_*", "*_test.py", "tests/*", "__pycache__/*"]
+    }
+  },
+  {
+    "repo_url": "Portkey-AI/gateway",
+    "output_dir": "./ai-api-liaison-auto/api",
+    "branch": null,
+    "search_criteria": {
+      "extensions": [".ts", ".js"],
+      "patterns": ["src/*.ts", "src/*.js"],
+      "exclude_patterns": ["test_*", "*_test.*", "tests/*", "node_modules/*", "dist/*"]
+    }
+  },
+  {
+    "repo_url": "pikho/ppromptor",
+    "output_dir": "./ai-api-liaison-auto/optimization",
+    "branch": null,
+    "search_criteria": {
+      "patterns": ["ppromptor/*.py", "src/*.py"],
+      "exclude_patterns": ["test_*", "*_test.py", "tests/*", "__pycache__/*"]
+    }
+  },
+  {
+    "repo_url": "austin-starks/Promptimizer",
+    "output_dir": "./ai-api-liaison-auto/optimization", 
+    "branch": null,
+    "search_criteria": {
+      "patterns": ["promptimizer/*.py", "src/*.py"],
+      "exclude_patterns": ["test_*", "*_test.py", "tests/*", "__pycache__/*"]
+    }
+  }
+]
