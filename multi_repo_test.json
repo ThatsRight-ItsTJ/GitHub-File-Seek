@@ -2,35 +2,63 @@
   {
     "repo_url": "microsoft/vscode",
     "search_criteria": {
-      "extensions": [".json", ".yml", ".yaml"],
-      "exclude_patterns": ["node_modules/*", "test*"]
+      "specific_files": ["README.md", "package.json", "tsconfig.json", ".gitignore", "LICENSE.txt"]
     },
     "branch": "main",
-    "output_subdir": "vscode_configs"
+    "output_subdir": "vscode_individual_files"
+  },
+  {
+    "repo_url": "fastapi/fastapi",
+    "search_criteria": {
+      "specific_files": ["README.md", "pyproject.toml", "requirements.txt", "fastapi/__init__.py", "fastapi/main.py"]
+    },
+    "output_subdir": "fastapi_individual_files"
   },
   {
     "repo_url": "facebook/react",
     "search_criteria": {
-      "extensions": [".js", ".jsx"],
-      "path_patterns": ["src/*"],
-      "exclude_patterns": ["*.test.*", "*.spec.*"]
+      "specific_files": ["README.md", "package.json", "babel.config.js", "src/index.js", "LICENSE"]
     },
-    "output_subdir": "react_frontend"
+    "branch": "main",
+    "output_subdir": "react_individual_files"
   },
   {
-    "repo_url": "docker/compose",
+    "repo_url": "django/django",
     "search_criteria": {
-      "name_patterns": ["docker*", "*.dockerfile", "*compose*"],
-      "exclude_patterns": ["test*"]
+      "specific_files": ["README.rst", "setup.py", "setup.cfg", "django/__init__.py", "requirements/py3.txt"]
     },
-    "output_subdir": "docker_files"
+    "branch": "main",
+    "output_subdir": "django_individual_files"
   },
   {
     "repo_url": "kubernetes/kubernetes",
     "search_criteria": {
-      "extensions": [".md"],
-      "name_patterns": ["README*", "CHANGELOG*"]
+      "specific_files": ["README.md", "go.mod", "go.sum", "Dockerfile", "CONTRIBUTING.md", "LICENSE"]
     },
-    "output_subdir": "k8s_docs"
+    "branch": "master",
+    "output_subdir": "kubernetes_individual_files"
+  },
+  {
+    "repo_url": "docker/compose",
+    "search_criteria": {
+      "specific_files": ["README.md", "go.mod", "Dockerfile", "docker-bake.hcl", "compose.yaml"]
+    },
+    "output_subdir": "docker_compose_individual_files"
+  },
+  {
+    "repo_url": "tensorflow/tensorflow",
+    "search_criteria": {
+      "specific_files": ["README.md", "setup.py", "requirements.txt", "tensorflow/__init__.py", "WORKSPACE"]
+    },
+    "branch": "master",
+    "output_subdir": "tensorflow_individual_files"
+  },
+  {
+    "repo_url": "pytorch/pytorch",
+    "search_criteria": {
+      "specific_files": ["README.md", "setup.py", "requirements.txt", "torch/__init__.py", ".gitmodules"]
+    },
+    "branch": "main",
+    "output_subdir": "pytorch_individual_files"
   }
 ]
