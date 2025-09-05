@@ -1,19 +1,19 @@
 # GitHub File Hunter 🔍
 
-An enhanced version of DownGit that intelligently finds and downloads specific files from GitHub repositories without cloning the entire repository.
+A powerful Python tool for hunting and downloading specific files from GitHub repositories with advanced search capabilities, batch processing, and individual file downloads.
 
-## Features
+## 🚀 Features
 
-- **Smart File Discovery**: Use GitHub API to traverse repository trees and find files matching your criteria
-- **Pattern-Based Searching**: Support for wildcards, regex patterns, file extensions, and custom filters
-- **Pre-built Profiles**: 14 ready-to-use search profiles for common development scenarios
-- **Batch Processing**: Process multiple repositories from configuration files
-- **Concurrent Downloads**: Fast, rate-limited downloads with progress tracking
-- **Multiple Export Formats**: Save results as JSON, CSV, or TXT
-- **Web Interface**: User-friendly Flask dashboard for non-technical users
-- **Flexible Output**: Preview-only mode or direct downloads to organized folders
+- **Individual File Downloads**: Download specific files by exact path from any repository
+- **Pattern-Based Search**: Hunt files using wildcards, extensions, and custom patterns
+- **Batch Processing**: Process multiple repositories and files in one operation
+- **Pre-built Profiles**: 14 ready-to-use search profiles for common file types
+- **Web Interface**: User-friendly Flask dashboard for easy interaction
+- **Flexible Configuration**: JSON and CSV configuration support
+- **Smart Filtering**: Advanced filtering by file size, type, and content
+- **Rate Limiting**: Built-in GitHub API rate limit handling
 
-## Installation
+## 📦 Installation
 
 ```bash
 # Clone the repository
@@ -22,379 +22,392 @@ cd GitHub-File-Seek
 
 # Install dependencies
 pip install -r requirements.txt
+
+# Set up your GitHub token (optional but recommended)
+export GITHUB_TOKEN="your_github_token_here"
 ```
 
-## Quick Start
+## 🎯 Individual File Downloads
 
-### Basic Usage
+### Basic Syntax
+Download specific files by providing their exact paths:
 
 ```bash
-# Find all Python files in a repository
-python github_file_hunter.py microsoft/vscode --ext py --preview-only
-
-# Download configuration files using a pre-built profile
-python github_file_hunter.py facebook/react --profile config --download
-
-# Search for files matching a pattern
-python github_file_hunter.py google/tensorflow --pattern "*.dockerfile" --download
+python github_file_hunter.py <owner/repo> <file1> [file2] [file3] ...
 ```
 
-### Using Pre-built Profiles
+### Examples
+
+**Download a single file:**
+```bash
+python github_file_hunter.py microsoft/vscode README.md
+```
+
+**Download multiple specific files:**
+```bash
+python github_file_hunter.py microsoft/vscode README.md package.json src/main.ts
+```
+
+**Download files from different directories:**
+```bash
+python github_file_hunter.py facebook/react README.md packages/react/package.json scripts/build.js
+```
+
+**Download configuration files:**
+```bash
+python github_file_hunter.py nodejs/node package.json .gitignore Dockerfile
+```
+
+### Individual File Download Features
+
+- ✅ **Exact Path Matching**: Specify the complete file path
+- ✅ **Multiple Files**: Download several files in one command
+- ✅ **Cross-Directory**: Files from any directory structure
+- ✅ **Error Handling**: Clear feedback for missing or inaccessible files
+- ✅ **Progress Tracking**: Real-time download progress
+
+## 🔍 Pattern-Based Search
+
+Hunt files using patterns and wildcards:
 
 ```bash
-# Available profiles: config, api, auth, database, docker, ci, docs, tests, frontend, backend, scripts, ml, security, large
+# Find all Python files
+python github_file_hunter.py microsoft/vscode "*.py"
 
-# Find all configuration files
-python github_file_hunter.py owner/repo --profile config --preview-only
+# Find configuration files
+python github_file_hunter.py facebook/react "*.json" "*.yml"
 
-# Download API-related files
-python github_file_hunter.py owner/repo --profile api --download
-
-# Find documentation files
-python github_file_hunter.py owner/repo --profile docs --preview-only
+# Find files in specific directories
+python github_file_hunter.py nodejs/node "src/*.js" "test/*.js"
 ```
 
-## Batch Processing 📦
+## 📊 Batch Processing
 
-The batch processing feature allows you to process multiple repositories at once using configuration files. This is perfect for:
-- Analyzing multiple projects simultaneously
-- Collecting files from related repositories
-- Automated file gathering workflows
-- Research and comparison tasks
+### Including Individual Files in Batch Operations
 
-### Creating Batch Configuration Files
+You can combine individual file downloads with pattern matching in batch configurations.
 
-#### CSV Format
-
-Create a CSV file with repository information:
-
-```csv
-repository,profile,extensions,patterns,max_files,output_folder
-microsoft/vscode,config,,*.json;*.yml,50,vscode_configs
-facebook/react,frontend,js;jsx;ts;tsx,,100,react_frontend
-google/tensorflow,ml,py,,200,tensorflow_ml
-docker/compose,docker,,docker*;*.dockerfile,30,docker_files
-```
-
-**CSV Columns:**
-- `repository`: GitHub repository in format `owner/repo`
-- `profile`: Pre-built profile name (optional)
-- `extensions`: Comma-separated file extensions (optional)
-- `patterns`: Semicolon-separated file patterns (optional)
-- `max_files`: Maximum files to download per repository (optional)
-- `output_folder`: Custom output folder name (optional)
-
-#### JSON Format
-
-Create a JSON file with detailed configuration:
+#### JSON Configuration Format
 
 ```json
 {
   "repositories": [
     {
-      "repository": "microsoft/vscode",
-      "profile": "config",
-      "patterns": ["*.json", "*.yml", "*.yaml"],
-      "max_files": 50,
-      "output_folder": "vscode_configs"
+      "owner": "microsoft",
+      "repo": "vscode",
+      "individual_files": ["README.md", "package.json", "src/main.ts"],
+      "patterns": ["*.py", "*.json"],
+      "max_files": 50
     },
     {
-      "repository": "facebook/react",
-      "extensions": ["js", "jsx", "ts", "tsx"],
-      "exclude_patterns": ["*.test.*", "*.spec.*"],
-      "max_files": 100,
-      "output_folder": "react_source"
-    },
-    {
-      "repository": "google/tensorflow",
-      "profile": "ml",
-      "custom_filters": {
-        "min_size": 1024,
-        "max_size": 1048576
-      },
-      "output_folder": "tensorflow_ml"
+      "owner": "facebook", 
+      "repo": "react",
+      "individual_files": ["README.md", "LICENSE"],
+      "patterns": ["packages/*/package.json"]
     }
   ],
-  "global_settings": {
-    "download": true,
-    "export_format": "json",
-    "concurrent_limit": 5,
-    "rate_limit_delay": 0.1
-  }
+  "output_dir": "downloads",
+  "create_repo_folders": true
 }
 ```
 
-### Running Batch Processing
+#### CSV Configuration Format
+
+```csv
+owner,repo,individual_files,patterns,max_files
+microsoft,vscode,"README.md;package.json;src/main.ts","*.py;*.json",50
+facebook,react,"README.md;LICENSE","packages/*/package.json",25
+nodejs,node,"package.json;.gitignore","src/*.js;test/*.js",30
+```
+
+### Running Batch Operations
 
 ```bash
-# Process repositories from CSV file
-python batch_hunter.py --config repositories.csv
-
-# Process repositories from JSON file
+# Using JSON configuration
 python batch_hunter.py --config batch_config.json
 
-# Preview mode (don't download, just show what would be found)
-python batch_hunter.py --config repositories.csv --preview-only
+# Using CSV configuration  
+python batch_hunter.py --csv repositories.csv
 
-# Custom output directory
-python batch_hunter.py --config batch_config.json --output-dir /path/to/output
-
-# Export results to specific format
-python batch_hunter.py --config repositories.csv --export-format csv
+# Generate example configurations
+python batch_hunter.py --generate-examples
 ```
 
-### Batch Processing Options
-
-```bash
-python batch_hunter.py [OPTIONS]
-
-Options:
-  --config PATH              Configuration file (CSV or JSON) [required]
-  --output-dir PATH          Base output directory [default: ./batch_downloads]
-  --preview-only            Show what would be downloaded without downloading
-  --export-format FORMAT    Export format: json, csv, txt [default: json]
-  --concurrent-limit INT     Max concurrent downloads [default: 5]
-  --rate-limit FLOAT        Delay between requests in seconds [default: 0.1]
-  --verbose                 Enable verbose logging
-  --help                    Show help message
-```
-
-### Example Batch Workflows
-
-#### 1. Configuration Analysis Across Projects
-
-```csv
-repository,profile,max_files,output_folder
-kubernetes/kubernetes,config,100,k8s_configs
-docker/docker,config,50,docker_configs
-hashicorp/terraform,config,75,terraform_configs
-ansible/ansible,config,60,ansible_configs
-```
-
-```bash
-python batch_hunter.py --config config_analysis.csv --export-format json
-```
-
-#### 2. Frontend Framework Comparison
+### Advanced Batch Configuration
 
 ```json
 {
   "repositories": [
     {
-      "repository": "facebook/react",
-      "extensions": ["js", "jsx", "ts", "tsx"],
-      "max_files": 200,
-      "output_folder": "react_source"
-    },
-    {
-      "repository": "vuejs/vue",
-      "extensions": ["js", "ts", "vue"],
-      "max_files": 200,
-      "output_folder": "vue_source"
-    },
-    {
-      "repository": "angular/angular",
-      "extensions": ["ts", "js"],
-      "max_files": 200,
-      "output_folder": "angular_source"
+      "owner": "microsoft",
+      "repo": "vscode", 
+      "individual_files": [
+        "README.md",
+        "package.json", 
+        "src/main.ts",
+        "build/gulpfile.js"
+      ],
+      "patterns": [
+        "*.py",
+        "src/**/*.ts", 
+        "extensions/*/package.json"
+      ],
+      "exclude_patterns": ["node_modules/*", "*.min.js"],
+      "max_files": 100,
+      "max_size_mb": 10
     }
   ],
-  "global_settings": {
-    "download": true,
-    "export_format": "csv"
-  }
+  "output_dir": "batch_downloads",
+  "create_repo_folders": true,
+  "github_token": "optional_token_here"
 }
 ```
 
-#### 3. Security Analysis
+## 🎨 Pre-built Profiles
 
-```csv
-repository,profile,patterns,max_files,output_folder
-owasp/owasp-top-ten,security,*.md;*.yml;*.json,50,owasp_security
-securecodewarrior/secure-code-review,security,,100,secure_review
-microsoft/security-devops-action,security,*.yml;*.yaml;*.json,75,ms_security
-```
-
-### Batch Processing Output
-
-The batch processor creates:
-- **Individual repository folders**: Each repository gets its own subfolder
-- **Consolidated reports**: Summary files with all findings
-- **Export files**: Results in your chosen format (JSON/CSV/TXT)
-- **Progress logs**: Detailed processing information
-
-Example output structure:
-```
-batch_downloads/
-├── microsoft_vscode/          # Repository-specific downloads
-│   ├── package.json
-│   ├── tsconfig.json
-│   └── ...
-├── facebook_react/
-│   ├── package.json
-│   ├── babel.config.js
-│   └── ...
-├── batch_results.json         # Consolidated results
-├── batch_summary.csv          # Processing summary
-└── batch_log.txt             # Detailed processing log
-```
-
-## Command Line Options
-
-### github_file_hunter.py
+Use ready-made search profiles for common scenarios:
 
 ```bash
-python github_file_hunter.py REPOSITORY [OPTIONS]
+# Web development files
+python github_file_hunter.py microsoft/vscode --profile web_dev
 
-Arguments:
-  REPOSITORY                GitHub repository (owner/repo format)
+# Python project files  
+python github_file_hunter.py python/cpython --profile python_dev
 
-Options:
-  --profile PROFILE         Use pre-built search profile
-  --ext EXTENSIONS          File extensions (comma-separated)
-  --pattern PATTERNS        File patterns (supports wildcards)
-  --regex PATTERN           Regular expression pattern
-  --exclude PATTERNS        Exclude patterns
-  --max-files INT           Maximum files to process [default: 100]
-  --download                Download files (default: preview only)
-  --output-dir PATH         Output directory [default: ./downloads]
-  --export-format FORMAT    Export format: json, csv, txt [default: json]
-  --concurrent-limit INT    Max concurrent downloads [default: 10]
-  --rate-limit FLOAT        Delay between requests [default: 0.1]
-  --github-token TOKEN      GitHub API token
-  --verbose                 Enable verbose logging
-  --help                    Show help message
+# Configuration files
+python github_file_hunter.py kubernetes/kubernetes --profile config_files
+
+# Documentation files
+python github_file_hunter.py facebook/react --profile docs
 ```
 
-## Pre-built Profiles
+### Available Profiles
 
-| Profile | Description | File Types |
-|---------|-------------|------------|
-| `config` | Configuration files | .json, .yml, .yaml, .toml, .ini, .cfg, .conf |
-| `api` | API-related files | OpenAPI specs, API docs, endpoint definitions |
-| `auth` | Authentication files | Auth configs, JWT, OAuth, security policies |
-| `database` | Database files | SQL, migrations, database configs |
-| `docker` | Docker files | Dockerfiles, docker-compose, container configs |
-| `ci` | CI/CD files | GitHub Actions, Jenkins, Travis, CircleCI |
-| `docs` | Documentation | README, docs, guides, wikis |
-| `tests` | Test files | Unit tests, integration tests, test configs |
-| `frontend` | Frontend files | HTML, CSS, JS, React, Vue, Angular |
-| `backend` | Backend files | Server code, APIs, microservices |
-| `scripts` | Scripts | Shell, Python, automation scripts |
-| `ml` | Machine Learning | Models, datasets, ML configs, notebooks |
-| `security` | Security files | Security configs, policies, certificates |
-| `large` | Large files | Files over 1MB, binaries, assets |
+1. **web_dev** - HTML, CSS, JS, TS files
+2. **python_dev** - Python source and config files
+3. **config_files** - Configuration and settings files
+4. **docs** - Documentation and README files
+5. **docker_files** - Docker and containerization files
+6. **ci_cd** - CI/CD pipeline files
+7. **mobile_dev** - Mobile development files
+8. **data_science** - Data science and ML files
+9. **security** - Security and authentication files
+10. **api_files** - API and service files
+11. **test_files** - Testing and QA files
+12. **build_files** - Build and deployment files
+13. **license_legal** - License and legal files
+14. **readme_docs** - README and documentation files
 
-## Web Interface
+## 🌐 Web Interface
 
-Launch the web dashboard for a user-friendly experience:
+Launch the web dashboard for easy file hunting:
 
 ```bash
 python web_interface.py
 ```
 
-Then open http://localhost:5000 in your browser.
+Then open http://localhost:5000 in your browser for a user-friendly interface.
 
-Features:
-- Repository browsing with real-time file tree
-- Interactive file filtering and selection
-- Drag-and-drop batch configuration upload
-- Progress tracking for downloads
-- Export results in multiple formats
+## 📋 Command Line Options
 
-## Advanced Usage
-
-### Custom Filters
-
+### Individual File Downloads
 ```bash
-# Find Python files larger than 10KB
-python github_file_hunter.py owner/repo --ext py --min-size 10240
-
-# Find recently modified files (last 30 days)
-python github_file_hunter.py owner/repo --modified-since 30
-
-# Exclude test files
-python github_file_hunter.py owner/repo --ext js --exclude "*.test.*,*.spec.*"
+python github_file_hunter.py <owner/repo> <file1> [file2] [file3] ...
+  --token TOKEN          GitHub personal access token
+  --output-dir DIR       Output directory (default: downloads)
+  --create-folders       Create repository folders
+  --verbose              Verbose output
 ```
 
-### Using GitHub Token
-
-For better rate limits and private repository access:
-
+### Pattern-Based Search
 ```bash
-export GITHUB_TOKEN="your_token_here"
-python github_file_hunter.py owner/private-repo --download
+python github_file_hunter.py <owner/repo> <pattern1> [pattern2] ...
+  --profile PROFILE      Use pre-built search profile
+  --max-files N          Maximum files to download (default: 100)
+  --max-size-mb N        Maximum file size in MB (default: 10)
+  --exclude PATTERN      Exclude files matching pattern
+  --token TOKEN          GitHub personal access token
+  --output-dir DIR       Output directory
+  --create-folders       Create repository folders
+  --list-only            List files without downloading
+  --verbose              Verbose output
 ```
 
-### Export Formats
-
+### Batch Processing
 ```bash
-# Export as CSV
-python github_file_hunter.py owner/repo --export-format csv
-
-# Export as plain text
-python github_file_hunter.py owner/repo --export-format txt
-
-# Export as JSON (default)
-python github_file_hunter.py owner/repo --export-format json
+python batch_hunter.py
+  --config FILE          JSON configuration file
+  --csv FILE            CSV configuration file  
+  --generate-examples    Generate example configuration files
+  --verbose             Verbose output
 ```
 
-## Examples
+## 🔧 Configuration Examples
 
-### Find Configuration Files
-```bash
-python github_file_hunter.py kubernetes/kubernetes --profile config --max-files 50 --download
+### Simple Individual Files Config
+```json
+{
+  "repositories": [
+    {
+      "owner": "microsoft",
+      "repo": "vscode",
+      "individual_files": ["README.md", "package.json"]
+    }
+  ]
+}
 ```
 
-### Download Frontend Assets
-```bash
-python github_file_hunter.py facebook/react --profile frontend --exclude "*.test.*" --download
+### Mixed Individual Files and Patterns
+```json
+{
+  "repositories": [
+    {
+      "owner": "facebook", 
+      "repo": "react",
+      "individual_files": ["README.md", "LICENSE", "CHANGELOG.md"],
+      "patterns": ["packages/*/package.json", "scripts/*.js"],
+      "max_files": 25
+    }
+  ]
+}
 ```
 
-### Security Audit
-```bash
-python github_file_hunter.py owner/repo --profile security --export-format csv --preview-only
+### Complex Multi-Repository Config
+```json
+{
+  "repositories": [
+    {
+      "owner": "microsoft",
+      "repo": "vscode",
+      "individual_files": ["README.md", "package.json", "src/main.ts"],
+      "patterns": ["*.py", "src/**/*.ts"],
+      "exclude_patterns": ["node_modules/*"],
+      "max_files": 50
+    },
+    {
+      "owner": "facebook",
+      "repo": "react", 
+      "individual_files": ["README.md", "LICENSE"],
+      "patterns": ["packages/*/package.json"]
+    },
+    {
+      "owner": "nodejs",
+      "repo": "node",
+      "individual_files": ["package.json", ".gitignore", "Dockerfile"],
+      "patterns": ["src/*.js", "test/*.js"],
+      "max_files": 30
+    }
+  ],
+  "output_dir": "multi_repo_downloads",
+  "create_repo_folders": true
+}
 ```
 
-### Custom Pattern Search
+## 📈 Usage Examples
+
+### Download Specific Files from Popular Repositories
+
 ```bash
-python github_file_hunter.py owner/repo --pattern "*.dockerfile,docker-compose*" --download
+# Get core files from VS Code
+python github_file_hunter.py microsoft/vscode README.md package.json src/main.ts
+
+# Get React's main files  
+python github_file_hunter.py facebook/react README.md LICENSE packages/react/package.json
+
+# Get Node.js configuration
+python github_file_hunter.py nodejs/node package.json .gitignore Dockerfile
+
+# Get Kubernetes manifests
+python github_file_hunter.py kubernetes/kubernetes README.md Dockerfile build/build-image/Dockerfile
 ```
 
-## Troubleshooting
+### Batch Download with Individual Files
 
-### Rate Limiting
-If you encounter rate limiting:
-- Use a GitHub token: `export GITHUB_TOKEN="your_token"`
-- Increase rate limit delay: `--rate-limit 0.5`
-- Reduce concurrent downloads: `--concurrent-limit 3`
+Create `my_config.json`:
+```json
+{
+  "repositories": [
+    {
+      "owner": "microsoft",
+      "repo": "vscode",
+      "individual_files": ["README.md", "package.json", "gulpfile.js"],
+      "patterns": ["src/**/*.ts", "extensions/*/package.json"]
+    },
+    {
+      "owner": "facebook", 
+      "repo": "react",
+      "individual_files": ["README.md", "LICENSE", "CHANGELOG.md"],
+      "patterns": ["packages/*/package.json"]
+    }
+  ],
+  "output_dir": "my_downloads"
+}
+```
 
-### Large Repositories
-For large repositories:
-- Use `--max-files` to limit results
-- Use specific patterns to narrow search
-- Use `--preview-only` first to estimate size
+Run the batch operation:
+```bash
+python batch_hunter.py --config my_config.json
+```
 
-### Memory Issues
-If processing very large files:
-- Reduce `--concurrent-limit`
-- Use smaller `--max-files` values
-- Process in smaller batches
+## 🛠️ Advanced Features
 
-## Contributing
+### Error Handling
+- Graceful handling of missing files
+- Clear error messages for inaccessible repositories
+- Automatic retry for rate-limited requests
+
+### Performance Optimization
+- Concurrent downloads for faster processing
+- Smart caching to avoid duplicate requests
+- Progress bars for long-running operations
+
+### Security
+- Secure token handling
+- Validation of file paths and patterns
+- Protection against directory traversal
+
+## 📝 Output Structure
+
+```
+downloads/
+├── microsoft_vscode/
+│   ├── README.md
+│   ├── package.json
+│   └── src/
+│       └── main.ts
+├── facebook_react/
+│   ├── README.md
+│   ├── LICENSE
+│   └── packages/
+│       └── react/
+│           └── package.json
+└── batch_results.json
+```
+
+## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Acknowledgments
+## 🆘 Support
 
-- Built upon the DownGit concept
-- Uses GitHub API for repository traversal
-- Inspired by the need for selective file downloading from repositories
+- Create an issue for bug reports or feature requests
+- Check existing issues before creating new ones
+- Provide detailed information for better assistance
+
+## 🔗 Related Projects
+
+- [GitHub CLI](https://cli.github.com/) - Official GitHub command line tool
+- [PyGithub](https://github.com/PyGithub/PyGithub) - Python GitHub API library
+- [GitPython](https://github.com/gitpython-developers/GitPython) - Git repository interaction
+
+---
+
+**Happy File Hunting! 🎯**
