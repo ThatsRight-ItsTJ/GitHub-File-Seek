@@ -3,7 +3,7 @@
 GitHub File Hunter - Batch Mode
 
 Process multiple repositories and file patterns from configuration files.
-Supports CSV, JSON input formats for bulk operations.
+Supports CSV, JSON input formats for bulk operations, including individual file downloads.
 """
 
 import asyncio
@@ -73,6 +73,10 @@ class BatchHunter:
                     'search_criteria': {}
                 }
                 
+                # Handle specific files (new feature)
+                if 'specific_files' in row and row['specific_files']:
+                    config['search_criteria']['specific_files'] = row['specific_files'].split(',')
+                
                 # Parse search criteria from CSV columns
                 if 'extensions' in row and row['extensions']:
                     config['search_criteria']['extensions'] = row['extensions'].split(',')
@@ -118,35 +122,47 @@ class BatchHunter:
                 owner, repo, detected_branch = hunter.parse_github_url(repo_url)
                 search_branch = branch or detected_branch
                 
-                # Create search criteria
-                criteria = SearchCriteria()
-                
-                if 'name_patterns' in search_criteria_dict:
-                    criteria.name_patterns = search_criteria_dict['name_patterns']
-                if 'extensions' in search_criteria_dict:
-                    criteria.extensions = search_criteria_dict['extensions']
-                if 'path_patterns' in search_criteria_dict:
-                    criteria.path_patterns = search_criteria_dict['path_patterns']
-                if 'exclude_patterns' in search_criteria_dict:
-                    criteria.exclude_patterns = search_criteria_dict['exclude_patterns']
-                if 'min_size' in search_criteria_dict:
-                    criteria.min_size = search_criteria_dict['min_size']
-                if 'max_size' in search_criteria_dict:
-                    criteria.max_size = search_criteria_dict['max_size']
-                if 'regex_pattern' in search_criteria_dict:
-                    criteria.regex_pattern = search_criteria_dict['regex_pattern']
-                
-                # Get repository tree
-                tree_data = await hunter.get_repository_tree(owner, repo, search_branch)
-                
-                # Search for matches
-                matches = hunter.search_files(tree_data, criteria, owner, repo, search_branch)
-                
                 # Determine output directory
                 if output_subdir:
                     repo_output_dir = os.path.join(base_output_dir, output_subdir)
                 else:
                     repo_output_dir = os.path.join(base_output_dir, f"{owner}_{repo}")
+                
+                matches = []
+                
+                # Handle specific files (individual file downloads)
+                if 'specific_files' in search_criteria_dict:
+                    print(f"📄 Downloading specific files: {search_criteria_dict['specific_files']}")
+                    
+                    for file_path in search_criteria_dict['specific_files']:
+                        file_match = await hunter.get_specific_file(owner, repo, file_path, search_branch)
+                        if file_match:
+                            matches.append(file_match)
+                            print(f"✅ Found: {file_path}")
+                        else:
+                            print(f"❌ Not found: {file_path}")
+                else:
+                    # Create search criteria for pattern matching
+                    criteria = SearchCriteria()
+                    
+                    if 'name_patterns' in search_criteria_dict:
+                        criteria.name_patterns = search_criteria_dict['name_patterns']
+                    if 'extensions' in search_criteria_dict:
+                        criteria.extensions = search_criteria_dict['extensions']
+                    if 'path_patterns' in search_criteria_dict:
+                        criteria.path_patterns = search_criteria_dict['path_patterns']
+                    if 'exclude_patterns' in search_criteria_dict:
+                        criteria.exclude_patterns = search_criteria_dict['exclude_patterns']
+                    if 'min_size' in search_criteria_dict:
+                        criteria.min_size = search_criteria_dict['min_size']
+                    if 'max_size' in search_criteria_dict:
+                        criteria.max_size = search_criteria_dict['max_size']
+                    if 'regex_pattern' in search_criteria_dict:
+                        criteria.regex_pattern = search_criteria_dict['regex_pattern']
+                    
+                    # Get repository tree and search
+                    tree_data = await hunter.get_repository_tree(owner, repo, search_branch)
+                    matches = hunter.search_files(tree_data, criteria, owner, repo, search_branch)
                 
                 # Download files
                 if matches:
@@ -257,15 +273,19 @@ Examples:
 
   # Generate example batch files
   python batch_hunter.py --generate-examples
+
+  # Use specific configuration file
+  python batch_hunter.py --config batch_config.json
         """
     )
     
     parser.add_argument('batch_file', nargs='?', help='Batch configuration file (JSON or CSV)')
+    parser.add_argument('--config', '-c', help='Configuration file (alternative to positional argument)')
     parser.add_argument('--output-dir', '-o', default='./batch_downloads', 
                        help='Output directory for batch downloads')
     parser.add_argument('--token', '-t', help='GitHub personal access token',
                        default=os.getenv('GITHUB_TOKEN'))
-    parser.add_argument('--concurrent', '-c', type=int, default=3,
+    parser.add_argument('--concurrent', type=int, default=3,
                        help='Maximum concurrent repository processing')
     parser.add_argument('--generate-examples', action='store_true',
                        help='Generate example batch configuration files')
@@ -276,18 +296,22 @@ Examples:
         generate_example_files()
         return 0
     
-    if not args.batch_file:
+    # Use --config argument if provided, otherwise use positional argument
+    batch_file = args.config or args.batch_file
+    
+    if not batch_file:
         print("❌ Error: Batch file required")
         print("💡 Use --generate-examples to create example files")
+        print("💡 Usage: python batch_hunter.py <file> or python batch_hunter.py --config <file>")
         return 1
     
-    if not os.path.exists(args.batch_file):
-        print(f"❌ Error: Batch file '{args.batch_file}' not found")
+    if not os.path.exists(batch_file):
+        print(f"❌ Error: Batch file '{batch_file}' not found")
         return 1
     
     try:
         batch_hunter = BatchHunter(args.token, args.concurrent)
-        await batch_hunter.process_batch_file(args.batch_file, args.output_dir)
+        await batch_hunter.process_batch_file(batch_file, args.output_dir)
         return 0
     
     except Exception as e:
@@ -297,8 +321,16 @@ Examples:
 def generate_example_files():
     """Generate example batch configuration files."""
     
-    # JSON example
+    # JSON example with individual files
     json_example = [
+        {
+            "repo_url": "microsoft/vscode",
+            "search_criteria": {
+                "specific_files": ["README.md", "package.json", "tsconfig.json"]
+            },
+            "branch": "main",
+            "output_subdir": "vscode_specific"
+        },
         {
             "repo_url": "microsoft/vscode",
             "search_criteria": {
@@ -322,12 +354,13 @@ def generate_example_files():
     with open('batch_example.json', 'w') as f:
         json.dump(json_example, f, indent=2)
     
-    # CSV example
+    # CSV example with individual files
     csv_example = [
-        ['repo_url', 'extensions', 'name_patterns', 'path_patterns', 'exclude_patterns', 'branch', 'output_subdir'],
-        ['microsoft/vscode', '.py,.js,.ts', '', 'src/*', 'node_modules/*,test*', 'main', 'vscode_source'],
-        ['fastapi/fastapi', '.py', '*api*,*route*', '', '', '', 'fastapi_files'],
-        ['django/django', '.py', '*model*,*view*', 'django/*', 'test*', 'main', 'django_core']
+        ['repo_url', 'specific_files', 'extensions', 'name_patterns', 'path_patterns', 'exclude_patterns', 'branch', 'output_subdir'],
+        ['microsoft/vscode', 'README.md,package.json,tsconfig.json', '', '', '', '', 'main', 'vscode_specific'],
+        ['microsoft/vscode', '', '.py,.js,.ts', '', 'src/*', 'node_modules/*,test*', 'main', 'vscode_source'],
+        ['fastapi/fastapi', '', '.py', '*api*,*route*', '', '', '', 'fastapi_files'],
+        ['django/django', '', '.py', '*model*,*view*', 'django/*', 'test*', 'main', 'django_core']
     ]
     
     with open('batch_example.csv', 'w', newline='') as f:
@@ -339,7 +372,10 @@ def generate_example_files():
     print("   📄 batch_example.csv - CSV format example")
     print("\n💡 Edit these files and run:")
     print("   python batch_hunter.py batch_example.json")
-    print("   python batch_hunter.py batch_example.csv")
+    print("   python batch_hunter.py --config batch_example.csv")
+    print("\n📋 Individual file download examples:")
+    print("   - Use 'specific_files' column in CSV or 'specific_files' array in JSON")
+    print("   - List exact file paths: 'README.md,package.json,src/main.py'")
 
 if __name__ == "__main__":
     exit(asyncio.run(main()))
