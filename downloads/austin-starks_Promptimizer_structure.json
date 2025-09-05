@@ -1,0 +1,1877 @@
+{
+  "summary": {
+    "total_files": 267,
+    "total_directories": 124,
+    "total_size_bytes": 15173063,
+    "total_size_mb": 14.47,
+    "average_file_size": 56827.95
+  },
+  "file_types": {
+    ".txt": 121,
+    ".json": 118,
+    ".ts": 24,
+    "[no extension]": 2,
+    ".md": 1,
+    ".py": 1
+  },
+  "largest_files": [
+    {
+      "path": "src/run/AI Stock Screener/generation_0/population.json",
+      "size": 307176,
+      "sha": "30763940fa676a546cca69938f87fb750585bdad",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_0/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_8/population.json",
+      "size": 295685,
+      "sha": "0946b58e0e8a48d60d01d8c98c0c6c3928f2e0e8",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_8/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_12/population.json",
+      "size": 295574,
+      "sha": "b37773515974e21caec7af5427cc1eff05d06723",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_12/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_13/population.json",
+      "size": 295533,
+      "sha": "5673e91a86548216b1672567f67d000593274d7b",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_13/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_11/population.json",
+      "size": 294950,
+      "sha": "5e445320ac91b035aa3f88d781942921412b0cf3",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_11/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_31/population.json",
+      "size": 293207,
+      "sha": "341082e02256c2e1420c816bafa1c32b07c127d5",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_31/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_32/population.json",
+      "size": 293201,
+      "sha": "e68a5756b83a60da832b2dfb1852992948cfbce3",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_32/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_35/population.json",
+      "size": 293201,
+      "sha": "817dfba22025020b84e639acd167b32e64b7a358",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_35/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_44/population.json",
+      "size": 293201,
+      "sha": "52e5467a7ba9a59aada87b0b0689684a1d71e74a",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_44/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_46/population.json",
+      "size": 293201,
+      "sha": "8c7df52bc8adcb795691432656a68a309450fb11",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_46/population.json"
+    }
+  ],
+  "top_directories": [
+    {
+      "path": "src/services",
+      "file_count": 8,
+      "total_size": 27875,
+      "avg_size": 3484.375
+    },
+    {
+      "path": "src",
+      "file_count": 5,
+      "total_size": 82823,
+      "avg_size": 16564.6
+    },
+    {
+      "path": "src/models/aiChatLog",
+      "file_count": 4,
+      "total_size": 7515,
+      "avg_size": 1878.75
+    },
+    {
+      "path": "src/groundTruths/easy_amazon_gross_profit_margin",
+      "file_count": 3,
+      "total_size": 976,
+      "avg_size": 325.3333333333333
+    },
+    {
+      "path": "src/groundTruths/easy_amazon_latest_eps",
+      "file_count": 3,
+      "total_size": 845,
+      "avg_size": 281.6666666666667
+    },
+    {
+      "path": "src/groundTruths/easy_apple_price_today",
+      "file_count": 3,
+      "total_size": 702,
+      "avg_size": 234.0
+    },
+    {
+      "path": "src/groundTruths/easy_apple_total_liabilities",
+      "file_count": 3,
+      "total_size": 1135,
+      "avg_size": 378.3333333333333
+    },
+    {
+      "path": "src/groundTruths/easy_cisco_latest_eps",
+      "file_count": 3,
+      "total_size": 1144,
+      "avg_size": 381.3333333333333
+    },
+    {
+      "path": "src/groundTruths/easy_facebook_latest_trading_volume",
+      "file_count": 3,
+      "total_size": 816,
+      "avg_size": 272.0
+    },
+    {
+      "path": "src/groundTruths/easy_ford_pe_ratio_ttm",
+      "file_count": 3,
+      "total_size": 701,
+      "avg_size": 233.66666666666666
+    }
+  ],
+  "all_files": [
+    {
+      "path": ".gitignore",
+      "size": 27,
+      "sha": "89657c06def4d6330c1320c4ee7cbc38be6d1267",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/.gitignore"
+    },
+    {
+      "path": "LICENSE",
+      "size": 1311,
+      "sha": "407b81aa78cafde15673fe980d7f2b875f487474",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "size": 8061,
+      "sha": "631c762598b9695d3254d5b2759f1d47990fe454",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/README.md"
+    },
+    {
+      "path": "graph.py",
+      "size": 1862,
+      "sha": "4dafb17b1e516449b164ee93090cf4188acb806d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/graph.py"
+    },
+    {
+      "path": "package-lock.json",
+      "size": 62616,
+      "sha": "a29098f28206f1b61cc21cdd47e3f4a61d716891",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/package-lock.json"
+    },
+    {
+      "path": "package.json",
+      "size": 286,
+      "sha": "c4cb7f739a0e364de64789076d0811616339d91d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/package.json"
+    },
+    {
+      "path": "requirements.txt",
+      "size": 25,
+      "sha": "80016b6518cd6c07c474ff6b244f0706919086bd",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/requirements.txt"
+    },
+    {
+      "path": "src/additionalSystemPrompts.ts",
+      "size": 40074,
+      "sha": "876176603821f97383c5600229b8b6f002179009",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/additionalSystemPrompts.ts"
+    },
+    {
+      "path": "src/groundTruths/easy_amazon_gross_profit_margin/input.txt",
+      "size": 37,
+      "sha": "651d7ee7d94bb477dfec5ee2e6e8da190f598838",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_amazon_gross_profit_margin/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_amazon_gross_profit_margin/output.txt",
+      "size": 819,
+      "sha": "00e93b0b0fb2fb80495e13a501d8c0b6aed3a737",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_amazon_gross_profit_margin/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_amazon_gross_profit_margin/output_result.json",
+      "size": 120,
+      "sha": "0f0fa0ee6e58683e3e31c804c2a9636b808e29c4",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_amazon_gross_profit_margin/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/easy_amazon_latest_eps/input.txt",
+      "size": 49,
+      "sha": "2423005d4f8dcceb0b78970f56ac63b6765ad600",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_amazon_latest_eps/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_amazon_latest_eps/output.txt",
+      "size": 681,
+      "sha": "4e56fd294d5594741d29084fbf5076452c73c86f",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_amazon_latest_eps/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_amazon_latest_eps/output_result.json",
+      "size": 115,
+      "sha": "0dd4be73127c274e14724a1ca333bd6ef929912b",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_amazon_latest_eps/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/easy_apple_price_today/input.txt",
+      "size": 28,
+      "sha": "9aa6a59046d5ef707282911d2b5595ee99837624",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_apple_price_today/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_apple_price_today/output.txt",
+      "size": 534,
+      "sha": "35e7a7b7f042c042e855c11310d221744ed85e92",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_apple_price_today/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_apple_price_today/output_result.json",
+      "size": 140,
+      "sha": "4aac7ab6a46631a0da30a6582ffcc3c04f56de3d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_apple_price_today/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/easy_apple_total_liabilities/input.txt",
+      "size": 39,
+      "sha": "16353ece09bcf5bdd4d5a493db5e3e523022e6c3",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_apple_total_liabilities/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_apple_total_liabilities/output.txt",
+      "size": 938,
+      "sha": "8f3d74501119023e11452dd2c3ee8e726b433622",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_apple_total_liabilities/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_apple_total_liabilities/output_result.json",
+      "size": 158,
+      "sha": "84af6a369fa44fd45b123dde15c030c3077d77c9",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_apple_total_liabilities/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/easy_cisco_latest_eps/input.txt",
+      "size": 42,
+      "sha": "18736f3901979c888b42fa044018478880fb6e2a",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_cisco_latest_eps/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_cisco_latest_eps/output.txt",
+      "size": 905,
+      "sha": "ed433203e9b7f7cd1429f3b8134cadce0e7d07a0",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_cisco_latest_eps/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_cisco_latest_eps/output_result.json",
+      "size": 197,
+      "sha": "992c74324bc410a44330fa3ac521ceb6d1110f94",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_cisco_latest_eps/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/easy_facebook_latest_trading_volume/input.txt",
+      "size": 41,
+      "sha": "41aa30fd2dc50f203da32ddfca4bc1c697f3361d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_facebook_latest_trading_volume/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_facebook_latest_trading_volume/output.txt",
+      "size": 649,
+      "sha": "e7033c0ac80bb1783d4d6d23d8a3b35a8c0d6575",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_facebook_latest_trading_volume/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_facebook_latest_trading_volume/output_result.json",
+      "size": 126,
+      "sha": "5e0b4b9a6f02a69a9fd28da2a7f49dbf53bf02c8",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_facebook_latest_trading_volume/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/easy_ford_pe_ratio_ttm/input.txt",
+      "size": 30,
+      "sha": "39dbc78fbcc390ca9e3b966e8a03f4634252af9a",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_ford_pe_ratio_ttm/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_ford_pe_ratio_ttm/output.txt",
+      "size": 553,
+      "sha": "c33ec6f9295aeb22ba9b3bc5645b2b5d5929c3cf",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_ford_pe_ratio_ttm/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_ford_pe_ratio_ttm/output_result.json",
+      "size": 118,
+      "sha": "5b6a4218c2277f8ef7ee4e7acb1e345be71136f3",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_ford_pe_ratio_ttm/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/easy_google_price_to_book_value/input.txt",
+      "size": 49,
+      "sha": "349d725a04eeb91381b8a9c9bff8b7be1b45a88f",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_google_price_to_book_value/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_google_price_to_book_value/output.txt",
+      "size": 827,
+      "sha": "795e7073da47990e03b972a74057d8b0f8a34b43",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_google_price_to_book_value/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_google_price_to_book_value/output_result.json",
+      "size": 174,
+      "sha": "3e388de4d9e154bf64b12343e22144888552a410",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_google_price_to_book_value/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/easy_google_return_on_assets/input.txt",
+      "size": 34,
+      "sha": "f74a3501549074cc5aee7c1a0ab9c6785263d0e6",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_google_return_on_assets/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_google_return_on_assets/output.txt",
+      "size": 920,
+      "sha": "4995036406236450b144c88a9f76140a1d55e0eb",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_google_return_on_assets/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_google_return_on_assets/output_result.json",
+      "size": 165,
+      "sha": "d9b54d19a2879ac32f7e3b0c5f98ece918174357",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_google_return_on_assets/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/easy_ibm_latest_gross_profit/input.txt",
+      "size": 34,
+      "sha": "1bf018147030ea90b3be08b01e9a59b50f0a008e",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_ibm_latest_gross_profit/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_ibm_latest_gross_profit/output.txt",
+      "size": 882,
+      "sha": "4eb50a887c82fbd91744bb7468e6e0249ffb0d3d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_ibm_latest_gross_profit/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_ibm_latest_gross_profit/output_result.json",
+      "size": 177,
+      "sha": "fdbc5f8e0f66417952a2596ff98f6f94f38cf819",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_ibm_latest_gross_profit/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/easy_intel_net_income/input.txt",
+      "size": 32,
+      "sha": "9d089cefb06f89537151bccbf0beeff0d1b56e7d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_intel_net_income/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_intel_net_income/output.txt",
+      "size": 827,
+      "sha": "f3b1ff03f3acf92a2295e3fb4534e437f1c4cda4",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_intel_net_income/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_intel_net_income/output_result.json",
+      "size": 111,
+      "sha": "310a8a9967101060601046ffa4aef93ebd5d0095",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_intel_net_income/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/easy_intel_total_assets/input.txt",
+      "size": 29,
+      "sha": "3a3293b2a6594dad140fc1f480153fab34f53d71",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_intel_total_assets/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_intel_total_assets/output.txt",
+      "size": 549,
+      "sha": "15f7745150b30e435bb847a3c0429276fc8140c1",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_intel_total_assets/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_intel_total_assets/output_result.json",
+      "size": 128,
+      "sha": "7a3464cb166218f25fd759c3127907cb0bfe50c1",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_intel_total_assets/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/easy_meta_latest_ebitda/input.txt",
+      "size": 29,
+      "sha": "44f01f15015a676eee6c5f6667ad0dc92f53be4d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_meta_latest_ebitda/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_meta_latest_ebitda/output.txt",
+      "size": 888,
+      "sha": "291335c2d795e346db0e94f4ac1535fd145218f2",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_meta_latest_ebitda/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_meta_latest_ebitda/output_result.json",
+      "size": 153,
+      "sha": "cae647c3d5efb1cf70ff8baaa7943497a31b3934",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_meta_latest_ebitda/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/easy_microsoft_free_cash_flow/input.txt",
+      "size": 67,
+      "sha": "2e241867709d835214a296a78c82e3b00fd57ea7",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_microsoft_free_cash_flow/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_microsoft_free_cash_flow/output.txt",
+      "size": 710,
+      "sha": "e37201fc42f7bb97145cbef16bba7e7564682838",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_microsoft_free_cash_flow/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_microsoft_free_cash_flow/output_result.json",
+      "size": 98,
+      "sha": "ec39a9056b9ef6eb31ce28a1cc81441dad28a55f",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_microsoft_free_cash_flow/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/easy_microsoft_net_income/input.txt",
+      "size": 58,
+      "sha": "1fac1ee0cf73468e2dfe93c48391f9680ba2b170",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_microsoft_net_income/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_microsoft_net_income/output.txt",
+      "size": 830,
+      "sha": "57b04793257706c324123d6d2e28a1cc28316dfc",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_microsoft_net_income/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_microsoft_net_income/output_result.json",
+      "size": 94,
+      "sha": "2225e2a0d79b681527fa4600b8b605886c03d188",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_microsoft_net_income/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/easy_netflix_highest_price_today/input.txt",
+      "size": 38,
+      "sha": "c17f61aa0da00c5cf98b34e2f030bf4373dd5d80",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_netflix_highest_price_today/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_netflix_highest_price_today/output.txt",
+      "size": 722,
+      "sha": "112a8b1d6740e08e6d7f66913e47b2f78aa669fe",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_netflix_highest_price_today/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_netflix_highest_price_today/output_result.json",
+      "size": 116,
+      "sha": "94dffd04b9fe3edbd63065ca9ff8f46af5a43dfb",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_netflix_highest_price_today/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/easy_nvidia_latest_revenue/input.txt",
+      "size": 32,
+      "sha": "5496bb3f55b4ee868c973c0eb94706bf5c93ed43",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_nvidia_latest_revenue/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_nvidia_latest_revenue/output.txt",
+      "size": 921,
+      "sha": "61fafc78058b119af5c1f3e6943058c3bb2abbde",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_nvidia_latest_revenue/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_nvidia_latest_revenue/output_result.json",
+      "size": 137,
+      "sha": "49ad3ec0deffdb003510fa71d1abd193eb60cc3b",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_nvidia_latest_revenue/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/easy_nvidia_return_on_assets/input.txt",
+      "size": 47,
+      "sha": "165afba94edf0c2fefbffe2b7dbde163cc6830f4",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_nvidia_return_on_assets/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_nvidia_return_on_assets/output.txt",
+      "size": 571,
+      "sha": "49fa0bd45e0ba6f7904cecf82bac64a575edf4ed",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_nvidia_return_on_assets/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_nvidia_return_on_assets/output_result.json",
+      "size": 126,
+      "sha": "104c746f633233f104d17b9093cb408f3e232780",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_nvidia_return_on_assets/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/easy_tesla_free_cash_flow/input.txt",
+      "size": 31,
+      "sha": "8bcd390e285f690c3d8b3b627069d198288c7254",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_tesla_free_cash_flow/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_tesla_free_cash_flow/output.txt",
+      "size": 913,
+      "sha": "4d1ea9a2799504ca6cf8d2c60e3e6a6742793a4a",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_tesla_free_cash_flow/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_tesla_free_cash_flow/output_result.json",
+      "size": 153,
+      "sha": "cc38f514c6c5b2694f1f58b4aa36f52f454cdc66",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_tesla_free_cash_flow/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/easy_tesla_market_cap/input.txt",
+      "size": 32,
+      "sha": "803b640473cde12ae1564191b6a3d96ff452c7e1",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_tesla_market_cap/input.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_tesla_market_cap/output.txt",
+      "size": 1115,
+      "sha": "4314dfe5e53c748aaf7688cc572e97754dfb1946",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_tesla_market_cap/output.txt"
+    },
+    {
+      "path": "src/groundTruths/easy_tesla_market_cap/output_result.json",
+      "size": 151,
+      "sha": "09c57d26e2c63f499c8306a6d9365707dcd0d5e5",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/easy_tesla_market_cap/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_ai_stocks_highest_fcf/input.txt",
+      "size": 102,
+      "sha": "33b7fe94aa162ed7a428790fdd39eb81944277a2",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_ai_stocks_highest_fcf/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_ai_stocks_highest_fcf/output.txt",
+      "size": 1672,
+      "sha": "5937024127ca5cde8eb58f96611ed34254ce11cf",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_ai_stocks_highest_fcf/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_ai_stocks_highest_fcf/output_result.json",
+      "size": 4017,
+      "sha": "f93523afdba224fec67728aa34b4c79530efbca9",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_ai_stocks_highest_fcf/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_avg_gross_profit_margin_cloud_computing/input.txt",
+      "size": 91,
+      "sha": "fc3ca8cfb21e9f427684508c8f29b2ac29d733b1",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_avg_gross_profit_margin_cloud_computing/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_avg_gross_profit_margin_cloud_computing/output.txt",
+      "size": 2203,
+      "sha": "2c8d601e06487312adca29f8cdc72ab264dc3e92",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_avg_gross_profit_margin_cloud_computing/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_avg_gross_profit_margin_cloud_computing/output_result.json",
+      "size": 2872,
+      "sha": "bbd9dfff7cd2fd47f6f027491e628c9824e8e1f5",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_avg_gross_profit_margin_cloud_computing/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_avg_pe_ratio_healthcare/input.txt",
+      "size": 82,
+      "sha": "fb8b947dda0a4b5dbc006eeb85b233934df801e4",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_avg_pe_ratio_healthcare/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_avg_pe_ratio_healthcare/output.txt",
+      "size": 1423,
+      "sha": "20c39438cf87a504864417ed8c9f42778dcd0571",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_avg_pe_ratio_healthcare/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_avg_pe_ratio_healthcare/output_result.json",
+      "size": 3295,
+      "sha": "18a6747e169c1cf14a022b745e5166821c1c9456",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_avg_pe_ratio_healthcare/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_biotech_highest_eps_q4/input.txt",
+      "size": 97,
+      "sha": "dad9f622ca4173e52e6f97f51de1f8d5c6f9537e",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_biotech_highest_eps_q4/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_biotech_highest_eps_q4/output.txt",
+      "size": 3180,
+      "sha": "31200641450945936cd1dcdc11e46877e6cdab9f",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_biotech_highest_eps_q4/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_biotech_highest_eps_q4/output_result.json",
+      "size": 1582,
+      "sha": "e79fbd991e6b732fcd69e879756b82e5d2e06190",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_biotech_highest_eps_q4/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_biotech_highest_net_income_2021/input.txt",
+      "size": 76,
+      "sha": "0fedb5b43a0ccde68825db12405509f333819e7d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_biotech_highest_net_income_2021/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_biotech_highest_net_income_2021/output.txt",
+      "size": 1452,
+      "sha": "06cbc821a5c3980c0338f1a3f788cf1d7614224d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_biotech_highest_net_income_2021/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_biotech_highest_net_income_2021/output_result.json",
+      "size": 3144,
+      "sha": "7b738f34337ec4798ef7ae7a69d51b1062173497",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_biotech_highest_net_income_2021/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_ev_stocks_highest_volume/input.txt",
+      "size": 98,
+      "sha": "a76c4105188055d66ad81172264bea37181257a3",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_ev_stocks_highest_volume/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_ev_stocks_highest_volume/output.txt",
+      "size": 3066,
+      "sha": "8d7e124ac2ec8e002dc6e5737fa4d4e644cfc04f",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_ev_stocks_highest_volume/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_ev_stocks_highest_volume/output_result.json",
+      "size": 594,
+      "sha": "c92349be835c3aec2d7e7a8954a80d26a643e231",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_ev_stocks_highest_volume/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_highest_eps_200b_market_cap/input.txt",
+      "size": 90,
+      "sha": "b0315eeaff333a25c101c0cea935f96324cf02eb",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_highest_eps_200b_market_cap/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_highest_eps_200b_market_cap/output.txt",
+      "size": 1862,
+      "sha": "e2d65dc71ea78b50c8a7e9f35315ece7f9c09e33",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_highest_eps_200b_market_cap/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_highest_eps_200b_market_cap/output_result.json",
+      "size": 1335,
+      "sha": "60989b393731d619a0839180741790ceef1fc7ab",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_highest_eps_200b_market_cap/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_highest_fcf_tech_2019/input.txt",
+      "size": 63,
+      "sha": "f1c043fe86a8c8fd3bc6959d4ddbd98c5faa0c0c",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_highest_fcf_tech_2019/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_highest_fcf_tech_2019/output.txt",
+      "size": 1411,
+      "sha": "049de68060e9af9a2388d4a8fc5d36584cc6bbc0",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_highest_fcf_tech_2019/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_highest_fcf_tech_2019/output_result.json",
+      "size": 2719,
+      "sha": "e1a7bf0e1e13c5d33b728e5b2c277910056cbccf",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_highest_fcf_tech_2019/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_highest_gross_profit_renewable_energy/input.txt",
+      "size": 88,
+      "sha": "60592284b6c35213dec065f34201cff5b560bbe1",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_highest_gross_profit_renewable_energy/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_highest_gross_profit_renewable_energy/output.txt",
+      "size": 1919,
+      "sha": "be5477af7fd8715474a2813d2fe6d481c58c1c13",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_highest_gross_profit_renewable_energy/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_highest_gross_profit_renewable_energy/output_result.json",
+      "size": 5422,
+      "sha": "1926ecaca575471e50cb16dacb4aae3aebbce836",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_highest_gross_profit_renewable_energy/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_highest_market_cap_ai_2020/input.txt",
+      "size": 86,
+      "sha": "8dcb67d5e7bd1f53b44a55076f9d00840fc5aefc",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_highest_market_cap_ai_2020/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_highest_market_cap_ai_2020/output.txt",
+      "size": 1708,
+      "sha": "2881078277b82bdd3cfffab758c881427956901e",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_highest_market_cap_ai_2020/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_highest_market_cap_ai_2020/output_result.json",
+      "size": 2739,
+      "sha": "6b81de7e83b4ce9a8573597e5ae4cde5f063e65b",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_highest_market_cap_ai_2020/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_highest_ps_ratio_cloud_computing_2020/input.txt",
+      "size": 74,
+      "sha": "fec55c42143fc05cd4b3f51d35cacec40a639980",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_highest_ps_ratio_cloud_computing_2020/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_highest_ps_ratio_cloud_computing_2020/output.txt",
+      "size": 1682,
+      "sha": "85707eeee6f1b9bf0425124d3df640c1e045524d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_highest_ps_ratio_cloud_computing_2020/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_highest_ps_ratio_cloud_computing_2020/output_result.json",
+      "size": 4212,
+      "sha": "3406bcf58732567bdb8d798c431645806f591270",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_highest_ps_ratio_cloud_computing_2020/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_lowest_price_fcf_ratio/input.txt",
+      "size": 123,
+      "sha": "868f97845340050b79790353e3ae6c325756c83a",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_lowest_price_fcf_ratio/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_lowest_price_fcf_ratio/output.txt",
+      "size": 2768,
+      "sha": "4ef798171818be76a61e4421f698ac1570471de0",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_lowest_price_fcf_ratio/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_lowest_price_fcf_ratio/output_result.json",
+      "size": 1948,
+      "sha": "f617ad50cb8ce4a0d208c252e1ffa81d5ee447f4",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_lowest_price_fcf_ratio/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_lowest_price_sales_ratio_ecommerce/input.txt",
+      "size": 103,
+      "sha": "f40bbe74f4603aa4fca8479630e32bdb2c929d0d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_lowest_price_sales_ratio_ecommerce/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_lowest_price_sales_ratio_ecommerce/output.txt",
+      "size": 1775,
+      "sha": "a1d27f159969a4647a40040e36c2390d72f2f019",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_lowest_price_sales_ratio_ecommerce/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_lowest_price_sales_ratio_ecommerce/output_result.json",
+      "size": 968,
+      "sha": "f81e007c370874dab60094931dbb6c388d7d825f",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_lowest_price_sales_ratio_ecommerce/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_semiconductor_highest_net_income/input.txt",
+      "size": 79,
+      "sha": "1346c166d388e9e03410e456c40275974c07c22b",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_semiconductor_highest_net_income/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_semiconductor_highest_net_income/output.txt",
+      "size": 1671,
+      "sha": "99736eec4e5d6fc9082c2aeae9e0763de167f581",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_semiconductor_highest_net_income/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_semiconductor_highest_net_income/output_result.json",
+      "size": 992,
+      "sha": "ea52b2e3771944c3177508b307272c14a615248f",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_semiconductor_highest_net_income/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_tech_stocks_price_book_value/input.txt",
+      "size": 101,
+      "sha": "c49522df564530fcb1a1b08c5ff0e7873f1fcc5a",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_tech_stocks_price_book_value/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_tech_stocks_price_book_value/output.txt",
+      "size": 1744,
+      "sha": "b29c94a1d4cf23bf625930afca6bf3c1ec41bb2c",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_tech_stocks_price_book_value/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_tech_stocks_price_book_value/output_result.json",
+      "size": 4823,
+      "sha": "361f32fff8f5c9d82f3e037f6117084e67bd3f8e",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_tech_stocks_price_book_value/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_top_5_pharma_ebitda_revenue/input.txt",
+      "size": 77,
+      "sha": "3a297e3747fd499dc756d85117e3866fb5a305a2",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_top_5_pharma_ebitda_revenue/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_top_5_pharma_ebitda_revenue/output.txt",
+      "size": 1622,
+      "sha": "fc032fed550962b0959b445707a4aa7f9f809616",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_top_5_pharma_ebitda_revenue/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_top_5_pharma_ebitda_revenue/output_result.json",
+      "size": 902,
+      "sha": "f7c272fd702bccabd6b870f67bb7483f04e7612a",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_top_5_pharma_ebitda_revenue/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_top_5_pharma_market_cap_gross_profit/input.txt",
+      "size": 86,
+      "sha": "f7b6d2f6f444b53c41ccb0efbc64988f854c1c04",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_top_5_pharma_market_cap_gross_profit/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_top_5_pharma_market_cap_gross_profit/output.txt",
+      "size": 1951,
+      "sha": "cf81ac56a983088385ce11b91b207ffe7f324b5a",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_top_5_pharma_market_cap_gross_profit/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_top_5_pharma_market_cap_gross_profit/output_result.json",
+      "size": 649,
+      "sha": "22ce8312e5089857c09a4c49c21cb881fbfb9703",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_top_5_pharma_market_cap_gross_profit/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_top_5_renewable_energy_pe_ratio/input.txt",
+      "size": 91,
+      "sha": "52a4fae6468af5893b6765a67ff5f93d863797fa",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_top_5_renewable_energy_pe_ratio/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_top_5_renewable_energy_pe_ratio/output.txt",
+      "size": 1815,
+      "sha": "4875d3a1de53705580b022fe04107f3da8fec16d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_top_5_renewable_energy_pe_ratio/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_top_5_renewable_energy_pe_ratio/output_result.json",
+      "size": 659,
+      "sha": "7d86775a4c8922cf9b16a4747a26d4556559c914",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_top_5_renewable_energy_pe_ratio/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_top_5_semiconductor_revenue_net_income/input.txt",
+      "size": 80,
+      "sha": "61f75389f7e4d33684a1a6a41f20b6a0428b64ef",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_top_5_semiconductor_revenue_net_income/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_top_5_semiconductor_revenue_net_income/output.txt",
+      "size": 1561,
+      "sha": "1102333a95200068c6d8bd2e68da01d26e741a7a",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_top_5_semiconductor_revenue_net_income/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_top_5_semiconductor_revenue_net_income/output_result.json",
+      "size": 647,
+      "sha": "0b93283d7a1c85e47ce4ccf355b1a9c36bbfe6bb",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_top_5_semiconductor_revenue_net_income/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/hard_top_5_tech_pe_ratio/input.txt",
+      "size": 77,
+      "sha": "14dc88252c3a06e867b9e6e2a59ff023a96f2562",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_top_5_tech_pe_ratio/input.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_top_5_tech_pe_ratio/output.txt",
+      "size": 1664,
+      "sha": "420b0fded704a1cffa1047967e2f86d6a3d0707e",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_top_5_tech_pe_ratio/output.txt"
+    },
+    {
+      "path": "src/groundTruths/hard_top_5_tech_pe_ratio/output_result.json",
+      "size": 997,
+      "sha": "48371b5228cac269b0473a780166f6351e968907",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/hard_top_5_tech_pe_ratio/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_ai_stocks_altman_z_score/input.txt",
+      "size": 47,
+      "sha": "e52e74bd59e07dd179d6846b442992d4adee326e",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_ai_stocks_altman_z_score/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_ai_stocks_altman_z_score/output.txt",
+      "size": 2505,
+      "sha": "04f63e1e90e6fc64c9c28c360b98f7b15047fa0d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_ai_stocks_altman_z_score/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_ai_stocks_altman_z_score/output_result.json",
+      "size": 4118,
+      "sha": "321a92263a35c4c1f2fe3dab3155eeb7fbc0b671",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_ai_stocks_altman_z_score/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_avg_free_cash_flow_top_10_ecommerce/input.txt",
+      "size": 81,
+      "sha": "9ef3cf94fbeee3fcff1e75dded56b0c8ab0ab76b",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_avg_free_cash_flow_top_10_ecommerce/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_avg_free_cash_flow_top_10_ecommerce/output.txt",
+      "size": 3285,
+      "sha": "90ad26c4614962ffeea8afb9f6b0648517b64646",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_avg_free_cash_flow_top_10_ecommerce/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_avg_free_cash_flow_top_10_ecommerce/output_result.json",
+      "size": 2826,
+      "sha": "b914a5dd711f5da7c14f291d37eb53796e894bea",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_avg_free_cash_flow_top_10_ecommerce/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_avg_ps_ratio_cloud_computing/input.txt",
+      "size": 77,
+      "sha": "a97ef3a5df77da3e39f3afcd818f9c4f557831a4",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_avg_ps_ratio_cloud_computing/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_avg_ps_ratio_cloud_computing/output.txt",
+      "size": 1622,
+      "sha": "263b0ebec2f520d8648f68560ca083660519b280",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_avg_ps_ratio_cloud_computing/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_avg_ps_ratio_cloud_computing/output_result.json",
+      "size": 1230,
+      "sha": "db6e80c159701b4f113093fcfa9f281d4fac9bff",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_avg_ps_ratio_cloud_computing/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_avg_revenue_top_25_biotech/input.txt",
+      "size": 79,
+      "sha": "1f63a3472b047ee49ba4f8f563e5e5d8dc01e795",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_avg_revenue_top_25_biotech/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_avg_revenue_top_25_biotech/output.txt",
+      "size": 2078,
+      "sha": "9f148cbb953d76c33f35d962552bee0b1d541f49",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_avg_revenue_top_25_biotech/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_avg_revenue_top_25_biotech/output_result.json",
+      "size": 7307,
+      "sha": "8ced33a118f72062168d7fd39db1cd0df8c57e24",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_avg_revenue_top_25_biotech/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_ev_stocks_gross_profit_margin/input.txt",
+      "size": 53,
+      "sha": "7b772439f1f043230b77224cd943c183a5debc72",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_ev_stocks_gross_profit_margin/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_ev_stocks_gross_profit_margin/output.txt",
+      "size": 2363,
+      "sha": "2d7b57b7aec9b9d3c9186b0814ab6c2e14883306",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_ev_stocks_gross_profit_margin/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_ev_stocks_gross_profit_margin/output_result.json",
+      "size": 3626,
+      "sha": "12cd1a6cf160651d8e241bdd100f33b4c71f899c",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_ev_stocks_gross_profit_margin/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_healthcare_stocks_net_income/input.txt",
+      "size": 77,
+      "sha": "f123eaa94a6b0d169f59638e59f30a9a3f729c56",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_healthcare_stocks_net_income/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_healthcare_stocks_net_income/output.txt",
+      "size": 1631,
+      "sha": "c7bc01b944a4381ab88ab5c33082fac30bfbf712",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_healthcare_stocks_net_income/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_healthcare_stocks_net_income/output_result.json",
+      "size": 3843,
+      "sha": "b9b5b19a3b3ec410a9c2a88ae54203a1bb905061",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_healthcare_stocks_net_income/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_highest_ebitda_pharma/input.txt",
+      "size": 52,
+      "sha": "4bd3e7e6c1b9f94a5f8654dc540fc4c1c0b1a166",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_highest_ebitda_pharma/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_highest_ebitda_pharma/output.txt",
+      "size": 1205,
+      "sha": "223f31726d3c42f9ce5b246ca95f28ed4a0eeb9c",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_highest_ebitda_pharma/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_highest_ebitda_pharma/output_result.json",
+      "size": 2842,
+      "sha": "2f9913454dd5fd63c036eebd8756840815a15d70",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_highest_ebitda_pharma/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_highest_pe_healthcare/input.txt",
+      "size": 65,
+      "sha": "e0b561aaf58d560ca6308c59f8d579152536bcda",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_highest_pe_healthcare/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_highest_pe_healthcare/output.txt",
+      "size": 1342,
+      "sha": "746d18f6b971a7695343684d2374c471781e3a0a",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_highest_pe_healthcare/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_highest_pe_healthcare/output_result.json",
+      "size": 4312,
+      "sha": "be90c1c83b590c1db9d211262ca297b0407add78",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_highest_pe_healthcare/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_semiconductor_gross_profit_margin/input.txt",
+      "size": 64,
+      "sha": "1466bee3c658ae85dbfd8211ae11b6287288d248",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_semiconductor_gross_profit_margin/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_semiconductor_gross_profit_margin/output.txt",
+      "size": 1665,
+      "sha": "11f40dc46c3a90af883afb809faa8de386e7a94b",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_semiconductor_gross_profit_margin/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_semiconductor_gross_profit_margin/output_result.json",
+      "size": 3613,
+      "sha": "3a7c7a235df5170f208b7519a9e84a37d4577515",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_semiconductor_gross_profit_margin/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_semiconductor_stocks_revenue/input.txt",
+      "size": 101,
+      "sha": "053f54cfde605793542f6c5fb3e1e6ebf44de42e",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_semiconductor_stocks_revenue/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_semiconductor_stocks_revenue/output.txt",
+      "size": 1390,
+      "sha": "7477866b6ee5ccf8b5f2b7ec1b816fa8696e4518",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_semiconductor_stocks_revenue/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_semiconductor_stocks_revenue/output_result.json",
+      "size": 4577,
+      "sha": "ec36ef10cc90743df85f15dce764c05031ac94ea",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_semiconductor_stocks_revenue/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_top_10_ai_market_cap/input.txt",
+      "size": 54,
+      "sha": "7161d9e4e1ee9d8d1a1eaa9017d79f316846e3a0",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_10_ai_market_cap/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_top_10_ai_market_cap/output.txt",
+      "size": 1452,
+      "sha": "8dd3fc965be8e5d979198d56dd5eb4a9d16307ae",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_10_ai_market_cap/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_top_10_ai_market_cap/output_result.json",
+      "size": 1568,
+      "sha": "c1151ef7d209afb817eed2bfa663b598f86ad7f8",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_10_ai_market_cap/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_top_10_ai_stocks/input.txt",
+      "size": 56,
+      "sha": "f584bf1810c36ad59baa38a6d4e11b2743ee254b",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_10_ai_stocks/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_top_10_ai_stocks/output.txt",
+      "size": 1829,
+      "sha": "8148e6c6bdbcf024467fcd06f88c30c8764df26a",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_10_ai_stocks/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_top_10_ai_stocks/output_result.json",
+      "size": 1777,
+      "sha": "9ee0e817b5ce4962bb8f7ce01a46f8f9197cb489",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_10_ai_stocks/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_top_10_pharma_ebitda/input.txt",
+      "size": 71,
+      "sha": "bab164b9d1f6356f1edd3537bb754f51e0dfae3f",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_10_pharma_ebitda/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_top_10_pharma_ebitda/output.txt",
+      "size": 1707,
+      "sha": "eebcd30eef48a0d427d046e43903b3fe5157977c",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_10_pharma_ebitda/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_top_10_pharma_ebitda/output_result.json",
+      "size": 2639,
+      "sha": "b078b625e583582843e4dd1eff1f3b94213b711d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_10_pharma_ebitda/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_top_10_tech_pe_ratio/input.txt",
+      "size": 52,
+      "sha": "29876fda41ac15ea2481c6d2fcbcaad5fb738846",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_10_tech_pe_ratio/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_top_10_tech_pe_ratio/output.txt",
+      "size": 1632,
+      "sha": "5c49bdf9ec7af6ddf032c1e76ca90c539444b565",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_10_tech_pe_ratio/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_top_10_tech_pe_ratio/output_result.json",
+      "size": 1731,
+      "sha": "8622f696256e27849239beac835c192049c874e7",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_10_tech_pe_ratio/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_top_10_tech_pfcf_ratio/input.txt",
+      "size": 80,
+      "sha": "cdf5d421b178f05b0dd7fa0dc7ecf0272ce7969d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_10_tech_pfcf_ratio/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_top_10_tech_pfcf_ratio/output.txt",
+      "size": 1345,
+      "sha": "7f79345a6ad1329e6d8124bb5ef6a68537c274e9",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_10_tech_pfcf_ratio/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_top_10_tech_pfcf_ratio/output_result.json",
+      "size": 1701,
+      "sha": "52154fba38ab3447bc596cbf676e8553bc28ee71",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_10_tech_pfcf_ratio/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_top_10_trading_volume/input.txt",
+      "size": 45,
+      "sha": "7db90bdd0fe617db7747af080e30e29f98200948",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_10_trading_volume/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_top_10_trading_volume/output.txt",
+      "size": 983,
+      "sha": "f57bcd1c6bb30cc574ded287792ebb83a0f56f4d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_10_trading_volume/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_top_10_trading_volume/output_result.json",
+      "size": 1239,
+      "sha": "a43b540e5e7ec7986a38c9ce36a6818a6d141eda",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_10_trading_volume/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_top_5_financial_services/input.txt",
+      "size": 75,
+      "sha": "ebb4fa395a5e606ef2973f3ecf3b9e2a1b9ca70f",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_5_financial_services/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_top_5_financial_services/output.txt",
+      "size": 1514,
+      "sha": "46013f10d6b4c400293104103ef1689c78970add",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_5_financial_services/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_top_5_financial_services/output_result.json",
+      "size": 802,
+      "sha": "9569bfaaa4b993d03f76608f562d6080609d57ae",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_5_financial_services/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_top_5_retail_free_cash_flow/input.txt",
+      "size": 54,
+      "sha": "815e96b439c0d0ccfc61d89ddb3491231065c4bb",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_5_retail_free_cash_flow/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_top_5_retail_free_cash_flow/output.txt",
+      "size": 1459,
+      "sha": "35cf454786775473567ba18232b14d1b7f50b7bd",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_5_retail_free_cash_flow/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_top_5_retail_free_cash_flow/output_result.json",
+      "size": 786,
+      "sha": "e9adf75eaf573b635f25c2d7d48bf18caf129bc4",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_5_retail_free_cash_flow/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_top_5_software_total_equity/input.txt",
+      "size": 57,
+      "sha": "4015877787b7e14aa8bc8367ea30100b4ccaaf4f",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_5_software_total_equity/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_top_5_software_total_equity/output.txt",
+      "size": 1562,
+      "sha": "44ac36811d13179a48901d6fc169588dadca5122",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_5_software_total_equity/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_top_5_software_total_equity/output_result.json",
+      "size": 820,
+      "sha": "40af430575d7a091530d01a0b6db8d08eb4e0859",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_top_5_software_total_equity/output_result.json"
+    },
+    {
+      "path": "src/groundTruths/medium_transportation_net_income/input.txt",
+      "size": 87,
+      "sha": "d7d10a85300e7127e69874646435aa9129a7b017",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_transportation_net_income/input.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_transportation_net_income/output.txt",
+      "size": 1142,
+      "sha": "5e13af5618ffa0bfeaf327abc0213eace06d76a8",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_transportation_net_income/output.txt"
+    },
+    {
+      "path": "src/groundTruths/medium_transportation_net_income/output_result.json",
+      "size": 2461,
+      "sha": "677ae34ec06d004c2f37e6e7f05a50be26cdb1d0",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/groundTruths/medium_transportation_net_income/output_result.json"
+    },
+    {
+      "path": "src/inputs.ts",
+      "size": 8388,
+      "sha": "77754cffdffc5533e86e27bc1d3cd3bee9d9ea1d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/inputs.ts"
+    },
+    {
+      "path": "src/main.ts",
+      "size": 6387,
+      "sha": "fe41ac718ae52ae47d1cc733f43158fa47041803",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/main.ts"
+    },
+    {
+      "path": "src/models/aiChatLog/anthropic.ts",
+      "size": 1557,
+      "sha": "72c77da7409277d5698917f85c0893775208f16a",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/models/aiChatLog/anthropic.ts"
+    },
+    {
+      "path": "src/models/aiChatLog/openai.ts",
+      "size": 3234,
+      "sha": "b66182d5b8fb21be73318539a841e0f9d63f984e",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/models/aiChatLog/openai.ts"
+    },
+    {
+      "path": "src/models/aiChatLog/opensource.ts",
+      "size": 2411,
+      "sha": "fc4b8a9df28265b93c684822ae1cc124aa42e91d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/models/aiChatLog/opensource.ts"
+    },
+    {
+      "path": "src/models/aiChatLog/shared.ts",
+      "size": 313,
+      "sha": "bc1807198171b1cb4316b02265d3c298d540b65a",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/models/aiChatLog/shared.ts"
+    },
+    {
+      "path": "src/models/context/index.ts",
+      "size": 2071,
+      "sha": "70c26d4c378277394e3d49d9c6131f4de637bc5d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/models/context/index.ts"
+    },
+    {
+      "path": "src/models/message/index.ts",
+      "size": 141,
+      "sha": "328298c80b0586b54099bf5641a0483d203eb03b",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/models/message/index.ts"
+    },
+    {
+      "path": "src/models/prompts/abstract.ts",
+      "size": 6279,
+      "sha": "c02ba0a162c314c0f3a204890bed49ea3fd1c7b2",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/models/prompts/abstract.ts"
+    },
+    {
+      "path": "src/models/prompts/defaults.ts",
+      "size": 43559,
+      "sha": "59cbba4d570df5bf6f1e28ee3e89f43905bee5ef",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/models/prompts/defaults.ts"
+    },
+    {
+      "path": "src/models/prompts/example.ts",
+      "size": 318,
+      "sha": "26ec8cab82d1f60fcc33c0e94c2f310ce6ed6557",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/models/prompts/example.ts"
+    },
+    {
+      "path": "src/models/shared.ts",
+      "size": 91,
+      "sha": "d1a9830fed94d93448260ba24a6151c77666b90d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/models/shared.ts"
+    },
+    {
+      "path": "src/optimization/testSet.json",
+      "size": 399,
+      "sha": "2b46acd88781008462f0e4782a0ec704c426b807",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/optimization/testSet.json"
+    },
+    {
+      "path": "src/optimization/trainingSet.json",
+      "size": 1614,
+      "sha": "f8935fa1a1487124cd0f03447f712ee2d4491972",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/optimization/trainingSet.json"
+    },
+    {
+      "path": "src/populateGroundTruth.ts",
+      "size": 5651,
+      "sha": "6bb634a0cfce1c45f0a94f9186ee95b4e0c120c9",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/populateGroundTruth.ts"
+    },
+    {
+      "path": "src/population.ts",
+      "size": 22323,
+      "sha": "700760aba5775136a000ebe0320dfee3d4eb16e6",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/population.ts"
+    },
+    {
+      "path": "src/run/AI Stock Screener/best_prompts.json",
+      "size": 170957,
+      "sha": "4429af708c39aeb7d81980879469ecf44c41da28",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/best_prompts.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_0/population.json",
+      "size": 307176,
+      "sha": "30763940fa676a546cca69938f87fb750585bdad",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_0/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_1/population.json",
+      "size": 241480,
+      "sha": "a212b25841da1496a579ab21a566e13e8b4998d9",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_1/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_10/population.json",
+      "size": 289178,
+      "sha": "364bbc8861eb0178c2054acadcddf4dc877356de",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_10/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_11/population.json",
+      "size": 294950,
+      "sha": "5e445320ac91b035aa3f88d781942921412b0cf3",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_11/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_12/population.json",
+      "size": 295574,
+      "sha": "b37773515974e21caec7af5427cc1eff05d06723",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_12/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_13/population.json",
+      "size": 295533,
+      "sha": "5673e91a86548216b1672567f67d000593274d7b",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_13/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_14/population.json",
+      "size": 287512,
+      "sha": "2e24b94425b8458d75503b57e45443dcf83ed9b7",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_14/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_15/population.json",
+      "size": 286517,
+      "sha": "df30023fd7d330593848098c95df5d305e65cdc0",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_15/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_16/population.json",
+      "size": 286450,
+      "sha": "5a1244a861b499a5e67f940d0e9429cee07f95d6",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_16/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_17/population.json",
+      "size": 286474,
+      "sha": "e229cd54779f452d7624608de3f1e6f7bc7baab5",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_17/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_18/population.json",
+      "size": 289867,
+      "sha": "25f1e133a9e52e040aa6af870ec2c32b56b959c0",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_18/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_19/population.json",
+      "size": 289867,
+      "sha": "93d4ebb7d27529f56144ac6a7aadbb2b9ce29086",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_19/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_2/population.json",
+      "size": 255066,
+      "sha": "17a9cb5e50cd5053dead398bdc2eca9e4edfd835",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_2/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_20/population.json",
+      "size": 289853,
+      "sha": "138b3763561dd7722701e7c7d621d13f761d6648",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_20/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_21/population.json",
+      "size": 289836,
+      "sha": "b8529985d09b61ebadb1c01508262461838a8813",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_21/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_22/population.json",
+      "size": 289840,
+      "sha": "c3e4a5a545097d15347977908f9ee47532be4d88",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_22/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_23/population.json",
+      "size": 289866,
+      "sha": "afd11820a5ebf8d697b003008c6157fa37e49c7e",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_23/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_24/population.json",
+      "size": 289840,
+      "sha": "87851aea398f7da9a898bc53a8f9c9dc38c996d4",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_24/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_25/population.json",
+      "size": 289837,
+      "sha": "b30c10f1be1c8c526f1aea2383b839a1b7dd3260",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_25/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_26/population.json",
+      "size": 289852,
+      "sha": "9934afe49e17d642e2a4b02d0ede06e03357c337",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_26/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_27/population.json",
+      "size": 289824,
+      "sha": "add418bcd7df713b4807155e516a435eb9b68add",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_27/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_28/population.json",
+      "size": 289840,
+      "sha": "9950f6a70f448edf704743ff6e3889018cae21de",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_28/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_29/population.json",
+      "size": 289839,
+      "sha": "41c44086f7ad582aedcc248e109a68455a6173f4",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_29/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_3/population.json",
+      "size": 265854,
+      "sha": "17da97cf7ff78d283b4b52de61e947c5292c13ad",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_3/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_30/population.json",
+      "size": 289854,
+      "sha": "8990ada0c531777340b0b0037f846f59a9f57675",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_30/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_31/population.json",
+      "size": 293207,
+      "sha": "341082e02256c2e1420c816bafa1c32b07c127d5",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_31/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_32/population.json",
+      "size": 293201,
+      "sha": "e68a5756b83a60da832b2dfb1852992948cfbce3",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_32/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_33/population.json",
+      "size": 293198,
+      "sha": "6ce7fec7a8b07b7552f3893253c78cb770276878",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_33/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_34/population.json",
+      "size": 293176,
+      "sha": "a5cc27202f28fa8981aefa6a797fb2c423455561",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_34/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_35/population.json",
+      "size": 293201,
+      "sha": "817dfba22025020b84e639acd167b32e64b7a358",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_35/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_36/population.json",
+      "size": 293172,
+      "sha": "02cdf69111f136d77a7aa0e51811066c54f67ecd",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_36/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_37/population.json",
+      "size": 293187,
+      "sha": "83d80f5a5ad283c44c7851e11022c064cf53b0c2",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_37/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_38/population.json",
+      "size": 293171,
+      "sha": "b9b6894662a8f544d8c7196c3c9e1386764b0e5c",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_38/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_39/population.json",
+      "size": 293176,
+      "sha": "8cbf49c9a5b6d87862c8e35623a7f3c25210fbae",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_39/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_4/population.json",
+      "size": 241575,
+      "sha": "27b02d52cf1f6d549f6dfa84f483e9553dd00b9c",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_4/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_40/population.json",
+      "size": 293186,
+      "sha": "e939686d02f5b8d354487d08d3b437befe3a14b2",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_40/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_41/population.json",
+      "size": 293174,
+      "sha": "960c61016675029e23932100a1a9287e99685bb6",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_41/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_42/population.json",
+      "size": 293173,
+      "sha": "6fcc2a8c0f246a54657aaf87fcf3c4a3dc87e80b",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_42/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_43/population.json",
+      "size": 293174,
+      "sha": "23e9060c2f327dca0856ea64c3b666cbabf138fc",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_43/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_44/population.json",
+      "size": 293201,
+      "sha": "52e5467a7ba9a59aada87b0b0689684a1d71e74a",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_44/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_45/population.json",
+      "size": 293190,
+      "sha": "2cb85cb41bc5d4bb7c4da7c3d5e5d27d1d724da6",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_45/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_46/population.json",
+      "size": 293201,
+      "sha": "8c7df52bc8adcb795691432656a68a309450fb11",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_46/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_47/population.json",
+      "size": 293184,
+      "sha": "bea91c8b642c2af7b6ce81a60d72cb86e5c29466",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_47/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_48/population.json",
+      "size": 293175,
+      "sha": "592301de360aa065ac843733b1e46ea37b8d8c25",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_48/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_49/population.json",
+      "size": 293174,
+      "sha": "9ff132ca3444ba631e4acbbc6b9254e40e0d3d28",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_49/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_5/population.json",
+      "size": 275523,
+      "sha": "0970ac65e0917288488dcef6269c2ecfa5a396bf",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_5/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_6/population.json",
+      "size": 290217,
+      "sha": "2b5175d07057100c919610f2e25488c3fa01e2c6",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_6/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_7/population.json",
+      "size": 276271,
+      "sha": "567b9b7872dfb558f6d83afbdaea454443dbde60",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_7/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_8/population.json",
+      "size": 295685,
+      "sha": "0946b58e0e8a48d60d01d8c98c0c6c3928f2e0e8",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_8/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/generation_9/population.json",
+      "size": 288767,
+      "sha": "038522a4332bf76376596272339f487e58e10b64",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/generation_9/population.json"
+    },
+    {
+      "path": "src/run/AI Stock Screener/prompt_summary.json",
+      "size": 6179,
+      "sha": "a50473206b4b239894579e5610c496453b68f4b6",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/AI Stock Screener/prompt_summary.json"
+    },
+    {
+      "path": "src/run/Original AI Stock Screener/generation_0/population.json",
+      "size": 155018,
+      "sha": "fbae7e819ef5a064e13f2b03649cc98c45482366",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/run/Original AI Stock Screener/generation_0/population.json"
+    },
+    {
+      "path": "src/services/AnthropicServiceClient.ts",
+      "size": 5818,
+      "sha": "34c7f0bc37edf267ac300d17649c446036d14f09",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/services/AnthropicServiceClient.ts"
+    },
+    {
+      "path": "src/services/GenAIFactory.ts",
+      "size": 1079,
+      "sha": "068d135d1ee4ef0bdc3c05098e101080a27c141e",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/services/GenAIFactory.ts"
+    },
+    {
+      "path": "src/services/GenerativeAIServiceClient.ts",
+      "size": 1280,
+      "sha": "59a693d2374478483d0933c6a893193ff5932b6d",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/services/GenerativeAIServiceClient.ts"
+    },
+    {
+      "path": "src/services/OpenAIServiceClient.ts",
+      "size": 7520,
+      "sha": "8c5ac951e3e08dbd8fc201e51762b9a3db16d04e",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/services/OpenAIServiceClient.ts"
+    },
+    {
+      "path": "src/services/OpenSourceServiceClient.ts",
+      "size": 4825,
+      "sha": "6ea22bea9dd8d9508b05c1a5cc7cb502a16bde9c",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/services/OpenSourceServiceClient.ts"
+    },
+    {
+      "path": "src/services/bigQueryClient.ts",
+      "size": 1228,
+      "sha": "f6ab79ff96b4c56f6356ba6662274e0e65d9e465",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/services/bigQueryClient.ts"
+    },
+    {
+      "path": "src/services/chatController.ts",
+      "size": 3459,
+      "sha": "d2015c8ffcfc496f7cfcf3c0a4e22881ad6837ed",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/services/chatController.ts"
+    },
+    {
+      "path": "src/services/db.ts",
+      "size": 2666,
+      "sha": "da33e7aad11d4eeb47b126c81107bced01be7a31",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/services/db.ts"
+    },
+    {
+      "path": "src/utils/index.ts",
+      "size": 2800,
+      "sha": "6a37d154468f68aff3653d6ebd59fd84f92399b2",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/src/utils/index.ts"
+    },
+    {
+      "path": "tsconfig.json",
+      "size": 324,
+      "sha": "a20fc38cbde76e6ed5b077e5aa9b4e76c8cb992e",
+      "download_url": "https://raw.githubusercontent.com/austin-starks/Promptimizer/None/tsconfig.json"
+    }
+  ],
+  "all_directories": [
+    "src",
+    "src/groundTruths",
+    "src/groundTruths/easy_amazon_gross_profit_margin",
+    "src/groundTruths/easy_amazon_latest_eps",
+    "src/groundTruths/easy_apple_price_today",
+    "src/groundTruths/easy_apple_total_liabilities",
+    "src/groundTruths/easy_cisco_latest_eps",
+    "src/groundTruths/easy_facebook_latest_trading_volume",
+    "src/groundTruths/easy_ford_pe_ratio_ttm",
+    "src/groundTruths/easy_google_price_to_book_value",
+    "src/groundTruths/easy_google_return_on_assets",
+    "src/groundTruths/easy_ibm_latest_gross_profit",
+    "src/groundTruths/easy_intel_net_income",
+    "src/groundTruths/easy_intel_total_assets",
+    "src/groundTruths/easy_meta_latest_ebitda",
+    "src/groundTruths/easy_microsoft_free_cash_flow",
+    "src/groundTruths/easy_microsoft_net_income",
+    "src/groundTruths/easy_netflix_highest_price_today",
+    "src/groundTruths/easy_nvidia_latest_revenue",
+    "src/groundTruths/easy_nvidia_return_on_assets",
+    "src/groundTruths/easy_tesla_free_cash_flow",
+    "src/groundTruths/easy_tesla_market_cap",
+    "src/groundTruths/hard_ai_stocks_highest_fcf",
+    "src/groundTruths/hard_avg_gross_profit_margin_cloud_computing",
+    "src/groundTruths/hard_avg_pe_ratio_healthcare",
+    "src/groundTruths/hard_biotech_highest_eps_q4",
+    "src/groundTruths/hard_biotech_highest_net_income_2021",
+    "src/groundTruths/hard_ev_stocks_highest_volume",
+    "src/groundTruths/hard_highest_eps_200b_market_cap",
+    "src/groundTruths/hard_highest_fcf_tech_2019",
+    "src/groundTruths/hard_highest_gross_profit_renewable_energy",
+    "src/groundTruths/hard_highest_market_cap_ai_2020",
+    "src/groundTruths/hard_highest_ps_ratio_cloud_computing_2020",
+    "src/groundTruths/hard_lowest_price_fcf_ratio",
+    "src/groundTruths/hard_lowest_price_sales_ratio_ecommerce",
+    "src/groundTruths/hard_semiconductor_highest_net_income",
+    "src/groundTruths/hard_tech_stocks_price_book_value",
+    "src/groundTruths/hard_top_5_pharma_ebitda_revenue",
+    "src/groundTruths/hard_top_5_pharma_market_cap_gross_profit",
+    "src/groundTruths/hard_top_5_renewable_energy_pe_ratio",
+    "src/groundTruths/hard_top_5_semiconductor_revenue_net_income",
+    "src/groundTruths/hard_top_5_tech_pe_ratio",
+    "src/groundTruths/medium_ai_stocks_altman_z_score",
+    "src/groundTruths/medium_avg_free_cash_flow_top_10_ecommerce",
+    "src/groundTruths/medium_avg_ps_ratio_cloud_computing",
+    "src/groundTruths/medium_avg_revenue_top_25_biotech",
+    "src/groundTruths/medium_ev_stocks_gross_profit_margin",
+    "src/groundTruths/medium_healthcare_stocks_net_income",
+    "src/groundTruths/medium_highest_ebitda_pharma",
+    "src/groundTruths/medium_highest_pe_healthcare",
+    "src/groundTruths/medium_semiconductor_gross_profit_margin",
+    "src/groundTruths/medium_semiconductor_stocks_revenue",
+    "src/groundTruths/medium_top_10_ai_market_cap",
+    "src/groundTruths/medium_top_10_ai_stocks",
+    "src/groundTruths/medium_top_10_pharma_ebitda",
+    "src/groundTruths/medium_top_10_tech_pe_ratio",
+    "src/groundTruths/medium_top_10_tech_pfcf_ratio",
+    "src/groundTruths/medium_top_10_trading_volume",
+    "src/groundTruths/medium_top_5_financial_services",
+    "src/groundTruths/medium_top_5_retail_free_cash_flow",
+    "src/groundTruths/medium_top_5_software_total_equity",
+    "src/groundTruths/medium_transportation_net_income",
+    "src/models",
+    "src/models/aiChatLog",
+    "src/models/context",
+    "src/models/message",
+    "src/models/prompts",
+    "src/optimization",
+    "src/run",
+    "src/run/AI Stock Screener",
+    "src/run/AI Stock Screener/generation_0",
+    "src/run/AI Stock Screener/generation_1",
+    "src/run/AI Stock Screener/generation_10",
+    "src/run/AI Stock Screener/generation_11",
+    "src/run/AI Stock Screener/generation_12",
+    "src/run/AI Stock Screener/generation_13",
+    "src/run/AI Stock Screener/generation_14",
+    "src/run/AI Stock Screener/generation_15",
+    "src/run/AI Stock Screener/generation_16",
+    "src/run/AI Stock Screener/generation_17",
+    "src/run/AI Stock Screener/generation_18",
+    "src/run/AI Stock Screener/generation_19",
+    "src/run/AI Stock Screener/generation_2",
+    "src/run/AI Stock Screener/generation_20",
+    "src/run/AI Stock Screener/generation_21",
+    "src/run/AI Stock Screener/generation_22",
+    "src/run/AI Stock Screener/generation_23",
+    "src/run/AI Stock Screener/generation_24",
+    "src/run/AI Stock Screener/generation_25",
+    "src/run/AI Stock Screener/generation_26",
+    "src/run/AI Stock Screener/generation_27",
+    "src/run/AI Stock Screener/generation_28",
+    "src/run/AI Stock Screener/generation_29",
+    "src/run/AI Stock Screener/generation_3",
+    "src/run/AI Stock Screener/generation_30",
+    "src/run/AI Stock Screener/generation_31",
+    "src/run/AI Stock Screener/generation_32",
+    "src/run/AI Stock Screener/generation_33",
+    "src/run/AI Stock Screener/generation_34",
+    "src/run/AI Stock Screener/generation_35",
+    "src/run/AI Stock Screener/generation_36",
+    "src/run/AI Stock Screener/generation_37",
+    "src/run/AI Stock Screener/generation_38",
+    "src/run/AI Stock Screener/generation_39",
+    "src/run/AI Stock Screener/generation_4",
+    "src/run/AI Stock Screener/generation_40",
+    "src/run/AI Stock Screener/generation_41",
+    "src/run/AI Stock Screener/generation_42",
+    "src/run/AI Stock Screener/generation_43",
+    "src/run/AI Stock Screener/generation_44",
+    "src/run/AI Stock Screener/generation_45",
+    "src/run/AI Stock Screener/generation_46",
+    "src/run/AI Stock Screener/generation_47",
+    "src/run/AI Stock Screener/generation_48",
+    "src/run/AI Stock Screener/generation_49",
+    "src/run/AI Stock Screener/generation_5",
+    "src/run/AI Stock Screener/generation_6",
+    "src/run/AI Stock Screener/generation_7",
+    "src/run/AI Stock Screener/generation_8",
+    "src/run/AI Stock Screener/generation_9",
+    "src/run/Original AI Stock Screener",
+    "src/run/Original AI Stock Screener/generation_0",
+    "src/services",
+    "src/utils"
+  ],
+  "repository_info": {
+    "owner": "austin-starks",
+    "repo": "Promptimizer",
+    "branch": null,
+    "repo_url": "austin-starks/Promptimizer"
+  }
+}
