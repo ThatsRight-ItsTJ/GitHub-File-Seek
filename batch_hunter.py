@@ -185,7 +185,7 @@ class BatchHunter:
         """Check if a pattern is a glob pattern (contains *, ?, [, ]) or a regex pattern"""
         # Simple heuristic: if it contains glob characters without regex-specific chars, treat as glob
         glob_chars = set('*?[]')
-        regex_chars = set('^$+{}()\\|.')
+        regex_chars = set('^$+{}()\\|')
         
         has_glob = any(c in pattern for c in glob_chars)
         has_regex_only = any(c in pattern for c in regex_chars - glob_chars)
