@@ -4,7 +4,7 @@ GitHub File Hunter - Smart file discovery and download tool
 
 Intelligently finds and downloads specific files from GitHub repositories
 without cloning the entire repository. Supports individual files, patterns,
-and batch operations.
+batch operations, and repository structure analysis.
 """
 
 import asyncio
@@ -356,6 +356,28 @@ async def download_individual_files(repo_url: str, file_paths: List[str],
         else:
             print("❌ No files found to download")
 
+async def analyze_repository_structure(repo_url: str, branch: str = None, 
+                                     github_token: str = None, 
+                                     output_dir: str = "./structure_analysis") -> Dict[str, Any]:
+    """Analyze repository structure and return file mapping."""
+    
+    from repo_structure_analyzer import RepoStructureAnalyzer
+    
+    analyzer = RepoStructureAnalyzer(github_token)
+    analysis = await analyzer.analyze_repository(repo_url, branch)
+    
+    # Save analysis to file
+    os.makedirs(output_dir, exist_ok=True)
+    repo_name = repo_url.replace('https://github.com/', '').replace('/', '_')
+    output_file = os.path.join(output_dir, f"{repo_name}_structure.json")
+    
+    with open(output_file, 'w') as f:
+        json.dump(analysis, f, indent=2)
+    
+    print(f"📊 Structure analysis saved to: {output_file}")
+    
+    return analysis
+
 async def main():
     parser = argparse.ArgumentParser(
         description='GitHub File Hunter - Smart file discovery and download',
@@ -375,7 +397,10 @@ Examples:
   python github_file_hunter.py owner/repo file.txt --branch develop
 
   # Use regex pattern
-  python github_file_hunter.py owner/repo --regex ".*\.(js|ts)$"
+  python github_file_hunter.py owner/repo --regex ".*\\.(js|ts)$"
+  
+  # Analyze repository structure only
+  python github_file_hunter.py microsoft/vscode --structure-only
         """
     )
     
@@ -407,10 +432,35 @@ Examples:
     
     parser.add_argument('--list-only', '-l', action='store_true',
                        help='List matching files without downloading')
+    parser.add_argument('--structure-only', '-s', action='store_true',
+                       help='Only analyze repository structure without downloading files')
     
     args = parser.parse_args()
     
     try:
+        # If structure-only mode, analyze repository structure
+        if args.structure_only:
+            analysis = await analyze_repository_structure(
+                repo_url=args.repo_url,
+                branch=args.branch,
+                github_token=args.token,
+                output_dir=args.output_dir
+            )
+            
+            # Print summary
+            summary = analysis['summary']
+            print(f"\n📊 Repository Structure Summary:")
+            print(f"   📁 Total files: {summary['total_files']}")
+            print(f"   📂 Total directories: {summary['total_directories']}")
+            print(f"   💾 Total size: {summary['total_size_mb']} MB")
+            print(f"   📈 Average file size: {summary['average_file_size']} bytes")
+            
+            print(f"\n🏆 Top file types:")
+            for ext, count in list(analysis['file_types'].items())[:5]:
+                print(f"   {ext}: {count} files")
+            
+            return 0
+        
         # If specific files are provided, download them individually
         if args.files:
             await download_individual_files(

@@ -1,381 +1,375 @@
 #!/usr/bin/env python3
 """
-GitHub File Hunter - Batch Mode
-
-Process multiple repositories and file patterns from configuration files.
-Supports CSV, JSON input formats for bulk operations, including individual file downloads.
+Batch GitHub File Hunter - Process multiple repositories efficiently
 """
 
 import asyncio
-import csv
 import json
+import csv
 import os
-from pathlib import Path
-from typing import List, Dict, Any
 import argparse
-from github_file_hunter import GitHubFileHunter, SearchCriteria, FileMatch
+from typing import List, Dict, Any
+from github_file_hunter import GitHubFileHunter, SearchCriteria
+from repo_structure_analyzer import RepoStructureAnalyzer
 
 class BatchHunter:
     """Batch processing for multiple repositories."""
     
-    def __init__(self, github_token: str = None, max_concurrent: int = 3):
+    def __init__(self, github_token: str = None):
         self.github_token = github_token
-        self.max_concurrent = max_concurrent
-        self.results = []
+        self.results = {}
         
-    async def process_batch_file(self, batch_file: str, output_dir: str = "./batch_downloads") -> None:
-        """Process a batch configuration file."""
+    async def process_repositories(self, config: Dict[str, Any], structure_only: bool = False) -> Dict[str, Any]:
+        """Process multiple repositories based on configuration."""
         
-        if batch_file.endswith('.json'):
-            batch_config = self._load_json_batch(batch_file)
-        elif batch_file.endswith('.csv'):
-            batch_config = self._load_csv_batch(batch_file)
-        else:
-            raise ValueError("Batch file must be JSON or CSV format")
+        repositories = config.get('repositories', [])
+        output_dir = config.get('output_dir', './batch_downloads')
+        create_repo_folders = config.get('create_repo_folders', True)
         
-        print(f"🚀 Processing {len(batch_config)} repositories...")
+        print(f"🚀 Processing {len(repositories)} repositories...")
+        if structure_only:
+            print("📋 Structure analysis mode - no files will be downloaded")
         
-        # Create output directory
-        os.makedirs(output_dir, exist_ok=True)
-        
-        # Process repositories with concurrency control
-        semaphore = asyncio.Semaphore(self.max_concurrent)
-        
-        async def process_repo_with_semaphore(repo_config):
-            async with semaphore:
-                return await self._process_single_repo(repo_config, output_dir)
-        
-        tasks = [process_repo_with_semaphore(config) for config in batch_config]
-        results = await asyncio.gather(*tasks, return_exceptions=True)
-        
-        # Compile results
-        self._compile_batch_results(results, output_dir)
-        
-    def _load_json_batch(self, file_path: str) -> List[Dict]:
-        """Load batch configuration from JSON file."""
-        with open(file_path, 'r') as f:
-            data = json.load(f)
-        
-        # Support both single config and array of configs
-        if isinstance(data, dict):
-            return [data]
-        return data
-    
-    def _load_csv_batch(self, file_path: str) -> List[Dict]:
-        """Load batch configuration from CSV file."""
-        configs = []
-        
-        with open(file_path, 'r') as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                config = {
-                    'repo_url': row['repo_url'],
-                    'search_criteria': {}
-                }
-                
-                # Handle specific files (new feature)
-                if 'specific_files' in row and row['specific_files']:
-                    config['search_criteria']['specific_files'] = row['specific_files'].split(',')
-                
-                # Parse search criteria from CSV columns
-                if 'extensions' in row and row['extensions']:
-                    config['search_criteria']['extensions'] = row['extensions'].split(',')
-                
-                if 'name_patterns' in row and row['name_patterns']:
-                    config['search_criteria']['name_patterns'] = row['name_patterns'].split(',')
-                
-                if 'path_patterns' in row and row['path_patterns']:
-                    config['search_criteria']['path_patterns'] = row['path_patterns'].split(',')
-                
-                if 'exclude_patterns' in row and row['exclude_patterns']:
-                    config['search_criteria']['exclude_patterns'] = row['exclude_patterns'].split(',')
-                
-                if 'min_size' in row and row['min_size']:
-                    config['search_criteria']['min_size'] = int(row['min_size'])
-                
-                if 'max_size' in row and row['max_size']:
-                    config['search_criteria']['max_size'] = int(row['max_size'])
-                
-                if 'regex_pattern' in row and row['regex_pattern']:
-                    config['search_criteria']['regex_pattern'] = row['regex_pattern']
-                
-                # Optional fields
-                config['branch'] = row.get('branch', None)
-                config['output_subdir'] = row.get('output_subdir', None)
-                
-                configs.append(config)
-        
-        return configs
-    
-    async def _process_single_repo(self, repo_config: Dict, base_output_dir: str) -> Dict:
-        """Process a single repository configuration."""
-        repo_url = repo_config['repo_url']
-        search_criteria_dict = repo_config.get('search_criteria', {})
-        branch = repo_config.get('branch', None)
-        output_subdir = repo_config.get('output_subdir', None)
-        
-        print(f"\n🔍 Processing: {repo_url}")
-        
-        try:
-            async with GitHubFileHunter(self.github_token) as hunter:
-                # Parse repository URL
-                owner, repo, detected_branch = hunter.parse_github_url(repo_url)
-                search_branch = branch or detected_branch
-                
-                # Determine output directory
-                if output_subdir:
-                    repo_output_dir = os.path.join(base_output_dir, output_subdir)
-                else:
-                    repo_output_dir = os.path.join(base_output_dir, f"{owner}_{repo}")
-                
-                matches = []
-                
-                # Handle specific files (individual file downloads)
-                if 'specific_files' in search_criteria_dict:
-                    print(f"📄 Downloading specific files: {search_criteria_dict['specific_files']}")
-                    
-                    for file_path in search_criteria_dict['specific_files']:
-                        file_match = await hunter.get_specific_file(owner, repo, file_path, search_branch)
-                        if file_match:
-                            matches.append(file_match)
-                            print(f"✅ Found: {file_path}")
-                        else:
-                            print(f"❌ Not found: {file_path}")
-                else:
-                    # Create search criteria for pattern matching
-                    criteria = SearchCriteria()
-                    
-                    if 'name_patterns' in search_criteria_dict:
-                        criteria.name_patterns = search_criteria_dict['name_patterns']
-                    if 'extensions' in search_criteria_dict:
-                        criteria.extensions = search_criteria_dict['extensions']
-                    if 'path_patterns' in search_criteria_dict:
-                        criteria.path_patterns = search_criteria_dict['path_patterns']
-                    if 'exclude_patterns' in search_criteria_dict:
-                        criteria.exclude_patterns = search_criteria_dict['exclude_patterns']
-                    if 'min_size' in search_criteria_dict:
-                        criteria.min_size = search_criteria_dict['min_size']
-                    if 'max_size' in search_criteria_dict:
-                        criteria.max_size = search_criteria_dict['max_size']
-                    if 'regex_pattern' in search_criteria_dict:
-                        criteria.regex_pattern = search_criteria_dict['regex_pattern']
-                    
-                    # Get repository tree and search
-                    tree_data = await hunter.get_repository_tree(owner, repo, search_branch)
-                    matches = hunter.search_files(tree_data, criteria, owner, repo, search_branch)
-                
-                # Download files
-                if matches:
-                    await hunter.download_files(matches, repo_output_dir)
-                
-                result = {
-                    'repo_url': repo_url,
-                    'owner': owner,
-                    'repo': repo,
-                    'branch': search_branch,
-                    'status': 'success',
-                    'files_found': len(matches),
-                    'files_downloaded': hunter.downloaded_count,
-                    'files_failed': hunter.failed_count,
-                    'output_dir': repo_output_dir,
-                    'matches': [
-                        {
-                            'path': match.path,
-                            'size': match.size,
-                            'download_url': match.download_url
-                        }
-                        for match in matches
-                    ]
-                }
-                
-                print(f"✅ {repo_url}: {len(matches)} files found, {hunter.downloaded_count} downloaded")
-                return result
-                
-        except Exception as e:
-            error_result = {
-                'repo_url': repo_url,
-                'status': 'error',
-                'error': str(e),
-                'files_found': 0,
-                'files_downloaded': 0,
-                'files_failed': 0
-            }
-            print(f"❌ {repo_url}: {str(e)}")
-            return error_result
-    
-    def _compile_batch_results(self, results: List[Dict], output_dir: str) -> None:
-        """Compile and save batch processing results."""
-        
-        # Filter out exceptions
-        valid_results = [r for r in results if isinstance(r, dict)]
-        
-        # Calculate summary statistics
-        total_repos = len(valid_results)
-        successful_repos = len([r for r in valid_results if r['status'] == 'success'])
-        total_files_found = sum(r.get('files_found', 0) for r in valid_results)
-        total_files_downloaded = sum(r.get('files_downloaded', 0) for r in valid_results)
-        total_files_failed = sum(r.get('files_failed', 0) for r in valid_results)
-        
-        summary = {
-            'batch_summary': {
-                'total_repositories': total_repos,
-                'successful_repositories': successful_repos,
-                'failed_repositories': total_repos - successful_repos,
-                'total_files_found': total_files_found,
-                'total_files_downloaded': total_files_downloaded,
-                'total_files_failed': total_files_failed,
-                'success_rate': f"{(successful_repos / total_repos * 100):.1f}%" if total_repos > 0 else "0%"
-            },
-            'repository_results': valid_results
+        results = {
+            'total_repositories': len(repositories),
+            'successful': 0,
+            'failed': 0,
+            'repositories': {}
         }
         
-        # Save detailed results
+        for repo_config in repositories:
+            repo_key = f"{repo_config['owner']}/{repo_config['repo']}"
+            
+            try:
+                if structure_only:
+                    # Structure analysis only
+                    result = await self._analyze_repository_structure(repo_config)
+                else:
+                    # Full file hunting and download
+                    result = await self._process_single_repository(repo_config, output_dir, create_repo_folders)
+                
+                results['repositories'][repo_key] = result
+                results['successful'] += 1
+                
+            except Exception as e:
+                print(f"❌ {repo_key}: {str(e)}")
+                results['repositories'][repo_key] = {
+                    'error': str(e),
+                    'status': 'failed'
+                }
+                results['failed'] += 1
+        
+        return results
+    
+    async def _analyze_repository_structure(self, repo_config: Dict[str, Any]) -> Dict[str, Any]:
+        """Analyze repository structure without downloading files."""
+        
+        owner = repo_config['owner']
+        repo = repo_config['repo']
+        branch = repo_config.get('branch')
+        
+        repo_url = f"https://github.com/{owner}/{repo}"
+        
+        analyzer = RepoStructureAnalyzer(self.github_token)
+        analysis = await analyzer.analyze_repository(repo_url, branch)
+        
+        print(f"📊 {owner}/{repo}: {analysis['summary']['total_files']} files, {analysis['summary']['total_size_mb']} MB")
+        
+        return {
+            'status': 'success',
+            'structure_analysis': analysis,
+            'files_found': analysis['summary']['total_files'],
+            'total_size_mb': analysis['summary']['total_size_mb']
+        }
+    
+    async def _process_single_repository(self, repo_config: Dict[str, Any], 
+                                       base_output_dir: str, create_repo_folders: bool) -> Dict[str, Any]:
+        """Process a single repository configuration."""
+        
+        owner = repo_config['owner']
+        repo = repo_config['repo']
+        branch = repo_config.get('branch')
+        individual_files = repo_config.get('individual_files', [])
+        patterns = repo_config.get('patterns', [])
+        exclude_patterns = repo_config.get('exclude_patterns', [])
+        max_files = repo_config.get('max_files', 100)
+        max_size_mb = repo_config.get('max_size_mb', 10)
+        
+        print(f"🔍 Processing {owner}/{repo}...")
+        
+        # Determine output directory
+        if create_repo_folders:
+            output_dir = os.path.join(base_output_dir, f"{owner}_{repo}")
+        else:
+            output_dir = base_output_dir
+        
+        async with GitHubFileHunter(self.github_token) as hunter:
+            # Get repository tree
+            tree_data = await hunter.get_repository_tree(owner, repo, branch)
+            
+            # Create search criteria
+            criteria = SearchCriteria()
+            criteria.specific_files = individual_files
+            criteria.exclude_patterns = exclude_patterns
+            criteria.max_size = max_size_mb * 1024 * 1024 if max_size_mb else None
+            
+            # Add patterns if provided
+            if patterns:
+                for pattern in patterns:
+                    if pattern.startswith('*.'):
+                        # Extension pattern
+                        criteria.extensions.append(pattern[1:])
+                    elif '/' in pattern:
+                        # Path pattern
+                        criteria.path_patterns.append(pattern)
+                    else:
+                        # Name pattern
+                        criteria.name_patterns.append(pattern)
+            
+            # Search for matches
+            matches = hunter.search_files(tree_data, criteria, owner, repo, branch or 'main')
+            
+            # Limit results
+            if max_files and len(matches) > max_files:
+                matches = matches[:max_files]
+                print(f"⚠️  Limited to {max_files} files (from {len(matches)} found)")
+            
+            if matches:
+                # Download files
+                await hunter.download_files(matches, output_dir)
+                
+                downloaded_files = [
+                    {
+                        'path': match.path,
+                        'size': match.size,
+                        'download_url': match.download_url
+                    }
+                    for match in matches
+                ]
+                
+                total_size = sum(match.size for match in matches)
+                
+                print(f"✅ {owner}/{repo}: {len(matches)} files downloaded ({total_size / 1024 / 1024:.2f} MB)")
+                
+                return {
+                    'status': 'success',
+                    'files_downloaded': len(matches),
+                    'total_size_bytes': total_size,
+                    'total_size_mb': round(total_size / 1024 / 1024, 2),
+                    'output_directory': output_dir,
+                    'downloaded_files': downloaded_files
+                }
+            else:
+                print(f"⚠️  {owner}/{repo}: No files found matching criteria")
+                return {
+                    'status': 'no_files',
+                    'files_downloaded': 0,
+                    'message': 'No files found matching criteria'
+                }
+    
+    def load_config_from_json(self, config_file: str) -> Dict[str, Any]:
+        """Load configuration from JSON file."""
+        with open(config_file, 'r') as f:
+            return json.load(f)
+    
+    def load_config_from_csv(self, csv_file: str) -> Dict[str, Any]:
+        """Load configuration from CSV file."""
+        repositories = []
+        
+        with open(csv_file, 'r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                repo_config = {
+                    'owner': row['owner'],
+                    'repo': row['repo']
+                }
+                
+                # Parse individual files (semicolon separated)
+                if row.get('individual_files'):
+                    repo_config['individual_files'] = [
+                        f.strip() for f in row['individual_files'].split(';') if f.strip()
+                    ]
+                
+                # Parse patterns (semicolon separated)
+                if row.get('patterns'):
+                    repo_config['patterns'] = [
+                        p.strip() for p in row['patterns'].split(';') if p.strip()
+                    ]
+                
+                # Parse other fields
+                if row.get('max_files'):
+                    repo_config['max_files'] = int(row['max_files'])
+                
+                if row.get('max_size_mb'):
+                    repo_config['max_size_mb'] = float(row['max_size_mb'])
+                
+                if row.get('branch'):
+                    repo_config['branch'] = row['branch']
+                
+                repositories.append(repo_config)
+        
+        return {
+            'repositories': repositories,
+            'output_dir': './batch_downloads',
+            'create_repo_folders': True
+        }
+    
+    def save_results(self, results: Dict[str, Any], output_dir: str):
+        """Save batch processing results."""
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # Save detailed results as JSON
         results_file = os.path.join(output_dir, 'batch_results.json')
         with open(results_file, 'w') as f:
-            json.dump(summary, f, indent=2)
+            json.dump(results, f, indent=2)
         
-        # Save summary CSV
+        # Create summary CSV
         summary_file = os.path.join(output_dir, 'batch_summary.csv')
         with open(summary_file, 'w', newline='') as f:
             writer = csv.writer(f)
-            writer.writerow(['repo_url', 'status', 'files_found', 'files_downloaded', 'files_failed', 'output_dir'])
+            writer.writerow([
+                'Repository', 'Status', 'Files Downloaded', 'Total Size (MB)', 'Output Directory'
+            ])
             
-            for result in valid_results:
-                writer.writerow([
-                    result.get('repo_url', ''),
-                    result.get('status', ''),
-                    result.get('files_found', 0),
-                    result.get('files_downloaded', 0),
-                    result.get('files_failed', 0),
-                    result.get('output_dir', '')
-                ])
+            for repo_key, repo_result in results['repositories'].items():
+                if repo_result.get('status') == 'success':
+                    writer.writerow([
+                        repo_key,
+                        repo_result['status'],
+                        repo_result.get('files_downloaded', 0),
+                        repo_result.get('total_size_mb', 0),
+                        repo_result.get('output_directory', 'N/A')
+                    ])
+                else:
+                    writer.writerow([
+                        repo_key,
+                        repo_result.get('status', 'error'),
+                        0,
+                        0,
+                        repo_result.get('error', 'Unknown error')
+                    ])
         
-        # Print summary
-        print(f"\n📊 Batch Processing Summary:")
-        print(f"   📁 Total repositories: {total_repos}")
-        print(f"   ✅ Successful: {successful_repos}")
-        print(f"   ❌ Failed: {total_repos - successful_repos}")
-        print(f"   📄 Total files found: {total_files_found}")
-        print(f"   📥 Total files downloaded: {total_files_downloaded}")
-        print(f"   💾 Results saved to: {output_dir}")
+        print(f"\n📊 Results saved:")
+        print(f"   📄 Detailed: {results_file}")
+        print(f"   📊 Summary: {summary_file}")
+    
+    def generate_example_configs(self):
+        """Generate example configuration files."""
+        
+        # JSON example
+        json_example = {
+            "repositories": [
+                {
+                    "owner": "microsoft",
+                    "repo": "vscode",
+                    "individual_files": ["README.md", "package.json", "src/main.ts"],
+                    "patterns": ["*.py", "*.json"],
+                    "exclude_patterns": ["node_modules/*", "*.min.js"],
+                    "max_files": 50,
+                    "max_size_mb": 10
+                },
+                {
+                    "owner": "facebook",
+                    "repo": "react",
+                    "individual_files": ["README.md", "LICENSE"],
+                    "patterns": ["packages/*/package.json", "scripts/*.js"],
+                    "max_files": 25
+                }
+            ],
+            "output_dir": "./batch_downloads",
+            "create_repo_folders": True
+        }
+        
+        with open('batch_example.json', 'w') as f:
+            json.dump(json_example, f, indent=2)
+        
+        # CSV example
+        csv_example = [
+            ['owner', 'repo', 'individual_files', 'patterns', 'max_files', 'max_size_mb'],
+            ['microsoft', 'vscode', 'README.md;package.json;src/main.ts', '*.py;*.json', '50', '10'],
+            ['facebook', 'react', 'README.md;LICENSE', 'packages/*/package.json;scripts/*.js', '25', '5'],
+            ['nodejs', 'node', 'package.json;.gitignore', 'src/*.js;test/*.js', '30', '8']
+        ]
+        
+        with open('batch_example.csv', 'w', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerows(csv_example)
+        
+        print("📝 Example configuration files generated:")
+        print("   📄 batch_example.json")
+        print("   📊 batch_example.csv")
 
 async def main():
-    parser = argparse.ArgumentParser(
-        description='GitHub File Hunter - Batch processing mode',
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-Examples:
-  # Process batch from JSON file
-  python batch_hunter.py batch_config.json
-
-  # Process batch from CSV file with custom output
-  python batch_hunter.py repos.csv --output-dir ./batch_results
-
-  # Generate example batch files
-  python batch_hunter.py --generate-examples
-
-  # Use specific configuration file
-  python batch_hunter.py --config batch_config.json
-        """
-    )
-    
-    parser.add_argument('batch_file', nargs='?', help='Batch configuration file (JSON or CSV)')
-    parser.add_argument('--config', '-c', help='Configuration file (alternative to positional argument)')
-    parser.add_argument('--output-dir', '-o', default='./batch_downloads', 
-                       help='Output directory for batch downloads')
-    parser.add_argument('--token', '-t', help='GitHub personal access token',
-                       default=os.getenv('GITHUB_TOKEN'))
-    parser.add_argument('--concurrent', type=int, default=3,
-                       help='Maximum concurrent repository processing')
-    parser.add_argument('--generate-examples', action='store_true',
-                       help='Generate example batch configuration files')
+    parser = argparse.ArgumentParser(description='Batch GitHub File Hunter')
+    parser.add_argument('--config', '-c', help='JSON configuration file')
+    parser.add_argument('--csv', help='CSV configuration file')
+    parser.add_argument('--structure-only', '-s', action='store_true', 
+                       help='Only analyze repository structures without downloading files')
+    parser.add_argument('--token', '-t', help='GitHub token', default=os.getenv('GITHUB_TOKEN'))
+    parser.add_argument('--output-dir', '-o', default='./batch_downloads', help='Output directory')
+    parser.add_argument('--generate-examples', '-g', action='store_true', 
+                       help='Generate example configuration files')
+    parser.add_argument('--verbose', '-v', action='store_true', help='Verbose output')
     
     args = parser.parse_args()
     
     if args.generate_examples:
-        generate_example_files()
-        return 0
+        hunter = BatchHunter()
+        hunter.generate_example_configs()
+        return
     
-    # Use --config argument if provided, otherwise use positional argument
-    batch_file = args.config or args.batch_file
-    
-    if not batch_file:
-        print("❌ Error: Batch file required")
-        print("💡 Use --generate-examples to create example files")
-        print("💡 Usage: python batch_hunter.py <file> or python batch_hunter.py --config <file>")
-        return 1
-    
-    if not os.path.exists(batch_file):
-        print(f"❌ Error: Batch file '{batch_file}' not found")
+    if not args.config and not args.csv:
+        print("❌ Error: Please provide either --config or --csv configuration file")
+        print("Use --generate-examples to create example configuration files")
         return 1
     
     try:
-        batch_hunter = BatchHunter(args.token, args.concurrent)
-        await batch_hunter.process_batch_file(batch_file, args.output_dir)
+        hunter = BatchHunter(args.token)
+        
+        # Load configuration
+        if args.config:
+            config = hunter.load_config_from_json(args.config)
+        else:
+            config = hunter.load_config_from_csv(args.csv)
+        
+        # Override output directory if specified
+        if args.output_dir != './batch_downloads':
+            config['output_dir'] = args.output_dir
+        
+        # Process repositories
+        results = await hunter.process_repositories(config, args.structure_only)
+        
+        # Save results
+        output_dir = config.get('output_dir', './batch_downloads')
+        if args.structure_only:
+            output_dir = './structure_analysis'
+        
+        hunter.save_results(results, output_dir)
+        
+        # Print summary
+        print(f"\n🎉 Batch processing complete!")
+        print(f"   ✅ Successful: {results['successful']}")
+        print(f"   ❌ Failed: {results['failed']}")
+        
+        if args.structure_only:
+            total_files = sum(
+                repo.get('structure_analysis', {}).get('summary', {}).get('total_files', 0)
+                for repo in results['repositories'].values()
+                if 'structure_analysis' in repo
+            )
+            print(f"   📊 Total files analyzed: {total_files}")
+        else:
+            total_downloaded = sum(
+                repo.get('files_downloaded', 0) 
+                for repo in results['repositories'].values()
+            )
+            print(f"   📥 Total files downloaded: {total_downloaded}")
+        
         return 0
-    
+        
     except Exception as e:
         print(f"❌ Error: {e}")
         return 1
-
-def generate_example_files():
-    """Generate example batch configuration files."""
-    
-    # JSON example with individual files
-    json_example = [
-        {
-            "repo_url": "microsoft/vscode",
-            "search_criteria": {
-                "specific_files": ["README.md", "package.json", "tsconfig.json"]
-            },
-            "branch": "main",
-            "output_subdir": "vscode_specific"
-        },
-        {
-            "repo_url": "microsoft/vscode",
-            "search_criteria": {
-                "extensions": [".py", ".js", ".ts"],
-                "path_patterns": ["src/*"],
-                "exclude_patterns": ["node_modules/*", "test*"]
-            },
-            "branch": "main",
-            "output_subdir": "vscode_source"
-        },
-        {
-            "repo_url": "https://github.com/fastapi/fastapi",
-            "search_criteria": {
-                "name_patterns": ["*api*", "*route*"],
-                "extensions": [".py"]
-            },
-            "output_subdir": "fastapi_files"
-        }
-    ]
-    
-    with open('batch_example.json', 'w') as f:
-        json.dump(json_example, f, indent=2)
-    
-    # CSV example with individual files
-    csv_example = [
-        ['repo_url', 'specific_files', 'extensions', 'name_patterns', 'path_patterns', 'exclude_patterns', 'branch', 'output_subdir'],
-        ['microsoft/vscode', 'README.md,package.json,tsconfig.json', '', '', '', '', 'main', 'vscode_specific'],
-        ['microsoft/vscode', '', '.py,.js,.ts', '', 'src/*', 'node_modules/*,test*', 'main', 'vscode_source'],
-        ['fastapi/fastapi', '', '.py', '*api*,*route*', '', '', '', 'fastapi_files'],
-        ['django/django', '', '.py', '*model*,*view*', 'django/*', 'test*', 'main', 'django_core']
-    ]
-    
-    with open('batch_example.csv', 'w', newline='') as f:
-        writer = csv.writer(f)
-        writer.writerows(csv_example)
-    
-    print("✅ Generated example files:")
-    print("   📄 batch_example.json - JSON format example")
-    print("   📄 batch_example.csv - CSV format example")
-    print("\n💡 Edit these files and run:")
-    print("   python batch_hunter.py batch_example.json")
-    print("   python batch_hunter.py --config batch_example.csv")
-    print("\n📋 Individual file download examples:")
-    print("   - Use 'specific_files' column in CSV or 'specific_files' array in JSON")
-    print("   - List exact file paths: 'README.md,package.json,src/main.py'")
 
 if __name__ == "__main__":
     exit(asyncio.run(main()))
