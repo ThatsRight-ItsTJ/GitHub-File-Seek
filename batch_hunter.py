@@ -41,7 +41,8 @@ class BatchGitHubHunter:
         for repo_config in repositories:
             owner = repo_config.get('owner')
             repo = repo_config.get('repo')
-            branch = repo_config.get('branch')
+            # Use None as default branch to enable auto-detection
+            branch = repo_config.get('branch') if repo_config.get('branch') not in [None, "auto", "default"] else None
             
             if not owner or not repo:
                 continue
@@ -58,7 +59,7 @@ class BatchGitHubHunter:
                 repo_url = f"https://github.com/{owner}/{repo}"
                 structure_data = await analyze_repository_structure(
                     repo_url=repo_url,
-                    branch=branch,
+                    branch=branch,  # None enables auto-detection
                     github_token=self.token,
                     output_dir=self.temp_structure_dir
                 )
@@ -100,8 +101,10 @@ class BatchGitHubHunter:
         # Fix branch name using actual repository info
         repo_info = structure_data.get('repository_info', {})
         actual_branch = repo_info.get('branch')
-        if actual_branch and actual_branch != repo_config.get('branch'):
-            print(f"    🔧 Fixed branch: {repo_config.get('branch', 'None')} → {actual_branch}")
+        original_branch = repo_config.get('branch')
+        
+        if actual_branch and actual_branch != original_branch:
+            print(f"    🔧 Auto-detected branch: {original_branch or 'None'} → {actual_branch}")
             fixed_config['branch'] = actual_branch
             
         # Validate individual files exist
