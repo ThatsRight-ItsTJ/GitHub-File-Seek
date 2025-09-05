@@ -1,0 +1,2746 @@
+{
+  "https://github.com/guilatrova/gracy": {
+    "summary": {
+      "total_files": 58,
+      "total_directories": 12,
+      "total_size_bytes": 1760926,
+      "total_size_mb": 1.68,
+      "average_file_size": 30360.79
+    },
+    "file_types": {
+      ".py": 39,
+      ".yml": 4,
+      "[no extension]": 3,
+      ".md": 3,
+      ".png": 3,
+      ".sqlite3": 1,
+      ".yaml": 1,
+      ".json": 1,
+      ".lock": 1,
+      ".toml": 1
+    },
+    "largest_files": [
+      {
+        "path": ".gracy/pokeapi.sqlite3",
+        "size": 1282048,
+        "sha": "54682f9478e290509263fcd09f464578143f31df",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/.gracy/pokeapi.sqlite3"
+      },
+      {
+        "path": "poetry.lock",
+        "size": 94327,
+        "sha": "ddbec2096ff916f8b9221278a9eae3150a1ba187",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/poetry.lock"
+      },
+      {
+        "path": "img/report-plotly-example.png",
+        "size": 78132,
+        "sha": "844b09a590352f82f4023e7b4a1f910a1d8d2b4d",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/img/report-plotly-example.png"
+      },
+      {
+        "path": "README.md",
+        "size": 36231,
+        "sha": "564ca6ffb9900206441f7668180e95ae1afcdb98",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/README.md"
+      },
+      {
+        "path": "img/report-rich-example.png",
+        "size": 33382,
+        "sha": "334f7f0a24328d0000e4d94cd3b96abe237ef3be",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/img/report-rich-example.png"
+      },
+      {
+        "path": "img/logo.png",
+        "size": 27753,
+        "sha": "11c70f5619e64bee31121b90e1e1699bf1f65408",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/img/logo.png"
+      },
+      {
+        "path": "CHANGELOG.md",
+        "size": 26845,
+        "sha": "d23afe25b9f42d68118e49e5401e5c9c2b278bb9",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/CHANGELOG.md"
+      },
+      {
+        "path": "src/gracy/_core.py",
+        "size": 26648,
+        "sha": "6f6433a4f4149f58c3247c1e7d34faa2829dc9cf",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/_core.py"
+      },
+      {
+        "path": "src/gracy/_models.py",
+        "size": 21098,
+        "sha": "1e111650271d50a8bb60ba4dfded96a78233ed33",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/_models.py"
+      },
+      {
+        "path": "src/tests/test_retry.py",
+        "size": 14104,
+        "sha": "5b21fd0d75bb22878879e616b49c296d82da85f2",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/tests/test_retry.py"
+      }
+    ],
+    "top_directories": [
+      {
+        "path": "src/gracy",
+        "file_count": 12,
+        "total_size": 78051,
+        "avg_size": 6504.25
+      },
+      {
+        "path": "examples",
+        "file_count": 10,
+        "total_size": 24466,
+        "avg_size": 2446.6
+      },
+      {
+        "path": "src/tests",
+        "file_count": 10,
+        "total_size": 34327,
+        "avg_size": 3432.7
+      },
+      {
+        "path": "src/gracy/replays/storages",
+        "file_count": 4,
+        "total_size": 13149,
+        "avg_size": 3287.25
+      },
+      {
+        "path": "img",
+        "file_count": 3,
+        "total_size": 139267,
+        "avg_size": 46422.333333333336
+      },
+      {
+        "path": "src/gracy/_reports",
+        "file_count": 3,
+        "total_size": 21573,
+        "avg_size": 7191.0
+      },
+      {
+        "path": ".github/workflows",
+        "file_count": 2,
+        "total_size": 2215,
+        "avg_size": 1107.5
+      },
+      {
+        "path": ".github",
+        "file_count": 1,
+        "total_size": 254,
+        "avg_size": 254.0
+      },
+      {
+        "path": ".gracy",
+        "file_count": 1,
+        "total_size": 1282048,
+        "avg_size": 1282048.0
+      },
+      {
+        "path": ".vscode",
+        "file_count": 1,
+        "total_size": 756,
+        "avg_size": 756.0
+      }
+    ],
+    "all_files": [
+      {
+        "path": ".flake8",
+        "size": 73,
+        "sha": "efac27ceddebed9b032ffebc1acd0b54e8927b50",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/.flake8"
+      },
+      {
+        "path": ".github/FUNDING.yml",
+        "size": 254,
+        "sha": "91dcb1aea3f4ce021e3c8043373d229413c673bf",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/.github/FUNDING.yml"
+      },
+      {
+        "path": ".github/workflows/ci.yml",
+        "size": 1261,
+        "sha": "6677a6794de059ac2d09317976a1ea56ead19e9e",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/.github/workflows/ci.yml"
+      },
+      {
+        "path": ".github/workflows/release.yml",
+        "size": 954,
+        "sha": "2327369275eb72d0e405e8ac409e3f0a6934532f",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/.github/workflows/release.yml"
+      },
+      {
+        "path": ".gitignore",
+        "size": 53,
+        "sha": "91339445f64a166326e0a77682982347b401cbca",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/.gitignore"
+      },
+      {
+        "path": ".gracy/pokeapi.sqlite3",
+        "size": 1282048,
+        "sha": "54682f9478e290509263fcd09f464578143f31df",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/.gracy/pokeapi.sqlite3"
+      },
+      {
+        "path": ".pre-commit-config.yaml",
+        "size": 642,
+        "sha": "47c984fed2ed0c13b9084529240a02a8f3e1a990",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/.pre-commit-config.yaml"
+      },
+      {
+        "path": ".vscode/settings.json",
+        "size": 756,
+        "sha": "8242cdad109d13f418daafaa8a3ba54e6b9f2242",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/.vscode/settings.json"
+      },
+      {
+        "path": "CHANGELOG.md",
+        "size": 26845,
+        "sha": "d23afe25b9f42d68118e49e5401e5c9c2b278bb9",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/CHANGELOG.md"
+      },
+      {
+        "path": "LICENSE",
+        "size": 1084,
+        "sha": "eb7f43e7985f71e296b59aab754504d68531d5ac",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/LICENSE"
+      },
+      {
+        "path": "README.md",
+        "size": 36231,
+        "sha": "564ca6ffb9900206441f7668180e95ae1afcdb98",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/README.md"
+      },
+      {
+        "path": "docker-compose.yml",
+        "size": 256,
+        "sha": "a4d0c7d18ebc2fea32de799f266abde016e9855c",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/docker-compose.yml"
+      },
+      {
+        "path": "examples/httpbin_post.py",
+        "size": 837,
+        "sha": "32c84e66226492fcbfcdc93ed0e725f59e01a4cd",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/examples/httpbin_post.py"
+      },
+      {
+        "path": "examples/memory.py",
+        "size": 1078,
+        "sha": "98d477994b17becaf8c20e13fab36c7c138bcae9",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/examples/memory.py"
+      },
+      {
+        "path": "examples/pokeapi.py",
+        "size": 2643,
+        "sha": "0ba3e2b3e0e49dde4bb326da60e1c26c926c1b3f",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/examples/pokeapi.py"
+      },
+      {
+        "path": "examples/pokeapi_limit_concurrency.py",
+        "size": 4313,
+        "sha": "4e31ad5c3b7e5ea387809b954e4e3adb73ca5bee",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/examples/pokeapi_limit_concurrency.py"
+      },
+      {
+        "path": "examples/pokeapi_namespaces.py",
+        "size": 2689,
+        "sha": "c3135044a4fcbc5456c59362f6a42e791bdb5fdf",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/examples/pokeapi_namespaces.py"
+      },
+      {
+        "path": "examples/pokeapi_replay.py",
+        "size": 3058,
+        "sha": "d43839eefd87c37786915346f747619ac71fc0cd",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/examples/pokeapi_replay.py"
+      },
+      {
+        "path": "examples/pokeapi_replay_mongo.py",
+        "size": 3016,
+        "sha": "e0dea227fb97dbaa5a5071ba45e9bbfaffb87753",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/examples/pokeapi_replay_mongo.py"
+      },
+      {
+        "path": "examples/pokeapi_retry.py",
+        "size": 1669,
+        "sha": "a61986624be211767bcb0398f0169f1bc41d667a",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/examples/pokeapi_retry.py"
+      },
+      {
+        "path": "examples/pokeapi_throttle.py",
+        "size": 3718,
+        "sha": "650e92c54426287136d0ade1ae50d7541fb76870",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/examples/pokeapi_throttle.py"
+      },
+      {
+        "path": "examples/pokestarwarsapi.py",
+        "size": 1445,
+        "sha": "8840e1cdd6d3aeb9601c5e8b4f859e00a7478192",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/examples/pokestarwarsapi.py"
+      },
+      {
+        "path": "img/logo.png",
+        "size": 27753,
+        "sha": "11c70f5619e64bee31121b90e1e1699bf1f65408",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/img/logo.png"
+      },
+      {
+        "path": "img/report-plotly-example.png",
+        "size": 78132,
+        "sha": "844b09a590352f82f4023e7b4a1f910a1d8d2b4d",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/img/report-plotly-example.png"
+      },
+      {
+        "path": "img/report-rich-example.png",
+        "size": 33382,
+        "sha": "334f7f0a24328d0000e4d94cd3b96abe237ef3be",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/img/report-rich-example.png"
+      },
+      {
+        "path": "poetry.lock",
+        "size": 94327,
+        "sha": "ddbec2096ff916f8b9221278a9eae3150a1ba187",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/poetry.lock"
+      },
+      {
+        "path": "pyproject.toml",
+        "size": 2436,
+        "sha": "77976f8150eabe7b82f92cf7089c13e919a20915",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/pyproject.toml"
+      },
+      {
+        "path": "src/gracy/__init__.py",
+        "size": 1677,
+        "sha": "0d5bbffd09d86d30954b226ece981beecd7bdb9a",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/__init__.py"
+      },
+      {
+        "path": "src/gracy/_configs.py",
+        "size": 759,
+        "sha": "8c2698e9c2c2e5dfa825e2cd641dc27fcea89ff7",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/_configs.py"
+      },
+      {
+        "path": "src/gracy/_core.py",
+        "size": 26648,
+        "sha": "6f6433a4f4149f58c3247c1e7d34faa2829dc9cf",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/_core.py"
+      },
+      {
+        "path": "src/gracy/_general.py",
+        "size": 523,
+        "sha": "73a0f584b2a0dcfc736d58a99e26f3bb4ca16120",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/_general.py"
+      },
+      {
+        "path": "src/gracy/_loggers.py",
+        "size": 5313,
+        "sha": "c36ff0e9b0e320e1d8dd1c591881c406b248a3a4",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/_loggers.py"
+      },
+      {
+        "path": "src/gracy/_models.py",
+        "size": 21098,
+        "sha": "1e111650271d50a8bb60ba4dfded96a78233ed33",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/_models.py"
+      },
+      {
+        "path": "src/gracy/_paginator.py",
+        "size": 4350,
+        "sha": "92889920a5cb6552d12e403308f59ecd6f40ee36",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/_paginator.py"
+      },
+      {
+        "path": "src/gracy/_reports/_builders.py",
+        "size": 5982,
+        "sha": "d118cdbd1889a5613a4683f20c6dc0c1f0cc712f",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/_reports/_builders.py"
+      },
+      {
+        "path": "src/gracy/_reports/_models.py",
+        "size": 3102,
+        "sha": "f9bb9ab3920678625ca5f58ee686ec4b505087b2",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/_reports/_models.py"
+      },
+      {
+        "path": "src/gracy/_reports/_printers.py",
+        "size": 12489,
+        "sha": "7653f4c62400b6e87227af3ef02ea47416a10e4b",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/_reports/_printers.py"
+      },
+      {
+        "path": "src/gracy/_types.py",
+        "size": 1804,
+        "sha": "8d9050ce7df9d984fec218d2d44d0015298c84c7",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/_types.py"
+      },
+      {
+        "path": "src/gracy/_validators.py",
+        "size": 1410,
+        "sha": "99216b0c529235a016ff25f271ed32e484cd0efa",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/_validators.py"
+      },
+      {
+        "path": "src/gracy/common_hooks.py",
+        "size": 8297,
+        "sha": "2ce52223d74b30c9a70618a100ca5cd38b710b7d",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/common_hooks.py"
+      },
+      {
+        "path": "src/gracy/exceptions.py",
+        "size": 6172,
+        "sha": "eb8cd61cd5cb8974aa0567d20c391f25e760cc55",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/exceptions.py"
+      },
+      {
+        "path": "src/gracy/py.typed",
+        "size": 0,
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/py.typed"
+      },
+      {
+        "path": "src/gracy/replays/_wrappers.py",
+        "size": 2144,
+        "sha": "5f1e1d378ca5186a7d0e5c64d71652c63f0820d7",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/replays/_wrappers.py"
+      },
+      {
+        "path": "src/gracy/replays/storages/_base.py",
+        "size": 4170,
+        "sha": "28d1e8eba16b6c9cf22d4e29e0f9dea2e4f5da5e",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/replays/storages/_base.py"
+      },
+      {
+        "path": "src/gracy/replays/storages/_sqlite_schema.py",
+        "size": 1020,
+        "sha": "8d5aacc0291b46fe3e777a21cf781e78b6c16054",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/replays/storages/_sqlite_schema.py"
+      },
+      {
+        "path": "src/gracy/replays/storages/pymongo.py",
+        "size": 4540,
+        "sha": "9d0dc9e9316b9e727fceb530f9d1d00af38d5c66",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/replays/storages/pymongo.py"
+      },
+      {
+        "path": "src/gracy/replays/storages/sqlite.py",
+        "size": 3419,
+        "sha": "9583ea522b198c918d0403f578558b53c2a91b3a",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/gracy/replays/storages/sqlite.py"
+      },
+      {
+        "path": "src/tests/conftest.py",
+        "size": 2164,
+        "sha": "cd12634c6e76ad05209298361385c603c2a9b19a",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/tests/conftest.py"
+      },
+      {
+        "path": "src/tests/generate_test_db.py",
+        "size": 1665,
+        "sha": "4427278b7dc22bb983a25ad578cb91c49506eb11",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/tests/generate_test_db.py"
+      },
+      {
+        "path": "src/tests/test_generators.py",
+        "size": 930,
+        "sha": "732e760a99823d168f83dd1bb5b57d2ab27d2ca4",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/tests/test_generators.py"
+      },
+      {
+        "path": "src/tests/test_gracy_httpx.py",
+        "size": 1085,
+        "sha": "e5fabd7ea710fda7c36ec8e72d56338741b55bd5",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/tests/test_gracy_httpx.py"
+      },
+      {
+        "path": "src/tests/test_hooks.py",
+        "size": 5242,
+        "sha": "8fa174fc0b1bb7dfa8b383c8b763c513300fb13e",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/tests/test_hooks.py"
+      },
+      {
+        "path": "src/tests/test_loggers.py",
+        "size": 2120,
+        "sha": "a1f0315a0d50a30b4efaa3780607f3fc7acbdb20",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/tests/test_loggers.py"
+      },
+      {
+        "path": "src/tests/test_namespaces.py",
+        "size": 1727,
+        "sha": "6d2036f47418ca573c0b2783517ec19c04707bb0",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/tests/test_namespaces.py"
+      },
+      {
+        "path": "src/tests/test_parsers.py",
+        "size": 1991,
+        "sha": "b0c8545e1115f679f486305ba732b2971eac4005",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/tests/test_parsers.py"
+      },
+      {
+        "path": "src/tests/test_retry.py",
+        "size": 14104,
+        "sha": "5b21fd0d75bb22878879e616b49c296d82da85f2",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/tests/test_retry.py"
+      },
+      {
+        "path": "src/tests/test_validators.py",
+        "size": 3299,
+        "sha": "63d4f572595aff22e7cff48196082ab0c773f39b",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/src/tests/test_validators.py"
+      },
+      {
+        "path": "todo.md",
+        "size": 729,
+        "sha": "9d0b162d0d44d7530d429b10b8f6b3b2147ef82e",
+        "download_url": "https://raw.githubusercontent.com/guilatrova/gracy/None/todo.md"
+      }
+    ],
+    "all_directories": [
+      ".github",
+      ".github/workflows",
+      ".gracy",
+      ".vscode",
+      "examples",
+      "img",
+      "src",
+      "src/gracy",
+      "src/gracy/_reports",
+      "src/gracy/replays",
+      "src/gracy/replays/storages",
+      "src/tests"
+    ],
+    "repository_info": {
+      "owner": "guilatrova",
+      "repo": "gracy",
+      "branch": null,
+      "repo_url": "https://github.com/guilatrova/gracy"
+    }
+  },
+  "https://github.com/scikit-learn-contrib/DESlib": {
+    "summary": {
+      "total_files": 177,
+      "total_directories": 24,
+      "total_size_bytes": 777257,
+      "total_size_mb": 0.74,
+      "average_file_size": 4391.28
+    },
+    "file_types": {
+      ".py": 102,
+      ".rst": 47,
+      ".npy": 13,
+      "[no extension]": 5,
+      ".txt": 4,
+      ".yml": 3,
+      ".md": 1,
+      ".in": 1,
+      ".bat": 1
+    },
+    "largest_files": [
+      {
+        "path": "deslib/base.py",
+        "size": 28533,
+        "sha": "c3f1841413800c4bc15547352f962db655ab558d",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/base.py"
+      },
+      {
+        "path": "deslib/des/meta_des.py",
+        "size": 23083,
+        "sha": "2f16d66b93906901d0162f54a422c415064d45b8",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/meta_des.py"
+      },
+      {
+        "path": "deslib/tests/test_des_integration.py",
+        "size": 21249,
+        "sha": "5629a2b7acf7912438eea72a023d2c20d6719220",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/test_des_integration.py"
+      },
+      {
+        "path": "deslib/des/des_knn.py",
+        "size": 17511,
+        "sha": "15406a41db764a98cec53f9db64ebcadaccd1ebe",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/des_knn.py"
+      },
+      {
+        "path": "deslib/des/des_clustering.py",
+        "size": 17305,
+        "sha": "368800959c133e65288bc607bf1a79137936e7d1",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/des_clustering.py"
+      },
+      {
+        "path": "deslib/util/aggregation.py",
+        "size": 15221,
+        "sha": "bd492565847ba75819f5522d62af4d49c0e613d2",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/util/aggregation.py"
+      },
+      {
+        "path": "deslib/des/des_mi.py",
+        "size": 13483,
+        "sha": "f51b73ab80a14cfad65bf8f0e4417bc74412dbac",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/des_mi.py"
+      },
+      {
+        "path": "deslib/dcs/base.py",
+        "size": 12386,
+        "sha": "2aec4d5f0485c1f4a49cc659c8bf83e410276947",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/dcs/base.py"
+      },
+      {
+        "path": "README.rst",
+        "size": 12142,
+        "sha": "d04043d305f6e6582846a828db995f9649a8c863",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/README.rst"
+      },
+      {
+        "path": "docs/user_guide/tutorial.rst",
+        "size": 11982,
+        "sha": "33baac745f9753f78ae7c8493ef27fd686001b64",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/user_guide/tutorial.rst"
+      }
+    ],
+    "top_directories": [
+      {
+        "path": "docs/modules/des",
+        "file_count": 14,
+        "total_size": 2823,
+        "avg_size": 201.64285714285714
+      },
+      {
+        "path": "deslib/tests/expected_values",
+        "file_count": 13,
+        "total_size": 52128,
+        "avg_size": 4009.846153846154
+      },
+      {
+        "path": "deslib/tests/des",
+        "file_count": 11,
+        "total_size": 63089,
+        "avg_size": 5735.363636363636
+      },
+      {
+        "path": "examples",
+        "file_count": 11,
+        "total_size": 50189,
+        "avg_size": 4562.636363636364
+      },
+      {
+        "path": "deslib/des",
+        "file_count": 10,
+        "total_size": 119896,
+        "avg_size": 11989.6
+      },
+      {
+        "path": "deslib/tests/util",
+        "file_count": 10,
+        "total_size": 30205,
+        "avg_size": 3020.5
+      },
+      {
+        "path": "deslib/util",
+        "file_count": 10,
+        "total_size": 80707,
+        "avg_size": 8070.7
+      },
+      {
+        "path": "deslib/dcs",
+        "file_count": 9,
+        "total_size": 75991,
+        "avg_size": 8443.444444444445
+      },
+      {
+        "path": "deslib/tests/dcs",
+        "file_count": 9,
+        "total_size": 32238,
+        "avg_size": 3582.0
+      },
+      {
+        "path": "deslib/tests",
+        "file_count": 8,
+        "total_size": 60444,
+        "avg_size": 7555.5
+      }
+    ],
+    "all_files": [
+      {
+        "path": ".circleci/config.yml",
+        "size": 1849,
+        "sha": "2cb7026985a3f3f293a39819f324e942fd68a6d9",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/.circleci/config.yml"
+      },
+      {
+        "path": ".coveragerc",
+        "size": 266,
+        "sha": "e14944e1cfa693f13f0e26d058ad7735fae72887",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/.coveragerc"
+      },
+      {
+        "path": ".gitignore",
+        "size": 1765,
+        "sha": "7b80292d5e3c0de5e2fbab4a93808e50848d31b2",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/.gitignore"
+      },
+      {
+        "path": ".pep8speaks.yml",
+        "size": 909,
+        "sha": "06bcb450c79e185690873047a03201b7e008dbf0",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/.pep8speaks.yml"
+      },
+      {
+        "path": ".readthedocs.yml",
+        "size": 91,
+        "sha": "6a06f6555134e68d1da903eed4ae795f8fe595ce",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/.readthedocs.yml"
+      },
+      {
+        "path": "CONTRIBUTING.md",
+        "size": 3469,
+        "sha": "c7576f1c3217460df7deb8fed964089d3903786c",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/CONTRIBUTING.md"
+      },
+      {
+        "path": "LICENSE.txt",
+        "size": 1476,
+        "sha": "8ddbf20d33587eec73a5591c39bae25678f13772",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/LICENSE.txt"
+      },
+      {
+        "path": "MANIFEST.in",
+        "size": 207,
+        "sha": "67601f42b8ecd14dc6f669f5d1f90816828d60fe",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/MANIFEST.in"
+      },
+      {
+        "path": "README.rst",
+        "size": 12142,
+        "sha": "d04043d305f6e6582846a828db995f9649a8c863",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/README.rst"
+      },
+      {
+        "path": "benchmarks/bench_ds_performance_faiss.py",
+        "size": 3047,
+        "sha": "4d8c076b2af16f4cc655ec30e6bc57329b0248f8",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/benchmarks/bench_ds_performance_faiss.py"
+      },
+      {
+        "path": "benchmarks/bench_knn_backbone.py",
+        "size": 1932,
+        "sha": "768e0fab75a1e3a919b967902317b5d60d67a31d",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/benchmarks/bench_knn_backbone.py"
+      },
+      {
+        "path": "benchmarks/bench_speed_faiss.py",
+        "size": 3582,
+        "sha": "cd574f52c0eb81198f56384d9503a2d9a78d12a6",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/benchmarks/bench_speed_faiss.py"
+      },
+      {
+        "path": "deslib/__init__.py",
+        "size": 704,
+        "sha": "8d75c301c3178e6762108fa836236c4e2620e102",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/__init__.py"
+      },
+      {
+        "path": "deslib/base.py",
+        "size": 28533,
+        "sha": "c3f1841413800c4bc15547352f962db655ab558d",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/base.py"
+      },
+      {
+        "path": "deslib/dcs/__init__.py",
+        "size": 463,
+        "sha": "71a6e19a6fa7fbfdc11494008fd9e978265703ba",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/dcs/__init__.py"
+      },
+      {
+        "path": "deslib/dcs/a_posteriori.py",
+        "size": 11054,
+        "sha": "4d1b54343d375c8fc716bc54341a25805c83ec10",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/dcs/a_posteriori.py"
+      },
+      {
+        "path": "deslib/dcs/a_priori.py",
+        "size": 9017,
+        "sha": "28792959f2611853c5ad48026f3fe1918cd62c5e",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/dcs/a_priori.py"
+      },
+      {
+        "path": "deslib/dcs/base.py",
+        "size": 12386,
+        "sha": "2aec4d5f0485c1f4a49cc659c8bf83e410276947",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/dcs/base.py"
+      },
+      {
+        "path": "deslib/dcs/lca.py",
+        "size": 8422,
+        "sha": "5e0d90f3562a35b97d4b7e9d78ba69f8a1f26eda",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/dcs/lca.py"
+      },
+      {
+        "path": "deslib/dcs/mcb.py",
+        "size": 10359,
+        "sha": "ff4c5f606582be814c7555c7af3997251c255be7",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/dcs/mcb.py"
+      },
+      {
+        "path": "deslib/dcs/mla.py",
+        "size": 9352,
+        "sha": "28224e54d8b2fe544a199376f49ec0ef65b784de",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/dcs/mla.py"
+      },
+      {
+        "path": "deslib/dcs/ola.py",
+        "size": 7136,
+        "sha": "05262f9dd41a3000245325282d11bbbda427aee5",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/dcs/ola.py"
+      },
+      {
+        "path": "deslib/dcs/rank.py",
+        "size": 7802,
+        "sha": "adf3fc1eb3299977366e939e5c9bf8549ab2e7fa",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/dcs/rank.py"
+      },
+      {
+        "path": "deslib/des/__init__.py",
+        "size": 1051,
+        "sha": "eb57a7a417aa78089ba055a57431d0b43d16c9b6",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/__init__.py"
+      },
+      {
+        "path": "deslib/des/base.py",
+        "size": 10416,
+        "sha": "9f3f973a71d3986e68c3a5f7211c6a5582ed4128",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/base.py"
+      },
+      {
+        "path": "deslib/des/des_clustering.py",
+        "size": 17305,
+        "sha": "368800959c133e65288bc607bf1a79137936e7d1",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/des_clustering.py"
+      },
+      {
+        "path": "deslib/des/des_knn.py",
+        "size": 17511,
+        "sha": "15406a41db764a98cec53f9db64ebcadaccd1ebe",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/des_knn.py"
+      },
+      {
+        "path": "deslib/des/des_mi.py",
+        "size": 13483,
+        "sha": "f51b73ab80a14cfad65bf8f0e4417bc74412dbac",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/des_mi.py"
+      },
+      {
+        "path": "deslib/des/des_p.py",
+        "size": 7776,
+        "sha": "d7352bc3aa0762956b2066571adeac75b6c737cc",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/des_p.py"
+      },
+      {
+        "path": "deslib/des/knop.py",
+        "size": 11615,
+        "sha": "753acdcfbc4f3b4357a65f49d19f80cc069fd5e0",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/knop.py"
+      },
+      {
+        "path": "deslib/des/knora_e.py",
+        "size": 9974,
+        "sha": "7217070ad07d7e5c1d06c4ec7f62224a2455d571",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/knora_e.py"
+      },
+      {
+        "path": "deslib/des/knora_u.py",
+        "size": 7682,
+        "sha": "1b6bc7a320c495b47d5697b2cceefe0aea81dfa0",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/knora_u.py"
+      },
+      {
+        "path": "deslib/des/meta_des.py",
+        "size": 23083,
+        "sha": "2f16d66b93906901d0162f54a422c415064d45b8",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/meta_des.py"
+      },
+      {
+        "path": "deslib/des/probabilistic/__init__.py",
+        "size": 362,
+        "sha": "2adaffe1f308db270ca560bf0a88d3ccbbd0886c",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/probabilistic/__init__.py"
+      },
+      {
+        "path": "deslib/des/probabilistic/base.py",
+        "size": 7287,
+        "sha": "6cdf86ee6a5a507017d32235fcc13861f9680dcb",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/probabilistic/base.py"
+      },
+      {
+        "path": "deslib/des/probabilistic/deskl.py",
+        "size": 6473,
+        "sha": "b68175fecd0d1f6db5b60cda26a6b26f28884a68",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/probabilistic/deskl.py"
+      },
+      {
+        "path": "deslib/des/probabilistic/exponential.py",
+        "size": 6478,
+        "sha": "595dccc878d48140a5c8b9cb2aafa8504846741f",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/probabilistic/exponential.py"
+      },
+      {
+        "path": "deslib/des/probabilistic/logarithmic.py",
+        "size": 5704,
+        "sha": "0015f8a7c5a764713b1f753fb8927f587813e136",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/probabilistic/logarithmic.py"
+      },
+      {
+        "path": "deslib/des/probabilistic/minimum_difference.py",
+        "size": 5902,
+        "sha": "3e419d95d7a758607a2ef21b2728b5272be2d7e1",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/probabilistic/minimum_difference.py"
+      },
+      {
+        "path": "deslib/des/probabilistic/rrc.py",
+        "size": 5730,
+        "sha": "6371558a5e6ada279107d994b35259c74df6cb35",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/des/probabilistic/rrc.py"
+      },
+      {
+        "path": "deslib/static/__init__.py",
+        "size": 428,
+        "sha": "8b7cc3c60fb6dc8f8f1771ef5623585f497201e3",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/static/__init__.py"
+      },
+      {
+        "path": "deslib/static/base.py",
+        "size": 5080,
+        "sha": "f5fc1487f9b14865be128cbf5fe591b650db0bee",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/static/base.py"
+      },
+      {
+        "path": "deslib/static/oracle.py",
+        "size": 5928,
+        "sha": "d1d7662e43d3bb156e927ee7c5839e1b5f652352",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/static/oracle.py"
+      },
+      {
+        "path": "deslib/static/single_best.py",
+        "size": 6261,
+        "sha": "6edb5c1fdaa74c810b54d3b101011d63fc5ac6bf",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/static/single_best.py"
+      },
+      {
+        "path": "deslib/static/stacked.py",
+        "size": 7488,
+        "sha": "f24b22edfb75ec6e1830e0f3f4894faba79651ec",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/static/stacked.py"
+      },
+      {
+        "path": "deslib/static/static_selection.py",
+        "size": 7389,
+        "sha": "cc0ef95eb46cd01d461d992d29b5d6f70df5dda3",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/static/static_selection.py"
+      },
+      {
+        "path": "deslib/tests/__init__.py",
+        "size": 24,
+        "sha": "9bd34cf03e9f8b9dce2e11fb52f16dddbbdb5028",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/__init__.py"
+      },
+      {
+        "path": "deslib/tests/conftest.py",
+        "size": 6803,
+        "sha": "56c449e4524784c508e14cded20fd18d5a76b044",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/conftest.py"
+      },
+      {
+        "path": "deslib/tests/dcs/__init__.py",
+        "size": 0,
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/dcs/__init__.py"
+      },
+      {
+        "path": "deslib/tests/dcs/test_a_posteriori.py",
+        "size": 5773,
+        "sha": "37411fedf8a537bca734f1a48f93573e07a5e79f",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/dcs/test_a_posteriori.py"
+      },
+      {
+        "path": "deslib/tests/dcs/test_a_priori.py",
+        "size": 3497,
+        "sha": "bea79fe27fc94d17b2d9bfb24ee39adc888f5a96",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/dcs/test_a_priori.py"
+      },
+      {
+        "path": "deslib/tests/dcs/test_base.py",
+        "size": 10024,
+        "sha": "e0b8dbc0c092952c9e83b2f41fbd999dc567d756",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/dcs/test_base.py"
+      },
+      {
+        "path": "deslib/tests/dcs/test_lca.py",
+        "size": 2558,
+        "sha": "c1cdc076e1cffdd2d7588461ace98c003f5dfcf2",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/dcs/test_lca.py"
+      },
+      {
+        "path": "deslib/tests/dcs/test_mcb.py",
+        "size": 3822,
+        "sha": "482d4c9b4c5927bc6ed6cbd31c0cbe3b35fc869a",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/dcs/test_mcb.py"
+      },
+      {
+        "path": "deslib/tests/dcs/test_mla.py",
+        "size": 4250,
+        "sha": "39db387653109febf1ed2ef3f14b914a41384cec",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/dcs/test_mla.py"
+      },
+      {
+        "path": "deslib/tests/dcs/test_ola.py",
+        "size": 1215,
+        "sha": "a471fe504d641ce54e6c7440dc20a9f2bae50edf",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/dcs/test_ola.py"
+      },
+      {
+        "path": "deslib/tests/dcs/test_rank.py",
+        "size": 1099,
+        "sha": "b25ededca897725095a6e5a4a8d7901c54ebb2d8",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/dcs/test_rank.py"
+      },
+      {
+        "path": "deslib/tests/des/__init__.py",
+        "size": 0,
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/des/__init__.py"
+      },
+      {
+        "path": "deslib/tests/des/test_base.py",
+        "size": 9310,
+        "sha": "ac44355169b296da08a622e01cd4b9c749538833",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/des/test_base.py"
+      },
+      {
+        "path": "deslib/tests/des/test_des_clustering.py",
+        "size": 8713,
+        "sha": "e65b8055e16a47f5c19a5f9da80da2f86a9a2908",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/des/test_des_clustering.py"
+      },
+      {
+        "path": "deslib/tests/des/test_des_knn.py",
+        "size": 10425,
+        "sha": "6ec024219483be37b986e7bc6ffb0f44e6cd7099",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/des/test_des_knn.py"
+      },
+      {
+        "path": "deslib/tests/des/test_des_mi.py",
+        "size": 5035,
+        "sha": "6cb55e84d3d3d186229d23d9e8a96d53675fbe77",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/des/test_des_mi.py"
+      },
+      {
+        "path": "deslib/tests/des/test_desp.py",
+        "size": 2597,
+        "sha": "8cd7fea23c5754d72c0b76d5395d43cf38fcdaf6",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/des/test_desp.py"
+      },
+      {
+        "path": "deslib/tests/des/test_knop.py",
+        "size": 2650,
+        "sha": "25e243d7f2e35b2e036f02a4816ec27c2820f637",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/des/test_knop.py"
+      },
+      {
+        "path": "deslib/tests/des/test_knorae.py",
+        "size": 2394,
+        "sha": "b7a65b3d83c075f9d208f22f4eccb2a6ca68ffa4",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/des/test_knorae.py"
+      },
+      {
+        "path": "deslib/tests/des/test_knorau.py",
+        "size": 1587,
+        "sha": "ee83da5a3b914a07b421f9fb3f2e2dba57e4122c",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/des/test_knorau.py"
+      },
+      {
+        "path": "deslib/tests/des/test_meta_des.py",
+        "size": 9165,
+        "sha": "c1769f3fe5b13a7e4cb0b6c973ca930b4de8a6f8",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/des/test_meta_des.py"
+      },
+      {
+        "path": "deslib/tests/des/test_probabilistic.py",
+        "size": 11213,
+        "sha": "5ba81e136bd93bd3c075dede1be838a7498cab09",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/des/test_probabilistic.py"
+      },
+      {
+        "path": "deslib/tests/expected_values/des_clustering_proba_integration.npy",
+        "size": 3136,
+        "sha": "633f382121cd18b39f1bf31e4fe535f6f2d90388",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/expected_values/des_clustering_proba_integration.npy"
+      },
+      {
+        "path": "deslib/tests/expected_values/desknn_proba_integration.npy",
+        "size": 3136,
+        "sha": "c19bf87cf3ba3b41ebc5725822f42ed22f431b64",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/expected_values/desknn_proba_integration.npy"
+      },
+      {
+        "path": "deslib/tests/expected_values/desknn_probas_DFP.npy",
+        "size": 5408,
+        "sha": "4df05fc6675a02d9b94e9ccfbf11c8416bc41a8b",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/expected_values/desknn_probas_DFP.npy"
+      },
+      {
+        "path": "deslib/tests/expected_values/desp_proba_DFP.npy",
+        "size": 5408,
+        "sha": "4dfaec54ac9bdceeb2a344bc1c7118be12798a5f",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/expected_values/desp_proba_DFP.npy"
+      },
+      {
+        "path": "deslib/tests/expected_values/desp_proba_integration.npy",
+        "size": 3136,
+        "sha": "d8fb23c6a026e4c0dff078bbcd6a3d7511240f28",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/expected_values/desp_proba_integration.npy"
+      },
+      {
+        "path": "deslib/tests/expected_values/kne_knn_proba_integration.npy",
+        "size": 3136,
+        "sha": "229717f93b008494cf1665ca58bb0bbe3369cfae",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/expected_values/kne_knn_proba_integration.npy"
+      },
+      {
+        "path": "deslib/tests/expected_values/kne_proba_DFP.npy",
+        "size": 5408,
+        "sha": "1bdce0b746acb1c0dd72cf921009d7e63b4b7a28",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/expected_values/kne_proba_DFP.npy"
+      },
+      {
+        "path": "deslib/tests/expected_values/kne_proba_integration.npy",
+        "size": 3136,
+        "sha": "438d073409e8ed95dd2feafe793e30694207b583",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/expected_values/kne_proba_integration.npy"
+      },
+      {
+        "path": "deslib/tests/expected_values/knop_proba_integration.npy",
+        "size": 3136,
+        "sha": "15cc533ba2a74baf6c7cbd021473924d5c406194",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/expected_values/knop_proba_integration.npy"
+      },
+      {
+        "path": "deslib/tests/expected_values/mcb_proba_DFP.npy",
+        "size": 5408,
+        "sha": "059facfb841f5fec09ad24955fb0b740c40a2232",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/expected_values/mcb_proba_DFP.npy"
+      },
+      {
+        "path": "deslib/tests/expected_values/mcb_proba_integration.npy",
+        "size": 3136,
+        "sha": "f4e19772c5d2121ac00f9f42c08426df38462565",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/expected_values/mcb_proba_integration.npy"
+      },
+      {
+        "path": "deslib/tests/expected_values/ola_proba_DFP.npy",
+        "size": 5408,
+        "sha": "f69bc9ee33ec8faf0ffb26b8d8775f6ccd2b66d9",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/expected_values/ola_proba_DFP.npy"
+      },
+      {
+        "path": "deslib/tests/expected_values/ola_proba_integration.npy",
+        "size": 3136,
+        "sha": "b888839311e04d7f831e50970ca5c1940a758283",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/expected_values/ola_proba_integration.npy"
+      },
+      {
+        "path": "deslib/tests/static/__init__.py",
+        "size": 0,
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/static/__init__.py"
+      },
+      {
+        "path": "deslib/tests/static/test_oracle.py",
+        "size": 2131,
+        "sha": "7060398e168642a7e7fa380ef69b90f75d931b2e",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/static/test_oracle.py"
+      },
+      {
+        "path": "deslib/tests/static/test_single_best.py",
+        "size": 3544,
+        "sha": "d5b434ea3f84430dd5cd7b008c0ed07eb285ad42",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/static/test_single_best.py"
+      },
+      {
+        "path": "deslib/tests/static/test_stacked.py",
+        "size": 3172,
+        "sha": "ace89bf03c8756b08de69babeeb3a93a4dc5ad78",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/static/test_stacked.py"
+      },
+      {
+        "path": "deslib/tests/static/test_static_selection.py",
+        "size": 4534,
+        "sha": "d2c3d21a063c1c8413840276117af9b5ba911725",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/static/test_static_selection.py"
+      },
+      {
+        "path": "deslib/tests/test_base.py",
+        "size": 11190,
+        "sha": "916fd4f406b4f1727482534f856db69b9685e5ed",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/test_base.py"
+      },
+      {
+        "path": "deslib/tests/test_des_integration.py",
+        "size": 21249,
+        "sha": "5629a2b7acf7912438eea72a023d2c20d6719220",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/test_des_integration.py"
+      },
+      {
+        "path": "deslib/tests/test_des_integration_multiclass.py",
+        "size": 3389,
+        "sha": "30799235a6cbf78d53a858aa61f0c0fa96d7df49",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/test_des_integration_multiclass.py"
+      },
+      {
+        "path": "deslib/tests/test_integration_DFP_IH.py",
+        "size": 2929,
+        "sha": "cc4185266e331f737f2b0a3069d8cfd19f09e43b",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/test_integration_DFP_IH.py"
+      },
+      {
+        "path": "deslib/tests/test_integration_dfp.py",
+        "size": 8021,
+        "sha": "1e53ddbb9599830aa17d6e2f7109644bd43401af",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/test_integration_dfp.py"
+      },
+      {
+        "path": "deslib/tests/test_metric.py",
+        "size": 6839,
+        "sha": "cdfd56297a6851853d2d32146e10bef7cc23336a",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/test_metric.py"
+      },
+      {
+        "path": "deslib/tests/util/__init__.py",
+        "size": 0,
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/util/__init__.py"
+      },
+      {
+        "path": "deslib/tests/util/test_aggregation.py",
+        "size": 5205,
+        "sha": "20d15653aa80f246925d71a194c120b5eee91c4b",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/util/test_aggregation.py"
+      },
+      {
+        "path": "deslib/tests/util/test_datasets.py",
+        "size": 1656,
+        "sha": "37c894da9facfeddb40f61f7750961f8bd53204a",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/util/test_datasets.py"
+      },
+      {
+        "path": "deslib/tests/util/test_diversity.py",
+        "size": 6205,
+        "sha": "bdeecd6439277b9f707f0e8fcd6a74756a51a55e",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/util/test_diversity.py"
+      },
+      {
+        "path": "deslib/tests/util/test_diversity_batch.py",
+        "size": 4140,
+        "sha": "f3815661323e90d8d69b77384244747601f329f1",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/util/test_diversity_batch.py"
+      },
+      {
+        "path": "deslib/tests/util/test_faiss.py",
+        "size": 852,
+        "sha": "d87e710ab5464211300033539d4c24e453ba5010",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/util/test_faiss.py"
+      },
+      {
+        "path": "deslib/tests/util/test_fire.py",
+        "size": 2372,
+        "sha": "ae5b526cf8f247997f42fc751f32d62baeafa986",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/util/test_fire.py"
+      },
+      {
+        "path": "deslib/tests/util/test_instance_hardness.py",
+        "size": 1491,
+        "sha": "400ceda0206fccc36c5a38fd32dd36f5756180ea",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/util/test_instance_hardness.py"
+      },
+      {
+        "path": "deslib/tests/util/test_knne.py",
+        "size": 2834,
+        "sha": "eb5415fceaa161e8d3671ac3297752dbd562330c",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/util/test_knne.py"
+      },
+      {
+        "path": "deslib/tests/util/test_prob_functions.py",
+        "size": 5450,
+        "sha": "eb0c0d9a6406e076b346e6a829c1fdedf74f42cc",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/tests/util/test_prob_functions.py"
+      },
+      {
+        "path": "deslib/util/__init__.py",
+        "size": 1032,
+        "sha": "43f0e31989269d90f9a3ee7035135ceabdab2759",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/util/__init__.py"
+      },
+      {
+        "path": "deslib/util/aggregation.py",
+        "size": 15221,
+        "sha": "bd492565847ba75819f5522d62af4d49c0e613d2",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/util/aggregation.py"
+      },
+      {
+        "path": "deslib/util/datasets.py",
+        "size": 9532,
+        "sha": "6f5319604204dc69eb0a205a9c5a9b77e9d16c91",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/util/datasets.py"
+      },
+      {
+        "path": "deslib/util/dfp.py",
+        "size": 4337,
+        "sha": "82dd981e0f8028d9af2b9f89960832e694d957b4",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/util/dfp.py"
+      },
+      {
+        "path": "deslib/util/diversity.py",
+        "size": 10449,
+        "sha": "9d89c6bbb0e09805d1ddac509f0ec6c9bc10d484",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/util/diversity.py"
+      },
+      {
+        "path": "deslib/util/diversity_batch.py",
+        "size": 11638,
+        "sha": "456faa513b7621e3154e93ff13c69df50e822d23",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/util/diversity_batch.py"
+      },
+      {
+        "path": "deslib/util/faiss_knn_wrapper.py",
+        "size": 6774,
+        "sha": "c9ed9434cf83694b4ffb114f096de8ec53990f1b",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/util/faiss_knn_wrapper.py"
+      },
+      {
+        "path": "deslib/util/instance_hardness.py",
+        "size": 3096,
+        "sha": "fadd504a587df561e4bb771a0da93e12191dab84",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/util/instance_hardness.py"
+      },
+      {
+        "path": "deslib/util/knne.py",
+        "size": 9014,
+        "sha": "70f744866f31ee3d6b6d35e07aea19e39b642e01",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/util/knne.py"
+      },
+      {
+        "path": "deslib/util/prob_functions.py",
+        "size": 9614,
+        "sha": "9a52ca002a64656d71b9854c80d235d458eb9b03",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/deslib/util/prob_functions.py"
+      },
+      {
+        "path": "docs/.gitignore",
+        "size": 7,
+        "sha": "e35d8850c9688b1ce82711694692cc574a799396",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/.gitignore"
+      },
+      {
+        "path": "docs/Makefile",
+        "size": 7409,
+        "sha": "3bc518abb48722b867c6f58204d662e520bc9e11",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/Makefile"
+      },
+      {
+        "path": "docs/_static/.keep",
+        "size": 0,
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/_static/.keep"
+      },
+      {
+        "path": "docs/api.rst",
+        "size": 2105,
+        "sha": "8639cdd873ac867068fc52954bf39d4f7ce5f396",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/api.rst"
+      },
+      {
+        "path": "docs/conf.py",
+        "size": 10869,
+        "sha": "4cdd84b08239f151fd95696923ee1f47fee5cdcd",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/conf.py"
+      },
+      {
+        "path": "docs/index.rst",
+        "size": 4971,
+        "sha": "a26a472ddded81a52eeec3a495ec7d16e3f6282e",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/index.rst"
+      },
+      {
+        "path": "docs/make.bat",
+        "size": 7244,
+        "sha": "d361c82b93658d27283abe29634efabce23d4da0",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/make.bat"
+      },
+      {
+        "path": "docs/modules/dcs/a_posteriori.rst",
+        "size": 173,
+        "sha": "b724db0db674c8b397a03c90b3c34e7bdab415b9",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/dcs/a_posteriori.rst"
+      },
+      {
+        "path": "docs/modules/dcs/a_priori.rst",
+        "size": 159,
+        "sha": "ef49b5e0dd463bd23e4e0e4553039837123dc404",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/dcs/a_priori.rst"
+      },
+      {
+        "path": "docs/modules/dcs/lca.rst",
+        "size": 184,
+        "sha": "823bc67dbea1977b1506b6e42939bfdec64cc749",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/dcs/lca.rst"
+      },
+      {
+        "path": "docs/modules/dcs/mcb.rst",
+        "size": 202,
+        "sha": "f72f9a4a69b96f55bb307eba6b52d42fd43306b8",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/dcs/mcb.rst"
+      },
+      {
+        "path": "docs/modules/dcs/mla.rst",
+        "size": 190,
+        "sha": "689d8c92548474db29391e47618c4480c5a629b0",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/dcs/mla.rst"
+      },
+      {
+        "path": "docs/modules/dcs/ola.rst",
+        "size": 189,
+        "sha": "b54e6446b4ec843b26a461536ad5072d80e68520",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/dcs/ola.rst"
+      },
+      {
+        "path": "docs/modules/dcs/rank.rst",
+        "size": 163,
+        "sha": "15e961a451274b5f6dc6556bf19df679b875644b",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/dcs/rank.rst"
+      },
+      {
+        "path": "docs/modules/des/des_clustering.rst",
+        "size": 181,
+        "sha": "38542d1106f7e2f1f81e3cbcb8b5acd8fd6b0d48",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/des/des_clustering.rst"
+      },
+      {
+        "path": "docs/modules/des/des_p.rst",
+        "size": 227,
+        "sha": "cb61e4ff65fcca9a31e9d2d319c137c80e28ea74",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/des/des_p.rst"
+      },
+      {
+        "path": "docs/modules/des/deskl.rst",
+        "size": 204,
+        "sha": "71a0ab5372c8177771fc6967d0cdbc98b63dbd91",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/des/deskl.rst"
+      },
+      {
+        "path": "docs/modules/des/desmi.rst",
+        "size": 204,
+        "sha": "9c1c71a8701bd0d56c8cb36d16a799103f1f567d",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/des/desmi.rst"
+      },
+      {
+        "path": "docs/modules/des/ds_knn.rst",
+        "size": 160,
+        "sha": "b3c6703f571f3b7ddb74d596deb0b6f5a412b680",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/des/ds_knn.rst"
+      },
+      {
+        "path": "docs/modules/des/exponential.rst",
+        "size": 199,
+        "sha": "5eae90dc18bbff2947578f0fc2f6b332a1a722a7",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/des/exponential.rst"
+      },
+      {
+        "path": "docs/modules/des/knop.rst",
+        "size": 209,
+        "sha": "f678d26d2f9fe7349e941e0e4d5fa990bf6b328a",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/des/knop.rst"
+      },
+      {
+        "path": "docs/modules/des/knora_e.rst",
+        "size": 213,
+        "sha": "87204a9df231382b6670430ca4384f0e79b1628e",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/des/knora_e.rst"
+      },
+      {
+        "path": "docs/modules/des/knora_u.rst",
+        "size": 203,
+        "sha": "a29b3d7ab7cb052956a0c7a66c77d07bc704167c",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/des/knora_u.rst"
+      },
+      {
+        "path": "docs/modules/des/logarithmic.rst",
+        "size": 198,
+        "sha": "a254a71c102e60c1d287286344f6e08b4eb92218",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/des/logarithmic.rst"
+      },
+      {
+        "path": "docs/modules/des/meta_des.rst",
+        "size": 168,
+        "sha": "e8838724eb2fa4f50c325734483d64ce780a4f27",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/des/meta_des.rst"
+      },
+      {
+        "path": "docs/modules/des/minimum_difference.rst",
+        "size": 218,
+        "sha": "5bc8d7b220908c2568286836df7c20d95abbeb45",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/des/minimum_difference.rst"
+      },
+      {
+        "path": "docs/modules/des/probabilistic.rst",
+        "size": 205,
+        "sha": "a3310c82b677b80c571328b26154cabe1316976f",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/des/probabilistic.rst"
+      },
+      {
+        "path": "docs/modules/des/rrc.rst",
+        "size": 234,
+        "sha": "b1a7816066e8e661e037932c1b9b0a1118b11e6f",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/des/rrc.rst"
+      },
+      {
+        "path": "docs/modules/static/oracle.rst",
+        "size": 98,
+        "sha": "5870ed7c23890fac5082b01b04a8f2fe1e781d49",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/static/oracle.rst"
+      },
+      {
+        "path": "docs/modules/static/single_best.rst",
+        "size": 147,
+        "sha": "344dcade73f91eed369d4e38ef33f0b2ebe6ac05",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/static/single_best.rst"
+      },
+      {
+        "path": "docs/modules/static/stacked.rst",
+        "size": 160,
+        "sha": "9ad85a775cc91e77c62a1e2f698cd20e2d67b78f",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/static/stacked.rst"
+      },
+      {
+        "path": "docs/modules/static/static_selection.rst",
+        "size": 163,
+        "sha": "eed213f1b30367213989d86d95d4b18f103ea60e",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/static/static_selection.rst"
+      },
+      {
+        "path": "docs/modules/util/aggregation.rst",
+        "size": 231,
+        "sha": "1d0d47773d20a67af0485ad908a374cd336732cd",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/util/aggregation.rst"
+      },
+      {
+        "path": "docs/modules/util/datasets.rst",
+        "size": 276,
+        "sha": "5fe0388fb680bfee53406a8183d2ffb7ce0f6428",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/util/datasets.rst"
+      },
+      {
+        "path": "docs/modules/util/dfp.rst",
+        "size": 80,
+        "sha": "2584474453d15e6af324c47164853de1877c00b4",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/util/dfp.rst"
+      },
+      {
+        "path": "docs/modules/util/diversity.rst",
+        "size": 360,
+        "sha": "364aabe2e244b3fbfc5117e8c3c87520b3a853bf",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/util/diversity.rst"
+      },
+      {
+        "path": "docs/modules/util/faiss_knn_wrapper.rst",
+        "size": 165,
+        "sha": "5a27f6e16e69013257d5224b8de879f7691ae777",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/util/faiss_knn_wrapper.rst"
+      },
+      {
+        "path": "docs/modules/util/instance_hardness.rst",
+        "size": 182,
+        "sha": "cb0c56cf1dee8a112c864ffb7f0afefe59446721",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/util/instance_hardness.rst"
+      },
+      {
+        "path": "docs/modules/util/knne.rst",
+        "size": 135,
+        "sha": "c48a4754f670c16985c58ce96de4f4b8dd6753ab",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/util/knne.rst"
+      },
+      {
+        "path": "docs/modules/util/prob_functions.rst",
+        "size": 285,
+        "sha": "0415ca040d3c7a37ca1730c150023538e85e264b",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/modules/util/prob_functions.rst"
+      },
+      {
+        "path": "docs/news.rst",
+        "size": 228,
+        "sha": "7df2de3546801e69fee444a20e6f9b777f0bd078",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/news.rst"
+      },
+      {
+        "path": "docs/news/v0.1.rst",
+        "size": 1153,
+        "sha": "990d924679037efcc69c886af9758fc3ef20e993",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/news/v0.1.rst"
+      },
+      {
+        "path": "docs/news/v0.2.rst",
+        "size": 920,
+        "sha": "f7003e2d87af3a6d515755b906bf350880af30e5",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/news/v0.2.rst"
+      },
+      {
+        "path": "docs/news/v0.3.5.rst",
+        "size": 1622,
+        "sha": "0d3ad2a8c9f05421bd385a41fe0253f9e61c1fb7",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/news/v0.3.5.rst"
+      },
+      {
+        "path": "docs/news/v0.3.rst",
+        "size": 2501,
+        "sha": "bb2ff167b69c1a62920ed747af1589ec4e14de06",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/news/v0.3.rst"
+      },
+      {
+        "path": "docs/user_guide.rst",
+        "size": 435,
+        "sha": "298f0d3f70e8f438bbddd6d03765b3eaa4809f80",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/user_guide.rst"
+      },
+      {
+        "path": "docs/user_guide/development.rst",
+        "size": 4093,
+        "sha": "e2e441d7ccaaf8961d64b07535571c2b8cd52979",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/user_guide/development.rst"
+      },
+      {
+        "path": "docs/user_guide/installation.rst",
+        "size": 803,
+        "sha": "ce00ba0e1dd5211a8e8e65a8da6c71602e74cc46",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/user_guide/installation.rst"
+      },
+      {
+        "path": "docs/user_guide/known_issues.rst",
+        "size": 737,
+        "sha": "0b8c399b99969eb0180802f886c7e802615130e9",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/user_guide/known_issues.rst"
+      },
+      {
+        "path": "docs/user_guide/packaging.rst",
+        "size": 3204,
+        "sha": "bfc2ecb13ba520a5b8bb703994cbb2b7ca4a2cb5",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/user_guide/packaging.rst"
+      },
+      {
+        "path": "docs/user_guide/tutorial.rst",
+        "size": 11982,
+        "sha": "33baac745f9753f78ae7c8493ef27fd686001b64",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/docs/user_guide/tutorial.rst"
+      },
+      {
+        "path": "examples/README.txt",
+        "size": 117,
+        "sha": "c4be93235ac989e36cca5bb9bbf03004247ce440",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/examples/README.txt"
+      },
+      {
+        "path": "examples/example_calibrating_classifiers.py",
+        "size": 5426,
+        "sha": "54daceca40292644c2deca88acf147b33838f262",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/examples/example_calibrating_classifiers.py"
+      },
+      {
+        "path": "examples/example_heterogeneous.py",
+        "size": 4920,
+        "sha": "2d4d4fcad6f7daa1aa0d9a38dc293d3ef83a07c6",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/examples/example_heterogeneous.py"
+      },
+      {
+        "path": "examples/plot_comparing_dynamic_static.py",
+        "size": 6411,
+        "sha": "935512e535625d4e7a5077ad87217e3cccaf1a6a",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/examples/plot_comparing_dynamic_static.py"
+      },
+      {
+        "path": "examples/plot_example_DFP.py",
+        "size": 4959,
+        "sha": "551cfe3b7474fa553e8d9d8111210d89df15b831",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/examples/plot_example_DFP.py"
+      },
+      {
+        "path": "examples/plot_example_P2.py",
+        "size": 8338,
+        "sha": "7f9b4665c0cde24391504d00726a6bb121ca8915",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/examples/plot_example_P2.py"
+      },
+      {
+        "path": "examples/plot_influence_k_value.py",
+        "size": 3250,
+        "sha": "95aa027af688fe96938f9a438500668ea06b0d24",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/examples/plot_influence_k_value.py"
+      },
+      {
+        "path": "examples/plot_random_forest.py",
+        "size": 4728,
+        "sha": "7cc35fbb8e27682e2ab65b82b583bc5f03cc37ba",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/examples/plot_random_forest.py"
+      },
+      {
+        "path": "examples/plot_using_instance_hardness.py",
+        "size": 4349,
+        "sha": "24e5b9bb16bd9ceaa3f01ecfc9c5e2b39ccdd511",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/examples/plot_using_instance_hardness.py"
+      },
+      {
+        "path": "examples/plot_xor_example.py",
+        "size": 5904,
+        "sha": "ff1e9dd06859c8f623e4bfe96b492d14ba3ae7c0",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/examples/plot_xor_example.py"
+      },
+      {
+        "path": "examples/simple_example.py",
+        "size": 1787,
+        "sha": "c80e66478a191970b80a39673add36e4b22e0638",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/examples/simple_example.py"
+      },
+      {
+        "path": "requirements-dev.txt",
+        "size": 148,
+        "sha": "abd2a919c981c5c70b9e73f6fcf7225d5611a220",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/requirements-dev.txt"
+      },
+      {
+        "path": "requirements.txt",
+        "size": 47,
+        "sha": "f74f4a20438894d5372d3a75ff041c9bab4ba901",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/requirements.txt"
+      },
+      {
+        "path": "setup.py",
+        "size": 1664,
+        "sha": "59dfdd47c7bdc9592dde030555eeee80776a4a15",
+        "download_url": "https://raw.githubusercontent.com/scikit-learn-contrib/DESlib/None/setup.py"
+      }
+    ],
+    "all_directories": [
+      ".circleci",
+      "benchmarks",
+      "deslib",
+      "deslib/dcs",
+      "deslib/des",
+      "deslib/des/probabilistic",
+      "deslib/static",
+      "deslib/tests",
+      "deslib/tests/dcs",
+      "deslib/tests/des",
+      "deslib/tests/expected_values",
+      "deslib/tests/static",
+      "deslib/tests/util",
+      "deslib/util",
+      "docs",
+      "docs/_static",
+      "docs/modules",
+      "docs/modules/dcs",
+      "docs/modules/des",
+      "docs/modules/static",
+      "docs/modules/util",
+      "docs/news",
+      "docs/user_guide",
+      "examples"
+    ],
+    "repository_info": {
+      "owner": "scikit-learn-contrib",
+      "repo": "DESlib",
+      "branch": null,
+      "repo_url": "https://github.com/scikit-learn-contrib/DESlib"
+    }
+  },
+  "https://github.com/zukijourney/api-oss": {
+    "summary": {
+      "total_files": 83,
+      "total_directories": 22,
+      "total_size_bytes": 461603,
+      "total_size_mb": 0.44,
+      "average_file_size": 5561.48
+    },
+    "file_types": {
+      ".py": 62,
+      "[no extension]": 8,
+      ".md": 3,
+      ".example": 2,
+      ".toml": 2,
+      ".lock": 2,
+      ".yml": 2,
+      ".sh": 1,
+      ".env": 1
+    },
+    "largest_files": [
+      {
+        "path": "api/uv.lock",
+        "size": 145123,
+        "sha": "5ac0c38cd11081d01368e9946f21a9b3a41f01dd",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/uv.lock"
+      },
+      {
+        "path": "bot/uv.lock",
+        "size": 109239,
+        "sha": "5030f0781e7b326b22da15b2994a7a113b47e95f",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/uv.lock"
+      },
+      {
+        "path": "api/app/providers/multiple/openai.py",
+        "size": 29138,
+        "sha": "2c8f41819cc0e17db821de23cf3c0286865fd1c3",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/providers/multiple/openai.py"
+      },
+      {
+        "path": "api/app/providers/ai_models.py",
+        "size": 27675,
+        "sha": "f5b8597b3de69b52527a097fd630394c02d3a2e4",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/providers/ai_models.py"
+      },
+      {
+        "path": "api/app/providers/utils.py",
+        "size": 13493,
+        "sha": "eecc4aa2e8288264e3623194b97bde91042ebfc5",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/providers/utils.py"
+      },
+      {
+        "path": "bot/app/views/faq_view.py",
+        "size": 12655,
+        "sha": "a5871617446505fedd22dad0d4f6e6d22d10a5a0",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/app/views/faq_view.py"
+      },
+      {
+        "path": "bot/app/utils.py",
+        "size": 11234,
+        "sha": "e2127f3112205dc433e9dddd419e35059ee5327e",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/app/utils.py"
+      },
+      {
+        "path": "bot/app/views/role_info_view.py",
+        "size": 9534,
+        "sha": "0f101e7ba149c21b73b4fc28f2d05e6b3cf8af56",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/app/views/role_info_view.py"
+      },
+      {
+        "path": "api/app/api/dependencies.py",
+        "size": 7119,
+        "sha": "6390669cb3be4a3b08b5a8c8f95fc847dae789a5",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/dependencies.py"
+      },
+      {
+        "path": "api/app/core/db/managers/provider_manager.py",
+        "size": 6434,
+        "sha": "84c5361e56e603c76df95c80dfc2f8c89a82b55a",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/core/db/managers/provider_manager.py"
+      }
+    ],
+    "top_directories": [
+      {
+        "path": "api/app/models",
+        "file_count": 7,
+        "total_size": 6364,
+        "avg_size": 909.1428571428571
+      },
+      {
+        "path": "api",
+        "file_count": 6,
+        "total_size": 146533,
+        "avg_size": 24422.166666666668
+      },
+      {
+        "path": "api/app",
+        "file_count": 6,
+        "total_size": 20094,
+        "avg_size": 3349.0
+      },
+      {
+        "path": "bot",
+        "file_count": 6,
+        "total_size": 110392,
+        "avg_size": 18398.666666666668
+      },
+      {
+        "path": "api/app/api",
+        "file_count": 4,
+        "total_size": 8247,
+        "avg_size": 2061.75
+      },
+      {
+        "path": "api/app/api/routes/v1",
+        "file_count": 4,
+        "total_size": 5038,
+        "avg_size": 1259.5
+      },
+      {
+        "path": "api/app/api/routes/v1/audio",
+        "file_count": 4,
+        "total_size": 6853,
+        "avg_size": 1713.25
+      },
+      {
+        "path": "api/app/providers",
+        "file_count": 4,
+        "total_size": 46844,
+        "avg_size": 11711.0
+      },
+      {
+        "path": "bot/app/cogs",
+        "file_count": 4,
+        "total_size": 12235,
+        "avg_size": 3058.75
+      },
+      {
+        "path": "bot/app/views",
+        "file_count": 4,
+        "total_size": 26928,
+        "avg_size": 6732.0
+      }
+    ],
+    "all_files": [
+      {
+        "path": ".dockerignore",
+        "size": 73,
+        "sha": "101092a3eca1edced8b6bf673d7285b7333bfb0e",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/.dockerignore"
+      },
+      {
+        "path": ".gitattributes",
+        "size": 28,
+        "sha": "1312090792c294a954a0304ea823e4ec3e0798f9",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/.gitattributes"
+      },
+      {
+        "path": ".gitignore",
+        "size": 3128,
+        "sha": "539cba4704921c4c0a64c9893f3291a95b345030",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/.gitignore"
+      },
+      {
+        "path": "LICENSE",
+        "size": 1058,
+        "sha": "6651cf1029807b1817c7e210fe4c794acd6d0b77",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/LICENSE"
+      },
+      {
+        "path": "README.md",
+        "size": 13,
+        "sha": "b31d8418c73284862957da7a118d6dcf61b9416a",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/README.md"
+      },
+      {
+        "path": "api/.dockerignore",
+        "size": 73,
+        "sha": "101092a3eca1edced8b6bf673d7285b7333bfb0e",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/.dockerignore"
+      },
+      {
+        "path": "api/.env.example",
+        "size": 20,
+        "sha": "b0f4943f3b6df6f66da7a851adf764f0320e01f6",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/.env.example"
+      },
+      {
+        "path": "api/Dockerfile",
+        "size": 926,
+        "sha": "3e08f09a14146a4664e1dc462cd324ddb4b0c20c",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/Dockerfile"
+      },
+      {
+        "path": "api/README.md",
+        "size": 5,
+        "sha": "c3684bb6a2d40a18c37ba15810b968b8a67a577b",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/README.md"
+      },
+      {
+        "path": "api/app/__init__.py",
+        "size": 40,
+        "sha": "8aa77847283b39e22f132c7ace8a98167ef9ee46",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/__init__.py"
+      },
+      {
+        "path": "api/app/api/__init__.py",
+        "size": 0,
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/__init__.py"
+      },
+      {
+        "path": "api/app/api/constants.py",
+        "size": 232,
+        "sha": "97b10b93b3c82d4f1dc2429817f0d8ec2ddacaf1",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/constants.py"
+      },
+      {
+        "path": "api/app/api/dependencies.py",
+        "size": 7119,
+        "sha": "6390669cb3be4a3b08b5a8c8f95fc847dae789a5",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/dependencies.py"
+      },
+      {
+        "path": "api/app/api/exceptions.py",
+        "size": 896,
+        "sha": "9f8552391fc32190bdb22d76ae02020b85d6edab",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/exceptions.py"
+      },
+      {
+        "path": "api/app/api/routes/__init__.py",
+        "size": 0,
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/routes/__init__.py"
+      },
+      {
+        "path": "api/app/api/routes/route.py",
+        "size": 344,
+        "sha": "a57aff341bcf9b2f6c6afc1b1c0e0de112a9d285",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/routes/route.py"
+      },
+      {
+        "path": "api/app/api/routes/v1/__init__.py",
+        "size": 0,
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/routes/v1/__init__.py"
+      },
+      {
+        "path": "api/app/api/routes/v1/audio/__init__.py",
+        "size": 0,
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/routes/v1/audio/__init__.py"
+      },
+      {
+        "path": "api/app/api/routes/v1/audio/speech.py",
+        "size": 2248,
+        "sha": "54b589109d47b4c3b0e0c06a8354d88b8166386a",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/routes/v1/audio/speech.py"
+      },
+      {
+        "path": "api/app/api/routes/v1/audio/transcriptions.py",
+        "size": 2308,
+        "sha": "5798a4e6ea57990eb9540c2c4a22063052674c51",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/routes/v1/audio/transcriptions.py"
+      },
+      {
+        "path": "api/app/api/routes/v1/audio/translations.py",
+        "size": 2297,
+        "sha": "377b6ac1461a3515e4537f92167969a7fcf5edfb",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/routes/v1/audio/translations.py"
+      },
+      {
+        "path": "api/app/api/routes/v1/chat/__init__.py",
+        "size": 0,
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/routes/v1/chat/__init__.py"
+      },
+      {
+        "path": "api/app/api/routes/v1/chat/completions.py",
+        "size": 4126,
+        "sha": "3323c3f3fc652882eded0395178f27981677f65f",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/routes/v1/chat/completions.py"
+      },
+      {
+        "path": "api/app/api/routes/v1/embeddings.py",
+        "size": 2312,
+        "sha": "5000c8708ce29c30657d22338ec14f9736818cb6",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/routes/v1/embeddings.py"
+      },
+      {
+        "path": "api/app/api/routes/v1/images/__init__.py",
+        "size": 0,
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/routes/v1/images/__init__.py"
+      },
+      {
+        "path": "api/app/api/routes/v1/images/generations.py",
+        "size": 2374,
+        "sha": "183ad8df647130ff33a63340f9fab51a43ee47c9",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/routes/v1/images/generations.py"
+      },
+      {
+        "path": "api/app/api/routes/v1/images/upscale.py",
+        "size": 2265,
+        "sha": "14a77a6384ea518903e6b33e8c5c93cb94f4b39d",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/routes/v1/images/upscale.py"
+      },
+      {
+        "path": "api/app/api/routes/v1/models.py",
+        "size": 412,
+        "sha": "459c49a04be3bd88f688d138ba16142ed54eb96f",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/routes/v1/models.py"
+      },
+      {
+        "path": "api/app/api/routes/v1/moderations.py",
+        "size": 2314,
+        "sha": "09d683089625e6aef9d9ba9e0f97abf6d3d4ff12",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/routes/v1/moderations.py"
+      },
+      {
+        "path": "api/app/api/routes/v1/text/__init__.py",
+        "size": 0,
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/routes/v1/text/__init__.py"
+      },
+      {
+        "path": "api/app/api/routes/v1/text/translations.py",
+        "size": 2417,
+        "sha": "c3ae6ecd6bd9d6f3c65e302533e8d445aee6a722",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/api/routes/v1/text/translations.py"
+      },
+      {
+        "path": "api/app/core/__init__.py",
+        "size": 168,
+        "sha": "c01803a660b6ec6bb72387ff60d8b4c2961dfa9d",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/core/__init__.py"
+      },
+      {
+        "path": "api/app/core/config.py",
+        "size": 255,
+        "sha": "83d39c57ef0cdb1ca5514b24d84b07e019d6cfa1",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/core/config.py"
+      },
+      {
+        "path": "api/app/core/db/__init__.py",
+        "size": 96,
+        "sha": "6fcce62f1143941867f340886f5ba63de8b97c25",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/core/db/__init__.py"
+      },
+      {
+        "path": "api/app/core/db/exceptions.py",
+        "size": 139,
+        "sha": "226f02c7170b5926ba37c016eaf12a17eb126596",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/core/db/exceptions.py"
+      },
+      {
+        "path": "api/app/core/db/managers/__init__.py",
+        "size": 129,
+        "sha": "0cc2918019ecdd749ce3da6e8179ee4cf43ba007",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/core/db/managers/__init__.py"
+      },
+      {
+        "path": "api/app/core/db/managers/provider_manager.py",
+        "size": 6434,
+        "sha": "84c5361e56e603c76df95c80dfc2f8c89a82b55a",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/core/db/managers/provider_manager.py"
+      },
+      {
+        "path": "api/app/core/db/managers/user_manager.py",
+        "size": 1300,
+        "sha": "34883dc4652632a944a9e7477f2aba85e4561acb",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/core/db/managers/user_manager.py"
+      },
+      {
+        "path": "api/app/errors.py",
+        "size": 4973,
+        "sha": "f5f6eefcbc27800b6094e1e4b6d5dd620133fccd",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/errors.py"
+      },
+      {
+        "path": "api/app/main.py",
+        "size": 1140,
+        "sha": "40961b40309768ef07a13dd48e3a4b02af12e1fd",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/main.py"
+      },
+      {
+        "path": "api/app/models/__init__.py",
+        "size": 520,
+        "sha": "156b0a76867b75836bcb1df0db9bccce9836f909",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/models/__init__.py"
+      },
+      {
+        "path": "api/app/models/audio.py",
+        "size": 387,
+        "sha": "8c453e2612b8cc80838c04a0eb8948478c91a52b",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/models/audio.py"
+      },
+      {
+        "path": "api/app/models/chat_completions.py",
+        "size": 2696,
+        "sha": "93cb3062502b79e42708a6803d1218c2afad44f3",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/models/chat_completions.py"
+      },
+      {
+        "path": "api/app/models/embeddings.py",
+        "size": 1167,
+        "sha": "09a3123db1f9726b74a5b2a1da1043b8290c7d0d",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/models/embeddings.py"
+      },
+      {
+        "path": "api/app/models/images_generations.py",
+        "size": 517,
+        "sha": "a46b1619523b669addeadafead74e764554b6b44",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/models/images_generations.py"
+      },
+      {
+        "path": "api/app/models/moderations.py",
+        "size": 640,
+        "sha": "49706219a1421dd9aa3847ce3c2c6c9ed9fa2070",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/models/moderations.py"
+      },
+      {
+        "path": "api/app/models/text_translations.py",
+        "size": 437,
+        "sha": "4ec7c7853b2ab789b35713ca19ffcbb70e5ff204",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/models/text_translations.py"
+      },
+      {
+        "path": "api/app/providers/__init__.py",
+        "size": 105,
+        "sha": "27e98161022a5ee5386b17b7caf3c55a92e09571",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/providers/__init__.py"
+      },
+      {
+        "path": "api/app/providers/ai_models.py",
+        "size": 27675,
+        "sha": "f5b8597b3de69b52527a097fd630394c02d3a2e4",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/providers/ai_models.py"
+      },
+      {
+        "path": "api/app/providers/base_provider.py",
+        "size": 5571,
+        "sha": "d1da37ff3aab81eed6ea78f2ece514217c7335d0",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/providers/base_provider.py"
+      },
+      {
+        "path": "api/app/providers/multiple/__init__.py",
+        "size": 0,
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/providers/multiple/__init__.py"
+      },
+      {
+        "path": "api/app/providers/multiple/openai.py",
+        "size": 29138,
+        "sha": "2c8f41819cc0e17db821de23cf3c0286865fd1c3",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/providers/multiple/openai.py"
+      },
+      {
+        "path": "api/app/providers/utils.py",
+        "size": 13493,
+        "sha": "eecc4aa2e8288264e3623194b97bde91042ebfc5",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/providers/utils.py"
+      },
+      {
+        "path": "api/app/responses.py",
+        "size": 4960,
+        "sha": "01bfd0110cdeae3db878f162e72c837526e1ae0c",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/responses.py"
+      },
+      {
+        "path": "api/app/tasks.py",
+        "size": 3593,
+        "sha": "6a457e44bd67375dae14a74f0e4f65b065622d15",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/tasks.py"
+      },
+      {
+        "path": "api/app/utils.py",
+        "size": 5388,
+        "sha": "2e79ce3d49100b2897f3f22bdfd88162cca79a1c",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/app/utils.py"
+      },
+      {
+        "path": "api/pyproject.toml",
+        "size": 386,
+        "sha": "b661d13582b79852692af6801e8fc1faf58c7ed5",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/pyproject.toml"
+      },
+      {
+        "path": "api/uv.lock",
+        "size": 145123,
+        "sha": "5ac0c38cd11081d01368e9946f21a9b3a41f01dd",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/api/uv.lock"
+      },
+      {
+        "path": "bot/.dockerignore",
+        "size": 73,
+        "sha": "101092a3eca1edced8b6bf673d7285b7333bfb0e",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/.dockerignore"
+      },
+      {
+        "path": "bot/.env.example",
+        "size": 14,
+        "sha": "66bef97a659b09ba727f156b2c2cf14d9d6e002a",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/.env.example"
+      },
+      {
+        "path": "bot/Dockerfile",
+        "size": 757,
+        "sha": "454206edd64ed60919267316aaacf97fcb6a0dc4",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/Dockerfile"
+      },
+      {
+        "path": "bot/README.md",
+        "size": 5,
+        "sha": "c4629e072fd0569c78ef819f77070c528f1c6fe3",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/README.md"
+      },
+      {
+        "path": "bot/app/__init__.py",
+        "size": 89,
+        "sha": "74cc102a7fe490cde95ec4a1073fe4c5dd785a16",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/app/__init__.py"
+      },
+      {
+        "path": "bot/app/cogs/__init__.py",
+        "size": 312,
+        "sha": "437092617e1f3acbe1049e727141c9426de43f0d",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/app/cogs/__init__.py"
+      },
+      {
+        "path": "bot/app/cogs/misc_cog.py",
+        "size": 4177,
+        "sha": "088ca41e98391327ce6084a18f9623f9ba744216",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/app/cogs/misc_cog.py"
+      },
+      {
+        "path": "bot/app/cogs/panel_setup_cog.py",
+        "size": 4502,
+        "sha": "f40418eae10fea9b6144da438e3c1e4d1618aaec",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/app/cogs/panel_setup_cog.py"
+      },
+      {
+        "path": "bot/app/cogs/user_cog.py",
+        "size": 3244,
+        "sha": "90dd5c5f828a24bb6b0ae554726a7138b01abec1",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/app/cogs/user_cog.py"
+      },
+      {
+        "path": "bot/app/core/__init__.py",
+        "size": 141,
+        "sha": "7940cd57c570dabc91e54213a5cb318d92b1b012",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/app/core/__init__.py"
+      },
+      {
+        "path": "bot/app/core/config.py",
+        "size": 272,
+        "sha": "4599db20145d184762ad921af430c6e2ddeff96f",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/app/core/config.py"
+      },
+      {
+        "path": "bot/app/core/db/__init__.py",
+        "size": 96,
+        "sha": "c962b49485e8ac2d96c18321499f83511a27b37e",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/app/core/db/__init__.py"
+      },
+      {
+        "path": "bot/app/core/db/user_manager.py",
+        "size": 2707,
+        "sha": "b1adcf665e7799789301c2e8b12e657abcd30e75",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/app/core/db/user_manager.py"
+      },
+      {
+        "path": "bot/app/main.py",
+        "size": 3337,
+        "sha": "c0297c230939f581fe858fb4f9dbf83439e0bb20",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/app/main.py"
+      },
+      {
+        "path": "bot/app/utils.py",
+        "size": 11234,
+        "sha": "e2127f3112205dc433e9dddd419e35059ee5327e",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/app/utils.py"
+      },
+      {
+        "path": "bot/app/views/__init__.py",
+        "size": 208,
+        "sha": "1731dcf5f84c79fe8609fac598c12be57507704c",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/app/views/__init__.py"
+      },
+      {
+        "path": "bot/app/views/control_panel_view.py",
+        "size": 4531,
+        "sha": "b162aced20be63873bff165e7d4f546a71589345",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/app/views/control_panel_view.py"
+      },
+      {
+        "path": "bot/app/views/faq_view.py",
+        "size": 12655,
+        "sha": "a5871617446505fedd22dad0d4f6e6d22d10a5a0",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/app/views/faq_view.py"
+      },
+      {
+        "path": "bot/app/views/role_info_view.py",
+        "size": 9534,
+        "sha": "0f101e7ba149c21b73b4fc28f2d05e6b3cf8af56",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/app/views/role_info_view.py"
+      },
+      {
+        "path": "bot/pyproject.toml",
+        "size": 304,
+        "sha": "ce29fa5864e005879e4c6bd6937135ec202bb9b2",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/pyproject.toml"
+      },
+      {
+        "path": "bot/uv.lock",
+        "size": 109239,
+        "sha": "5030f0781e7b326b22da15b2994a7a113b47e95f",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/bot/uv.lock"
+      },
+      {
+        "path": "credits.yml",
+        "size": 64,
+        "sha": "abe202fca1d6d5431a7f7c30f68c53cfd4888223",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/credits.yml"
+      },
+      {
+        "path": "deploy.sh",
+        "size": 58,
+        "sha": "c1ac0cbe02b2f658982cc3445e6534af7c69504b",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/deploy.sh"
+      },
+      {
+        "path": "docker-compose.yml",
+        "size": 514,
+        "sha": "9cb6d3de036ad5313a804743eaa1f8200ee71c83",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/docker-compose.yml"
+      },
+      {
+        "path": "secrets/db.env",
+        "size": 78,
+        "sha": "7303c8a3f6c116aef0a6093cbf2d9f1392196eb8",
+        "download_url": "https://raw.githubusercontent.com/zukijourney/api-oss/None/secrets/db.env"
+      }
+    ],
+    "all_directories": [
+      "api",
+      "api/app",
+      "api/app/api",
+      "api/app/api/routes",
+      "api/app/api/routes/v1",
+      "api/app/api/routes/v1/audio",
+      "api/app/api/routes/v1/chat",
+      "api/app/api/routes/v1/images",
+      "api/app/api/routes/v1/text",
+      "api/app/core",
+      "api/app/core/db",
+      "api/app/core/db/managers",
+      "api/app/models",
+      "api/app/providers",
+      "api/app/providers/multiple",
+      "bot",
+      "bot/app",
+      "bot/app/cogs",
+      "bot/app/core",
+      "bot/app/core/db",
+      "bot/app/views",
+      "secrets"
+    ],
+    "repository_info": {
+      "owner": "zukijourney",
+      "repo": "api-oss",
+      "branch": null,
+      "repo_url": "https://github.com/zukijourney/api-oss"
+    }
+  },
+  "https://github.com/austind/retryhttp": {
+    "summary": {
+      "total_files": 26,
+      "total_directories": 6,
+      "total_size_bytes": 61216,
+      "total_size_mb": 0.06,
+      "average_file_size": 2354.46
+    },
+    "file_types": {
+      ".py": 12,
+      ".md": 5,
+      ".yml": 3,
+      "[no extension]": 2,
+      ".css": 1,
+      ".toml": 1,
+      ".txt": 1,
+      ".typed": 1
+    },
+    "largest_files": [
+      {
+        "path": "LICENSE",
+        "size": 11357,
+        "sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/LICENSE"
+      },
+      {
+        "path": "retryhttp/_wait.py",
+        "size": 8702,
+        "sha": "a4c1d53e36c8fa1d05e4f34c182b35ccec38a5b8",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/retryhttp/_wait.py"
+      },
+      {
+        "path": "retryhttp/_retry.py",
+        "size": 8409,
+        "sha": "7102038ec12237dd0c27e19c2627e6ccf33b05da",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/retryhttp/_retry.py"
+      },
+      {
+        "path": "docs/guide.md",
+        "size": 3834,
+        "sha": "817b63c27560ce4d4465ace918b09efe821c0277",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/docs/guide.md"
+      },
+      {
+        "path": "retryhttp/_utils.py",
+        "size": 3823,
+        "sha": "4cf35c198b414fcaf0e86166648fbbc1c92e77b9",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/retryhttp/_utils.py"
+      },
+      {
+        "path": "docs/changelog.md",
+        "size": 3160,
+        "sha": "55d423d795503132f22cc35dddbd673b923c69e7",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/docs/changelog.md"
+      },
+      {
+        "path": ".gitignore",
+        "size": 3157,
+        "sha": "933dd9f85d2801eb9cf123f58fa3fbd428410f28",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/.gitignore"
+      },
+      {
+        "path": "tests/test_rate_limited.py",
+        "size": 2548,
+        "sha": "63d6f43615318d5e4476b37aa58c9796dcd3df52",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/tests/test_rate_limited.py"
+      },
+      {
+        "path": "tests/test_wait.py",
+        "size": 2159,
+        "sha": "7df38a445251c34d6006756be9f26d348746427e",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/tests/test_wait.py"
+      },
+      {
+        "path": "pyproject.toml",
+        "size": 2139,
+        "sha": "b08b963d6e7d936bb2767ac25b140f8b7104018b",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/pyproject.toml"
+      }
+    ],
+    "top_directories": [
+      {
+        "path": "retryhttp",
+        "file_count": 7,
+        "total_size": 22138,
+        "avg_size": 3162.5714285714284
+      },
+      {
+        "path": "tests",
+        "file_count": 5,
+        "total_size": 7297,
+        "avg_size": 1459.4
+      },
+      {
+        "path": "docs",
+        "file_count": 4,
+        "total_size": 9463,
+        "avg_size": 2365.75
+      },
+      {
+        "path": ".github/workflows",
+        "file_count": 1,
+        "total_size": 375,
+        "avg_size": 375.0
+      },
+      {
+        "path": "docs/css",
+        "file_count": 1,
+        "total_size": 1170,
+        "avg_size": 1170.0
+      }
+    ],
+    "all_files": [
+      {
+        "path": ".github/workflows/ci.yml",
+        "size": 375,
+        "sha": "bdc44e13866998b4a2bd75fc0b5ccb7e29b87b57",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/.github/workflows/ci.yml"
+      },
+      {
+        "path": ".gitignore",
+        "size": 3157,
+        "sha": "933dd9f85d2801eb9cf123f58fa3fbd428410f28",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/.gitignore"
+      },
+      {
+        "path": ".readthedocs.yml",
+        "size": 254,
+        "sha": "15acbbf337768b948dcd912c1f45c1493e799c5a",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/.readthedocs.yml"
+      },
+      {
+        "path": "LICENSE",
+        "size": 11357,
+        "sha": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/LICENSE"
+      },
+      {
+        "path": "README.md",
+        "size": 2122,
+        "sha": "2d2165785c0a6a31ff7bb3e60903ae860444743b",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/README.md"
+      },
+      {
+        "path": "docs/api.md",
+        "size": 899,
+        "sha": "e34ad20b8c69d08d826dd96609fe5467d5c277e5",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/docs/api.md"
+      },
+      {
+        "path": "docs/changelog.md",
+        "size": 3160,
+        "sha": "55d423d795503132f22cc35dddbd673b923c69e7",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/docs/changelog.md"
+      },
+      {
+        "path": "docs/css/mkdocstrings.css",
+        "size": 1170,
+        "sha": "47a6fc26fbd5f6dcd8c0ae05a429dd399ffbde86",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/docs/css/mkdocstrings.css"
+      },
+      {
+        "path": "docs/guide.md",
+        "size": 3834,
+        "sha": "817b63c27560ce4d4465ace918b09efe821c0277",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/docs/guide.md"
+      },
+      {
+        "path": "docs/index.md",
+        "size": 1570,
+        "sha": "1903b3a49389835930a0d4efe5bd4632793cc498",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/docs/index.md"
+      },
+      {
+        "path": "mkdocs.yml",
+        "size": 1520,
+        "sha": "ee7f14dc8f10038148d4afe3fa07da33c17c760e",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/mkdocs.yml"
+      },
+      {
+        "path": "noxfile.py",
+        "size": 200,
+        "sha": "38f48f22b640d291a9fc38ffe57b29f4c7f7c3a7",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/noxfile.py"
+      },
+      {
+        "path": "pyproject.toml",
+        "size": 2139,
+        "sha": "b08b963d6e7d936bb2767ac25b140f8b7104018b",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/pyproject.toml"
+      },
+      {
+        "path": "requirements.txt",
+        "size": 24,
+        "sha": "e2633829f574877353f619e465ccff55074f15d3",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/requirements.txt"
+      },
+      {
+        "path": "retryhttp/__init__.py",
+        "size": 492,
+        "sha": "5bb0c9703ac81c254dc07fd6c204fb25d5d14bea",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/retryhttp/__init__.py"
+      },
+      {
+        "path": "retryhttp/_constants.py",
+        "size": 151,
+        "sha": "cef81a946e05418827297764ef9262a7e23e0998",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/retryhttp/_constants.py"
+      },
+      {
+        "path": "retryhttp/_retry.py",
+        "size": 8409,
+        "sha": "7102038ec12237dd0c27e19c2627e6ccf33b05da",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/retryhttp/_retry.py"
+      },
+      {
+        "path": "retryhttp/_types.py",
+        "size": 561,
+        "sha": "2a9068e72223c384ecc1a51a1db89670d0508570",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/retryhttp/_types.py"
+      },
+      {
+        "path": "retryhttp/_utils.py",
+        "size": 3823,
+        "sha": "4cf35c198b414fcaf0e86166648fbbc1c92e77b9",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/retryhttp/_utils.py"
+      },
+      {
+        "path": "retryhttp/_wait.py",
+        "size": 8702,
+        "sha": "a4c1d53e36c8fa1d05e4f34c182b35ccec38a5b8",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/retryhttp/_wait.py"
+      },
+      {
+        "path": "retryhttp/py.typed",
+        "size": 0,
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/retryhttp/py.typed"
+      },
+      {
+        "path": "tests/__init__.py",
+        "size": 0,
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/tests/__init__.py"
+      },
+      {
+        "path": "tests/conftest.py",
+        "size": 690,
+        "sha": "a5f1a38a715391a52b6421c4af974b753b6161f0",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/tests/conftest.py"
+      },
+      {
+        "path": "tests/test_rate_limited.py",
+        "size": 2548,
+        "sha": "63d6f43615318d5e4476b37aa58c9796dcd3df52",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/tests/test_rate_limited.py"
+      },
+      {
+        "path": "tests/test_retry.py",
+        "size": 1900,
+        "sha": "3840b0f3b6891ea006d3b7e93e808de1aae39cc3",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/tests/test_retry.py"
+      },
+      {
+        "path": "tests/test_wait.py",
+        "size": 2159,
+        "sha": "7df38a445251c34d6006756be9f26d348746427e",
+        "download_url": "https://raw.githubusercontent.com/austind/retryhttp/None/tests/test_wait.py"
+      }
+    ],
+    "all_directories": [
+      ".github",
+      ".github/workflows",
+      "docs",
+      "docs/css",
+      "retryhttp",
+      "tests"
+    ],
+    "repository_info": {
+      "owner": "austind",
+      "repo": "retryhttp",
+      "branch": null,
+      "repo_url": "https://github.com/austind/retryhttp"
+    }
+  },
+  "https://github.com/ThatsRight-ItsTJ/Outbound-API-Handler": {
+    "error": "Repository ThatsRight-ItsTJ/Outbound-API-Handler not found or not accessible"
+  },
+  "https://github.com/lexlapax/go-llms": {
+    "error": "Failed to access repository: HTTP 403"
+  },
+  "https://github.com/pikho/ppromptor": {
+    "error": "Failed to access repository: HTTP 403"
+  },
+  "https://github.com/austin-starks/Promptimizer": {
+    "error": "Failed to access repository: HTTP 403"
+  },
+  "https://github.com/michaelachmann/gpt-cost-estimator": {
+    "error": "Failed to access repository: HTTP 403"
+  },
+  "https://github.com/Portkey-AI/gateway": {
+    "error": "Failed to access repository: HTTP 403"
+  },
+  "https://github.com/beepkh/SUPMER": {
+    "error": "Failed to access repository: HTTP 403"
+  },
+  "https://github.com/Oneirocom/ai-api-cost-estimator": {
+    "error": "Failed to access repository: HTTP 403"
+  },
+  "https://github.com/AdieLaine/MetaBot": {
+    "error": "Failed to access repository: HTTP 403"
+  },
+  "https://github.com/AHarshkkk6/-AI-Powered-Task-Management-System": {
+    "error": "Failed to access repository: HTTP 403"
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "repositories": [
+    {
+      "owner": "guilatrova",
+      "repo": "gracy",
+      "individual_files": [
+        "src/gracy/_core.py",
+        "src/gracy/_models.py",
+        "src/gracy/common_hooks.py"
+      ],
+      "patterns": [
+        "src/gracy/*.py"
+      ],
+      "exclude_patterns": ["test_*", "*_test.py", "src/tests/*", "__pycache__/*"],
+      "branch": "main",
+      "max_files": 50
+    },
+    {
+      "owner": "guilatrova",
+      "repo": "gracy",
+      "individual_files": [
+        "src/gracy/replays/_wrappers.py",
+        "src/gracy/replays/storages/sqlite.py",
+        "src/gracy/replays/storages/pymongo.py"
+      ],
+      "patterns": [
+        "src/gracy/replays/*.py",
+        "src/gracy/replays/storages/*.py"
+      ],
+      "exclude_patterns": ["test_*", "*_test.py", "src/tests/*", "__pycache__/*"],
+      "branch": "main",
+      "max_files": 25
+    },
+    {
+      "owner": "guilatrova",
+      "repo": "gracy",
+      "individual_files": [
+        "src/gracy/_reports/_builders.py",
+        "src/gracy/_reports/_models.py",
+        "src/gracy/_reports/_printers.py"
+      ],
+      "patterns": [
+        "src/gracy/_reports/*.py"
+      ],
+      "exclude_patterns": ["test_*", "*_test.py", "src/tests/*", "__pycache__/*"],
+      "branch": "main",
+      "max_files": 25
+    },
+    {
+      "owner": "guilatrova",
+      "repo": "gracy",
+      "individual_files": [
+        "src/gracy/_loggers.py",
+        "src/gracy/_validators.py",
+        "src/gracy/_general.py"
+      ],
+      "patterns": [
+        "src/gracy/_*.py"
+      ],
+      "exclude_patterns": ["test_*", "*_test.py", "src/tests/*", "__pycache__/*"],
+      "branch": "main",
+      "max_files": 25
+    },
+    {
+      "owner": "guilatrova",
+      "repo": "gracy",
+      "individual_files": [],
+      "patterns": [
+        "src/tests/*.py"
+      ],
+      "exclude_patterns": ["__pycache__/*"],
+      "branch": "main",
+      "max_files": 30
+    },
+    {
+      "owner": "guilatrova",
+      "repo": "gracy",
+      "individual_files": [],
+      "patterns": [
+        "examples/*.py"
+      ],
+      "exclude_patterns": ["__pycache__/*"],
+      "branch": "main",
+      "max_files": 20
+    },
+    {
+      "owner": "scikit-learn-contrib",
+      "repo": "DESlib",
+      "individual_files": [],
+      "patterns": [
+        "deslib/des/*.py",
+        "deslib/dcs/*.py"
+      ],
+      "exclude_patterns": ["test_*", "*_test.py", "deslib/tests/*", "__pycache__/*"],
+      "branch": "master",
+      "max_files": 50
+    },
+    {
+      "owner": "scikit-learn-contrib",
+      "repo": "DESlib",
+      "individual_files": [],
+      "patterns": [
+        "deslib/util/*.py",
+        "deslib/base*.py"
+      ],
+      "exclude_patterns": ["test_*", "*_test.py", "deslib/tests/*", "__pycache__/*"],
+      "branch": "master",
+      "max_files": 30
+    },
+    {
+      "owner": "scikit-learn-contrib",
+      "repo": "DESlib",
+      "individual_files": [],
+      "patterns": [
+        "deslib/static/*.py"
+      ],
+      "exclude_patterns": ["test_*", "*_test.py", "deslib/tests/*", "__pycache__/*"],
+      "branch": "master",
+      "max_files": 20
+    },
+    {
+      "owner": "scikit-learn-contrib",
+      "repo": "DESlib",
+      "individual_files": [],
+      "patterns": [
+        "deslib/tests/*.py"
+      ],
+      "exclude_patterns": ["__pycache__/*"],
+      "branch": "master",
+      "max_files": 30
+    },
+    {
+      "owner": "zukijourney",
+      "repo": "api-oss",
+      "individual_files": [
+        "api/app/api/constants.py",
+        "api/app/api/routes/route.py"
+      ],
+      "patterns": [
+        "api/app/api/*.py"
+      ],
+      "exclude_patterns": ["test_*", "*_test.py", "tests/*", "__pycache__/*"],
+      "branch": "main",
+      "max_files": 25
+    },
+    {
+      "owner": "zukijourney",
+      "repo": "api-oss",
+      "individual_files": [
+        "api/app/api/routes/v1/chat/completions.py",
+        "api/app/api/dependencies.py"
+      ],
+      "patterns": [
+        "api/app/api/routes/v1/*.py",
+        "api/app/api/routes/v1/*/*.py"
+      ],
+      "exclude_patterns": ["test_*", "*_test.py", "tests/*", "__pycache__/*"],
+      "branch": "main",
+      "max_files": 30
+    },
+    {
+      "owner": "zukijourney",
+      "repo": "api-oss",
+      "individual_files": [
+        "README.md"
+      ],
+      "patterns": [
+        "api/app/providers/*.py",
+        "api/app/models/*.py"
+      ],
+      "exclude_patterns": ["__pycache__/*"],
+      "branch": "main",
+      "max_files": 25
+    },
+    {
+      "owner": "austind",
+      "repo": "retryhttp",
+      "individual_files": [],
+      "patterns": [
+        "retryhttp/*.py"
+      ],
+      "exclude_patterns": ["test_*", "*_test.py", "tests/*", "__pycache__/*"],
+      "branch": "main",
+      "max_files": 20
+    },
+    {
+      "owner": "austind",
+      "repo": "retryhttp",
+      "individual_files": [
+        "retryhttp/_retry.py",
+        "retryhttp/_wait.py"
+      ],
+      "patterns": [
+        "retryhttp/_*.py"
+      ],
+      "exclude_patterns": ["test_*", "*_test.py", "tests/*", "__pycache__/*"],
+      "branch": "main",
+      "max_files": 15
+    },
+    {
+      "owner": "austind",
+      "repo": "retryhttp",
+      "individual_files": [
+        "retryhttp/_utils.py"
+      ],
+      "patterns": [
+        "retryhttp/_utils*.py"
+      ],
+      "exclude_patterns": ["test_*", "*_test.py", "tests/*", "__pycache__/*"],
+      "branch": "main",
+      "max_files": 10
+    },
+    {
+      "owner": "guilatrova",
+      "repo": "gracy",
+      "individual_files": [
+        "README.md",
+        "pyproject.toml",
+        "CHANGELOG.md"
+      ],
+      "patterns": [
+        "*.md",
+        "*.toml"
+      ],
+      "exclude_patterns": ["__pycache__/*"],
+      "branch": "main",
+      "max_files": 15
+    },
+    {
+      "owner": "zukijourney",
+      "repo": "api-oss",
+      "individual_files": [
+        "README.md",
+        "docker-compose.yml",
+        "api/Dockerfile",
+        "bot/Dockerfile"
+      ],
+      "patterns": [
+        "*.md",
+        "*.yml",
+        "*.yaml"
+      ],
+      "exclude_patterns": ["__pycache__/*"],
+      "branch": "main",
+      "max_files": 15
+    }
+  ],
+  "output_dir": "./ai_api_liaison_downloads",
+  "create_repo_folders": true
+}
