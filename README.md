@@ -1,207 +1,199 @@
-# 🔍 GitHub File Hunter
+# GitHub File Hunter 🔍
 
-**Advanced GitHub repository file extraction tool with intelligent batch processing and auto-branch detection.**
+**Smart file discovery and download tool for GitHub repositories**
+
+Intelligently finds and downloads specific files from GitHub repositories without cloning the entire repository. Supports individual files, patterns, batch operations, and repository structure analysis with centralized download management.
 
 ## ✨ Features
 
-- 🎯 **Pattern-based file searching** with wildcards, regex, and extensions
-- 🚀 **100% success rate batch processing** with auto-branch detection
-- 📦 **Pre-built search profiles** for common development scenarios
-- 🌐 **Web interface** with interactive file tree exploration
-- ⚡ **Concurrent downloads** with rate limiting and progress tracking
-- 📊 **Smart fallback logic** adapts to different repository structures
-- 🔄 **CSV/JSON batch processing** for multiple repositories
+- 🎯 **Individual File Downloads**: Download specific files by name or path
+- 🔍 **Pattern-Based Search**: Use glob patterns, regex, or file extensions
+- 📦 **Batch Processing**: Process multiple repositories from CSV/JSON configurations
+- 🌳 **Repository Structure Analysis**: Analyze and export repository file structures
+- 🚀 **High Performance**: Async downloads with concurrent processing
+- 📁 **Centralized Downloads**: All files organized in `resulting_downloads/` folder
+- 🔑 **GitHub Token Support**: Avoid rate limits with personal access tokens
+- 🌐 **Web Interface**: User-friendly Flask dashboard for GUI operations
 
 ## 🚀 Quick Start
 
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/GitHub-File-Seek.git
+git clone https://github.com/ThatsRight-ItsTJ/GitHub-File-Seek.git
 cd GitHub-File-Seek
-
-# Install dependencies
 pip install -r requirements.txt
-
-# Set GitHub token (optional but recommended)
-export GITHUB_TOKEN=your_github_token_here
 ```
 
 ### Basic Usage
 
 ```bash
-# Search for Python files in a repository
-python github_file_hunter.py microsoft/vscode --extensions .py --download
+# Download specific files
+python github_file_hunter.py microsoft/vscode README.md package.json
 
-# Use a pre-built profile
-python github_file_hunter.py fastapi/fastapi --profile api --download
+# Search by file extensions
+python github_file_hunter.py fastapi/fastapi --extensions .py --list-only
 
-# Batch process multiple repositories
-python batch_hunter.py --batch-file repos.csv --download
+# Search with patterns
+python github_file_hunter.py django/django --path-patterns "django/core/*" --extensions .py
 
-# Launch web interface
-python web_interface.py
+# Analyze repository structure
+python github_file_hunter.py microsoft/vscode --structure-only
 ```
 
-## 📋 Batch Processing Formats
+### Batch Processing
 
-### CSV Format Example
+```bash
+# Create sample configuration
+python batch_hunter.py --create-sample json --sample-file my_batch.json
 
-Create a file `repos.csv`:
+# Preview matches without downloading
+python batch_hunter.py -f my_batch.json
 
-```csv
-repo_url,profile,output_dir,branch,extensions
-microsoft/vscode,config,./downloads/vscode,main,
-https://github.com/fastapi/fastapi,api,./downloads/fastapi,,
-kubernetes/kubernetes,docker,./downloads/k8s,master,
-openai/gpt-3,,,,.py,.js
+# Download all matching files
+python batch_hunter.py -f my_batch.json --download
 ```
 
-### JSON Format Example
+## 📁 Download Organization
 
-Create a file `repos.json`:
+All downloaded files are automatically organized in the `resulting_downloads/` folder:
+
+```
+resulting_downloads/
+├── repo1_owner_repo1_name/
+│   ├── src/
+│   │   └── main.py
+│   └── README.md
+├── repo2_owner_repo2_name/
+│   ├── config/
+│   │   └── settings.json
+│   └── docs/
+└── structure_analysis/
+    └── repo_structure.json
+```
+
+## 🔧 Configuration
+
+### Environment Variables
+
+```bash
+export GITHUB_TOKEN="your_github_token_here"
+```
+
+### Batch Configuration (JSON)
 
 ```json
 [
   {
     "repo_url": "microsoft/vscode",
-    "profile": "config",
-    "output_dir": "./downloads/vscode",
-    "branch": "main"
-  },
-  {
-    "repo_url": "https://github.com/fastapi/fastapi",
-    "profile": "api",
-    "output_dir": "./downloads/fastapi",
-    "branch": null
-  },
-  {
-    "repo_url": "kubernetes/kubernetes",
-    "profile": "docker",
-    "output_dir": "./downloads/k8s",
-    "branch": "master"
-  },
-  {
-    "repo_url": "openai/gpt-3",
-    "output_dir": "./downloads/openai",
+    "output_dir": "./resulting_downloads/vscode",
     "search_criteria": {
-      "extensions": [".py", ".js"],
-      "exclude_patterns": ["node_modules/*", "*.test.js"]
+      "extensions": [".json", ".md"],
+      "exclude_patterns": ["node_modules/*", "out/*"]
     }
+  },
+  {
+    "repo_url": "fastapi/fastapi",
+    "profile": "api",
+    "output_dir": "./resulting_downloads/fastapi",
+    "branch": "main"
   }
 ]
 ```
 
-## 🎯 Search Profiles
+### Search Profiles
 
-Pre-built profiles for common scenarios:
+Built-in profiles for common use cases:
 
-- **config** - Configuration files (yml, json, toml, env)
-- **api** - API routes, endpoints, clients
-- **auth** - Authentication & security files
-- **database** - Database schemas, migrations, ORM files
-- **docker** - Containerization files
-- **cicd** - CI/CD pipeline configurations
-- **docs** - Documentation files
-- **tests** - Test files and configurations
-- **frontend** - Frontend assets and components
-- **backend** - Backend services and APIs
-- **scripts** - Automation and build scripts
-- **ml** - Machine learning models and data
+- `config` - Configuration files (.yml, .json, .env, etc.)
+- `api` - API-related files (routes, endpoints, controllers)
+- `auth` - Authentication and security files
+- `database` - Database models, schemas, migrations
+- `docker` - Docker and containerization files
+- `cicd` - CI/CD workflows and pipelines
+- `docs` - Documentation files
+- `tests` - Test files and specs
+- `frontend` - Frontend code (JS, TS, Vue, React)
+- `backend` - Backend services and APIs
+- `scripts` - Build scripts and utilities
+- `ml` - Machine learning models and notebooks
 
-## 🌐 Web Interface
+## 📊 Advanced Features
 
-Launch the interactive web dashboard:
+### Repository Structure Analysis
 
 ```bash
+# Analyze repository structure
+python github_file_hunter.py owner/repo --structure-only
+
+# Output includes:
+# - File type distribution
+# - Directory structure
+# - Size statistics
+# - Largest files
+```
+
+### Web Interface
+
+```bash
+# Launch web dashboard
 python web_interface.py
+
+# Access at http://localhost:5000
 ```
 
-Features:
-- Visual repository exploration
-- Interactive file filtering
-- Real-time download progress
-- Results export (JSON/CSV/TXT)
-- Batch job management
-
-## 🔧 Advanced Usage
-
-### Custom Search Criteria
+### Concurrent Processing
 
 ```bash
-# Search with multiple extensions
-python github_file_hunter.py repo/name --extensions .py,.js,.ts --download
-
-# Use regex patterns
-python github_file_hunter.py repo/name --patterns ".*config.*\.yml$" --download
-
-# Exclude specific paths
-python github_file_hunter.py repo/name --exclude "node_modules/*,dist/*" --download
-
-# Size-based filtering
-python github_file_hunter.py repo/name --max-size 1MB --min-size 1KB --download
+# Process multiple repositories concurrently
+python batch_hunter.py -f batch.json --download --concurrent 5
 ```
 
-### Batch Processing Options
+## 🛠️ Command Line Options
+
+### github_file_hunter.py
 
 ```bash
-# Process with custom concurrency
-python batch_hunter.py --batch-file repos.csv --concurrent 5 --download
+python github_file_hunter.py [repo_url] [files...] [options]
 
-# Preview mode (no downloads)
-python batch_hunter.py --batch-file repos.json --preview-only
-
-# Export results
-python batch_hunter.py --batch-file repos.csv --export results.json --export-format json
+Options:
+  --extensions, -e      File extensions (.py, .js, etc.)
+  --name-patterns, -n   Filename patterns (*test*, config*)
+  --path-patterns, -p   Path patterns (src/*, docs/*)
+  --exclude-patterns, -x Exclude patterns (node_modules/*)
+  --regex, -r           Regular expression pattern
+  --min-size           Minimum file size in bytes
+  --max-size           Maximum file size in bytes
+  --branch, -b         Specific branch to search
+  --output-dir, -o     Output directory (default: ./resulting_downloads)
+  --token, -t          GitHub personal access token
+  --list-only, -l      List files without downloading
+  --structure-only, -s  Analyze structure only
 ```
 
-## 📊 Auto-Branch Detection
-
-The tool automatically detects repository default branches:
-
-- Set `branch: null` in JSON or leave empty in CSV
-- Automatically handles "main", "master", or custom default branches
-- 100% success rate with smart fallback logic
-
-## 🛠️ Configuration
-
-### Environment Variables
+### batch_hunter.py
 
 ```bash
-export GITHUB_TOKEN=your_token_here          # GitHub API token
-export GITHUB_HUNTER_CONCURRENT=3            # Default concurrency
-export GITHUB_HUNTER_OUTPUT_DIR=./downloads  # Default output directory
+python batch_hunter.py [options]
+
+Options:
+  --batch-file, -f     CSV or JSON batch configuration file
+  --create-sample      Create sample batch file (csv/json)
+  --download, -d       Download matching files
+  --preview-only       Show matches without downloading
+  --concurrent, -c     Max concurrent processing (default: 3)
+  --token, -t          GitHub personal access token
+  --export             Export results to file
+  --export-format      Export format (json/csv)
 ```
 
-### Config File
+## 📈 Performance & Limits
 
-Create `config.json`:
-
-```json
-{
-  "github_token": "your_token_here",
-  "default_output_dir": "./downloads",
-  "max_concurrent": 3,
-  "rate_limit_delay": 1.0,
-  "default_profiles": ["config", "api", "docker"]
-}
-```
-
-## 📁 Project Structure
-
-```
-GitHub-File-Seek/
-├── github_file_hunter.py      # Main CLI tool
-├── batch_hunter.py            # Batch processing
-├── web_interface.py           # Web dashboard
-├── github_hunter_profiles.py  # Search profiles
-├── requirements.txt           # Dependencies
-├── README.md                  # This file
-├── README_HUNTER.md          # Detailed documentation
-├── examples/                  # Usage examples
-└── templates/                 # Web interface templates
-```
+- **Rate Limits**: Use GitHub token to avoid API limits
+- **Concurrent Downloads**: Configurable concurrent processing
+- **File Size Limits**: Filter by min/max file sizes
+- **Pattern Optimization**: Smart glob/regex pattern detection
+- **Error Recovery**: Automatic fallback for failed patterns
 
 ## 🤝 Contributing
 
@@ -213,14 +205,21 @@ GitHub-File-Seek/
 
 ## 📄 License
 
-MIT License - see LICENSE file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🔗 Links
 
-- [Detailed Documentation](README_HUNTER.md)
-- [GitHub Repository](https://github.com/your-username/GitHub-File-Seek)
-- [Issue Tracker](https://github.com/your-username/GitHub-File-Seek/issues)
+- **Repository**: https://github.com/ThatsRight-ItsTJ/GitHub-File-Seek
+- **Issues**: https://github.com/ThatsRight-ItsTJ/GitHub-File-Seek/issues
+- **Documentation**: See README_HUNTER.md for detailed usage examples
+
+## 🙏 Acknowledgments
+
+- Built with Python asyncio for high performance
+- Uses GitHub API v3 for repository access
+- Supports both glob and regex pattern matching
+- Centralized download management for better organization
 
 ---
 
-**Made with ❤️ for developers who need efficient repository file extraction.**
+**Happy file hunting! 🎯**
