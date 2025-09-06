@@ -320,7 +320,7 @@ class GitHubFileHunter:
             print(f"✗ {match.path} (Error: {e})")
 
 async def download_individual_files(repo_url: str, file_paths: List[str], 
-                                  output_dir: str = "./downloads", 
+                                  output_dir: str = "./resulting_downloads", 
                                   github_token: str = None,
                                   branch: str = None) -> None:
     """Download specific individual files from a repository."""
@@ -358,7 +358,7 @@ async def download_individual_files(repo_url: str, file_paths: List[str],
 
 async def analyze_repository_structure(repo_url: str, branch: str = None, 
                                      github_token: str = None, 
-                                     output_dir: str = "./structure_analysis") -> Dict[str, Any]:
+                                     output_dir: str = "./resulting_downloads") -> Dict[str, Any]:
     """Analyze repository structure and return file mapping."""
     
     from repo_structure_analyzer import RepoStructureAnalyzer
@@ -424,7 +424,7 @@ Examples:
     
     parser.add_argument('--branch', '-b', 
                        help='Specific branch to search (default: repository default)')
-    parser.add_argument('--output-dir', '-o', default='./downloads',
+    parser.add_argument('--output-dir', '-o', default='./resulting_downloads',
                        help='Output directory for downloads')
     parser.add_argument('--token', '-t', 
                        help='GitHub personal access token',

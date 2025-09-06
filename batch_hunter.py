@@ -30,7 +30,7 @@ class SearchCriteria:
 class BatchJob:
     repo_url: str
     profile: str = None
-    output_dir: str = "."
+    output_dir: str = "./resulting_downloads"
     branch: str = None
     search_criteria: SearchCriteria = None
 
@@ -392,11 +392,15 @@ class BatchHunter:
                         min_size=row.get('min_size')
                     )
                 
-                # Create job
+                # Create job with resulting_downloads as default
+                output_dir = row.get('output_dir', './resulting_downloads')
+                if not output_dir.startswith('./resulting_downloads'):
+                    output_dir = f"./resulting_downloads/{output_dir.lstrip('./')}"
+                
                 job = BatchJob(
                     repo_url=row['repo_url'],
                     profile=row.get('profile'),
-                    output_dir=row.get('output_dir', '.'),
+                    output_dir=output_dir,
                     branch=row.get('branch') if row.get('branch') else None,
                     search_criteria=criteria
                 )
@@ -423,10 +427,15 @@ class BatchHunter:
                     min_size=sc.get('min_size')
                 )
             
+            # Ensure output_dir goes to resulting_downloads
+            output_dir = item.get('output_dir', './resulting_downloads')
+            if not output_dir.startswith('./resulting_downloads'):
+                output_dir = f"./resulting_downloads/{output_dir.lstrip('./')}"
+            
             job = BatchJob(
                 repo_url=item['repo_url'],
                 profile=item.get('profile'),
-                output_dir=item.get('output_dir', '.'),
+                output_dir=output_dir,
                 branch=item.get('branch'),
                 search_criteria=criteria
             )
@@ -476,28 +485,28 @@ class BatchHunter:
             with open(filename, 'w', newline='', encoding='utf-8') as f:
                 writer = csv.writer(f)
                 writer.writerow(['repo_url', 'profile', 'output_dir', 'branch', 'extensions', 'patterns', 'exclude_patterns', 'max_size', 'min_size'])
-                writer.writerow(['microsoft/vscode', 'config', './downloads/vscode', 'main', '', '', 'node_modules/*', '', ''])
-                writer.writerow(['fastapi/fastapi', 'api', './downloads/fastapi', '', '', '', '', '', ''])
-                writer.writerow(['kubernetes/kubernetes', 'docker', './downloads/k8s', 'master', '', '', '', '', ''])
-                writer.writerow(['openai/gpt-3', '', './downloads/openai', '', '.py,.js', '.*config.*', 'tests/*|docs/*', '1MB', '1KB'])
+                writer.writerow(['microsoft/vscode', 'config', './resulting_downloads/vscode', 'main', '', '', 'node_modules/*', '', ''])
+                writer.writerow(['fastapi/fastapi', 'api', './resulting_downloads/fastapi', '', '', '', '', '', ''])
+                writer.writerow(['kubernetes/kubernetes', 'docker', './resulting_downloads/k8s', 'master', '', '', '', '', ''])
+                writer.writerow(['openai/gpt-3', '', './resulting_downloads/openai', '', '.py,.js', '.*config.*', 'tests/*|docs/*', '1MB', '1KB'])
         
         elif format_type == 'json':
             sample_data = [
                 {
                     "repo_url": "microsoft/vscode",
                     "profile": "config",
-                    "output_dir": "./downloads/vscode",
+                    "output_dir": "./resulting_downloads/vscode",
                     "branch": "main"
                 },
                 {
                     "repo_url": "fastapi/fastapi",
                     "profile": "api",
-                    "output_dir": "./downloads/fastapi",
+                    "output_dir": "./resulting_downloads/fastapi",
                     "branch": None
                 },
                 {
                     "repo_url": "kubernetes/kubernetes",
-                    "output_dir": "./downloads/k8s",
+                    "output_dir": "./resulting_downloads/k8s",
                     "search_criteria": {
                         "extensions": [".yaml", ".yml", ".json"],
                         "patterns": [".*docker.*", ".*k8s.*", ".*deploy.*"],
@@ -506,7 +515,7 @@ class BatchHunter:
                 },
                 {
                     "repo_url": "openai/gpt-3",
-                    "output_dir": "./downloads/openai",
+                    "output_dir": "./resulting_downloads/openai",
                     "branch": "main",
                     "search_criteria": {
                         "extensions": [".py"],
